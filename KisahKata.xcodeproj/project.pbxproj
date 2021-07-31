@@ -7,6 +7,19 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		403305EB26B59FE500506E7C /* Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 403305EA26B59FE500506E7C /* Extension.swift */; };
+		403305F526B5A09E00506E7C /* Ubuntu-Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 403305ED26B5A09E00506E7C /* Ubuntu-Italic.ttf */; };
+		403305F626B5A09E00506E7C /* Ubuntu-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 403305EE26B5A09E00506E7C /* Ubuntu-Regular.ttf */; };
+		403305F726B5A09E00506E7C /* Ubuntu-LightItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 403305EF26B5A09E00506E7C /* Ubuntu-LightItalic.ttf */; };
+		403305F826B5A09E00506E7C /* Ubuntu-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 403305F026B5A09E00506E7C /* Ubuntu-Medium.ttf */; };
+		403305F926B5A09E00506E7C /* Ubuntu-BoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 403305F126B5A09E00506E7C /* Ubuntu-BoldItalic.ttf */; };
+		403305FA26B5A09E00506E7C /* Ubuntu-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 403305F226B5A09E00506E7C /* Ubuntu-Light.ttf */; };
+		403305FB26B5A09E00506E7C /* Ubuntu-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 403305F326B5A09E00506E7C /* Ubuntu-Bold.ttf */; };
+		403305FC26B5A09E00506E7C /* Ubuntu-MediumItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 403305F426B5A09E00506E7C /* Ubuntu-MediumItalic.ttf */; };
+		403305FE26B5A0DD00506E7C /* GifImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 403305FD26B5A0DD00506E7C /* GifImage.swift */; };
+		4033060726B5A21600506E7C /* Storytelling.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4033060626B5A21600506E7C /* Storytelling.storyboard */; };
+		4033060926B5A22600506E7C /* Quiz.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4033060826B5A22600506E7C /* Quiz.storyboard */; };
+		4033060B26B5A24300506E7C /* Practice.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4033060A26B5A24300506E7C /* Practice.storyboard */; };
 		40EB3E1C26B257A400D9DEC9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40EB3E1B26B257A400D9DEC9 /* AppDelegate.swift */; };
 		40EB3E1E26B257A400D9DEC9 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40EB3E1D26B257A400D9DEC9 /* SceneDelegate.swift */; };
 		40EB3E2026B257A400D9DEC9 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40EB3E1F26B257A400D9DEC9 /* ViewController.swift */; };
@@ -18,6 +31,19 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		403305EA26B59FE500506E7C /* Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extension.swift; sourceTree = "<group>"; };
+		403305ED26B5A09E00506E7C /* Ubuntu-Italic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Ubuntu-Italic.ttf"; sourceTree = "<group>"; };
+		403305EE26B5A09E00506E7C /* Ubuntu-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Ubuntu-Regular.ttf"; sourceTree = "<group>"; };
+		403305EF26B5A09E00506E7C /* Ubuntu-LightItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Ubuntu-LightItalic.ttf"; sourceTree = "<group>"; };
+		403305F026B5A09E00506E7C /* Ubuntu-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Ubuntu-Medium.ttf"; sourceTree = "<group>"; };
+		403305F126B5A09E00506E7C /* Ubuntu-BoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Ubuntu-BoldItalic.ttf"; sourceTree = "<group>"; };
+		403305F226B5A09E00506E7C /* Ubuntu-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Ubuntu-Light.ttf"; sourceTree = "<group>"; };
+		403305F326B5A09E00506E7C /* Ubuntu-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Ubuntu-Bold.ttf"; sourceTree = "<group>"; };
+		403305F426B5A09E00506E7C /* Ubuntu-MediumItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Ubuntu-MediumItalic.ttf"; sourceTree = "<group>"; };
+		403305FD26B5A0DD00506E7C /* GifImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GifImage.swift; sourceTree = "<group>"; };
+		4033060626B5A21600506E7C /* Storytelling.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Storytelling.storyboard; sourceTree = "<group>"; };
+		4033060826B5A22600506E7C /* Quiz.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Quiz.storyboard; sourceTree = "<group>"; };
+		4033060A26B5A24300506E7C /* Practice.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Practice.storyboard; sourceTree = "<group>"; };
 		40EB3E1826B257A400D9DEC9 /* KisahKata.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KisahKata.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		40EB3E1B26B257A400D9DEC9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		40EB3E1D26B257A400D9DEC9 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -41,6 +67,88 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		403305E926B59F8E00506E7C /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				403305EA26B59FE500506E7C /* Extension.swift */,
+				403305FD26B5A0DD00506E7C /* GifImage.swift */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		403305EC26B5A04700506E7C /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				403305F326B5A09E00506E7C /* Ubuntu-Bold.ttf */,
+				403305F126B5A09E00506E7C /* Ubuntu-BoldItalic.ttf */,
+				403305ED26B5A09E00506E7C /* Ubuntu-Italic.ttf */,
+				403305F226B5A09E00506E7C /* Ubuntu-Light.ttf */,
+				403305EF26B5A09E00506E7C /* Ubuntu-LightItalic.ttf */,
+				403305F026B5A09E00506E7C /* Ubuntu-Medium.ttf */,
+				403305F426B5A09E00506E7C /* Ubuntu-MediumItalic.ttf */,
+				403305EE26B5A09E00506E7C /* Ubuntu-Regular.ttf */,
+			);
+			path = Fonts;
+			sourceTree = "<group>";
+		};
+		403305FF26B5A11200506E7C /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				40EB3E2926B257A500D9DEC9 /* LaunchScreen.storyboard */,
+				40EB3E2126B257A400D9DEC9 /* Main.storyboard */,
+				4033060626B5A21600506E7C /* Storytelling.storyboard */,
+				4033060826B5A22600506E7C /* Quiz.storyboard */,
+				4033060A26B5A24300506E7C /* Practice.storyboard */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		4033060026B5A14E00506E7C /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				40EB3E1F26B257A400D9DEC9 /* ViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		4033060126B5A15400506E7C /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		4033060226B5A17300506E7C /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				4033060526B5A19800506E7C /* MLModels */,
+				4033060426B5A18E00506E7C /* Images */,
+				4033060326B5A18000506E7C /* Videos */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		4033060326B5A18000506E7C /* Videos */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Videos;
+			sourceTree = "<group>";
+		};
+		4033060426B5A18E00506E7C /* Images */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Images;
+			sourceTree = "<group>";
+		};
+		4033060526B5A19800506E7C /* MLModels */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = MLModels;
+			sourceTree = "<group>";
+		};
 		40EB3E0F26B257A400D9DEC9 = {
 			isa = PBXGroup;
 			children = (
@@ -60,12 +168,15 @@
 		40EB3E1A26B257A400D9DEC9 /* KisahKata */ = {
 			isa = PBXGroup;
 			children = (
+				4033060226B5A17300506E7C /* Resources */,
+				4033060126B5A15400506E7C /* Models */,
+				4033060026B5A14E00506E7C /* Controllers */,
+				403305FF26B5A11200506E7C /* Views */,
+				403305EC26B5A04700506E7C /* Fonts */,
+				403305E926B59F8E00506E7C /* Utils */,
 				40EB3E1B26B257A400D9DEC9 /* AppDelegate.swift */,
 				40EB3E1D26B257A400D9DEC9 /* SceneDelegate.swift */,
-				40EB3E1F26B257A400D9DEC9 /* ViewController.swift */,
-				40EB3E2126B257A400D9DEC9 /* Main.storyboard */,
 				40EB3E2726B257A500D9DEC9 /* Assets.xcassets */,
-				40EB3E2926B257A500D9DEC9 /* LaunchScreen.storyboard */,
 				40EB3E2C26B257A500D9DEC9 /* Info.plist */,
 				40EB3E2426B257A400D9DEC9 /* KisahKata.xcdatamodeld */,
 				E3F2177426B39618003B4CB5 /* IntroViewController.swift */,
@@ -130,9 +241,20 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4033060926B5A22600506E7C /* Quiz.storyboard in Resources */,
+				403305FB26B5A09E00506E7C /* Ubuntu-Bold.ttf in Resources */,
+				403305F926B5A09E00506E7C /* Ubuntu-BoldItalic.ttf in Resources */,
+				4033060726B5A21600506E7C /* Storytelling.storyboard in Resources */,
 				40EB3E2B26B257A500D9DEC9 /* LaunchScreen.storyboard in Resources */,
 				40EB3E2826B257A500D9DEC9 /* Assets.xcassets in Resources */,
+				403305F826B5A09E00506E7C /* Ubuntu-Medium.ttf in Resources */,
 				40EB3E2326B257A400D9DEC9 /* Main.storyboard in Resources */,
+				403305F626B5A09E00506E7C /* Ubuntu-Regular.ttf in Resources */,
+				4033060B26B5A24300506E7C /* Practice.storyboard in Resources */,
+				403305F726B5A09E00506E7C /* Ubuntu-LightItalic.ttf in Resources */,
+				403305FA26B5A09E00506E7C /* Ubuntu-Light.ttf in Resources */,
+				403305F526B5A09E00506E7C /* Ubuntu-Italic.ttf in Resources */,
+				403305FC26B5A09E00506E7C /* Ubuntu-MediumItalic.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -143,8 +265,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				403305EB26B59FE500506E7C /* Extension.swift in Sources */,
 				E3F2177526B39618003B4CB5 /* IntroViewController.swift in Sources */,
 				40EB3E2026B257A400D9DEC9 /* ViewController.swift in Sources */,
+				403305FE26B5A0DD00506E7C /* GifImage.swift in Sources */,
 				40EB3E1C26B257A400D9DEC9 /* AppDelegate.swift in Sources */,
 				40EB3E1E26B257A400D9DEC9 /* SceneDelegate.swift in Sources */,
 				40EB3E2626B257A400D9DEC9 /* KisahKata.xcdatamodeld in Sources */,

@@ -14,6 +14,7 @@
 		40EB3E2626B257A400D9DEC9 /* KisahKata.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 40EB3E2426B257A400D9DEC9 /* KisahKata.xcdatamodeld */; };
 		40EB3E2826B257A500D9DEC9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 40EB3E2726B257A500D9DEC9 /* Assets.xcassets */; };
 		40EB3E2B26B257A500D9DEC9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 40EB3E2926B257A500D9DEC9 /* LaunchScreen.storyboard */; };
+		E3F2177526B39618003B4CB5 /* IntroViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3F2177426B39618003B4CB5 /* IntroViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 		40EB3E2726B257A500D9DEC9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		40EB3E2A26B257A500D9DEC9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		40EB3E2C26B257A500D9DEC9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E3F2177426B39618003B4CB5 /* IntroViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntroViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,6 +68,7 @@
 				40EB3E2926B257A500D9DEC9 /* LaunchScreen.storyboard */,
 				40EB3E2C26B257A500D9DEC9 /* Info.plist */,
 				40EB3E2426B257A400D9DEC9 /* KisahKata.xcdatamodeld */,
+				E3F2177426B39618003B4CB5 /* IntroViewController.swift */,
 			);
 			path = KisahKata;
 			sourceTree = "<group>";
@@ -140,6 +143,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E3F2177526B39618003B4CB5 /* IntroViewController.swift in Sources */,
 				40EB3E2026B257A400D9DEC9 /* ViewController.swift in Sources */,
 				40EB3E1C26B257A400D9DEC9 /* AppDelegate.swift in Sources */,
 				40EB3E1E26B257A400D9DEC9 /* SceneDelegate.swift in Sources */,

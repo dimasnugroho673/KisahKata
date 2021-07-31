@@ -1,0 +1,23 @@
+{
+  "images" : [
+    {
+      "filename" : "img_M-Eggy-Senang@1x.png",
+      "idiom" : "universal",
+      "scale" : "1x"
+    },
+    {
+      "filename" : "img_M-Eggy-Senang@2x.png",
+      "idiom" : "universal",
+      "scale" : "2x"
+    },
+    {
+      "filename" : "img_M-Eggy-Senang@3x.png",
+      "idiom" : "universal",
+      "scale" : "3x"
+    }
+  ],
+  "info" : {
+    "author" : "xcode",
+    "version" : 1
+  }
+}

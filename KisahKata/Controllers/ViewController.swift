@@ -38,8 +38,10 @@ class ViewController: UIViewController {
         let flowLayout = UPCarouselFlowLayout()
         flowLayout.itemSize = CGSize(width: 200, height: 245)
         flowLayout.scrollDirection = .vertical
+        flowLayout.sideItemShift = 0.3
+        flowLayout.sideItemAlpha = 0.3
         flowLayout.spacingMode = .fixed(spacing: 20)
-        flowLayout.sectionInset = UIEdgeInsets(top: 20, left: 0, bottom: 10, right: 0)
+        //flowLayout.sectionInset = UIEdgeInsets(top: 20, left: 0, bottom: 10, right: 0)
         homeCollectionView.collectionViewLayout = flowLayout
         
         homeCollectionView.delegate = self
@@ -59,10 +61,30 @@ extension ViewController: UICollectionViewDelegate, UICollectionViewDataSource{
         cell.temaImage.image = tema.picture
         cell.temaLabel.text = tema.nama
         
+        if indexPath.row < 1 {
+            //cell.lockImage.image = UIImage(named: "img_star2")
+            print("Item Terbuka")
+        } else {
+            cell.lockImage.image = UIImage(named: "ic_lock")
+        }
+        
         return cell
     }
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        print("Cell \(indexPath.row) ditekan")
+        if indexPath.row < 1 {
+            //performSegue(withIdentifier: <#T##String#>, sender: <#T##Any?#>)
+            print("Cell \(indexPath.row) ditekan")
+        } else {
+            var dialogMessage = UIAlertController(title: "Cerita masih terkunci", message: "Cerita masih terkunci, kamu harus menyelesaikan tema sebelumnya untuk membuka cerita ini", preferredStyle: .alert)
+            
+            let ok = UIAlertAction(title: "OK", style: .default, handler: {(action) -> Void in
+            })
+            dialogMessage.addAction(ok)
+            self.present(dialogMessage, animated: true, completion: nil)
+        }
+        
+        
+        
     }
     
     func scrollViewDidEndDecelerating(_ scrollView: UIScrollView) {

@@ -110,6 +110,7 @@
 			children = (
 				403305EA26B59FE500506E7C /* Extension.swift */,
 				403305FD26B5A0DD00506E7C /* GifImage.swift */,
+				517AFAA626B5C91B00C4DC6C /* UPCarouselFlowLayout.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -234,7 +235,6 @@
 				40EB3E1B26B257A400D9DEC9 /* AppDelegate.swift */,
 				40EB3E1D26B257A400D9DEC9 /* SceneDelegate.swift */,
 				40EB3E2726B257A500D9DEC9 /* Assets.xcassets */,
-				517AFAA626B5C91B00C4DC6C /* UPCarouselFlowLayout.swift */,
 				40EB3E2C26B257A500D9DEC9 /* Info.plist */,
 				40EB3E2426B257A400D9DEC9 /* KisahKata.xcdatamodeld */,
 			);

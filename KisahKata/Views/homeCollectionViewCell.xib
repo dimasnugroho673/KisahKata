@@ -36,10 +36,19 @@
                                 <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="bOd-Ng-gi4">
+                                <rect key="frame" x="152" y="12" width="33" height="33"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="33" id="1Bv-eU-NCm"/>
+                                    <constraint firstAttribute="width" constant="33" id="KHx-mL-qTB"/>
+                                </constraints>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" red="0.75686274509803919" green="0.8683219552" blue="0.97648650410000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <constraints>
                             <constraint firstItem="u9D-BY-8DS" firstAttribute="centerX" secondItem="KSm-RF-GAw" secondAttribute="centerX" id="Ck1-x2-WrK"/>
+                            <constraint firstItem="bOd-Ng-gi4" firstAttribute="top" secondItem="KSm-RF-GAw" secondAttribute="top" constant="12" id="JLj-X3-c1A"/>
+                            <constraint firstAttribute="trailing" secondItem="bOd-Ng-gi4" secondAttribute="trailing" constant="15" id="YVD-Za-Ymq"/>
                             <constraint firstItem="BfK-bR-mE5" firstAttribute="centerX" secondItem="KSm-RF-GAw" secondAttribute="centerX" id="dKD-Pg-dtj"/>
                             <constraint firstItem="u9D-BY-8DS" firstAttribute="top" secondItem="KSm-RF-GAw" secondAttribute="top" id="owU-5V-TWC"/>
                             <constraint firstAttribute="bottom" secondItem="BfK-bR-mE5" secondAttribute="bottom" id="tzf-IV-Vzl"/>
@@ -56,6 +65,7 @@
             </constraints>
             <connections>
                 <outlet property="cntnView" destination="KSm-RF-GAw" id="7mg-RY-LI6"/>
+                <outlet property="lockImage" destination="bOd-Ng-gi4" id="u5h-bp-aJ6"/>
                 <outlet property="temaImage" destination="u9D-BY-8DS" id="Ybp-q0-2mU"/>
                 <outlet property="temaLabel" destination="BfK-bR-mE5" id="Xrh-uA-laN"/>
             </connections>

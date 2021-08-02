@@ -12,10 +12,12 @@ class homeCollectionViewCell: UICollectionViewCell {
     @IBOutlet weak var temaLabel: UILabel!
     @IBOutlet weak var cntnView: UIView!
     
-
+    @IBOutlet weak var lockImage: UIImageView!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
+        //self.layer.cornerRadius = 25
         DispatchQueue.main.async {
             self.cntnView.layer.cornerRadius = 12.0
             self.cntnView.layer.shadowColor = UIColor.gray.cgColor
@@ -23,7 +25,7 @@ class homeCollectionViewCell: UICollectionViewCell {
             self.cntnView.layer.shadowOpacity = 10.0
             self.cntnView.layer.shadowOffset = .zero
             self.cntnView.layer.shadowPath = UIBezierPath(rect: self.cntnView.bounds).cgPath
-            self.cntnView.layer.shouldRasterize = true
+            //self.cntnView.layer.shouldRasterize = true
         }
     }
 

@@ -26,7 +26,7 @@
         <!--Intro View Controller-->
         <scene sceneID="nEY-WE-0OA">
             <objects>
-                <viewController modalPresentationStyle="fullScreen" id="0vu-y2-FWS" customClass="IntroViewController" customModule="KisahKata" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="IntroVC" modalPresentationStyle="fullScreen" useStoryboardIdentifierAsRestorationIdentifier="YES" id="0vu-y2-FWS" customClass="IntroViewController" customModule="KisahKata" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8Kj-m1-mUq">
                         <rect key="frame" x="0.0" y="0.0" width="844" height="390"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -56,7 +56,6 @@
                                 <color key="backgroundColor" red="0.87650471929999996" green="0.67803412679999997" blue="0.23515006899999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="S65-Pw-UWf"/>
-                                    <constraint firstAttribute="width" constant="184" id="nz5-99-fvz"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                 <state key="normal" title="Button">
@@ -73,16 +72,16 @@
                             <constraint firstAttribute="trailing" secondItem="UX1-M9-nDn" secondAttribute="trailing" id="NQq-Hy-y7T"/>
                             <constraint firstItem="4MF-3Y-5n0" firstAttribute="trailing" secondItem="CK8-nk-Brk" secondAttribute="trailing" constant="366" id="Sqv-65-q2h"/>
                             <constraint firstItem="CK8-nk-Brk" firstAttribute="top" secondItem="Xyb-oS-2Tg" secondAttribute="bottom" constant="36.5" id="U2t-Wa-qLw"/>
+                            <constraint firstItem="ouf-33-Uwg" firstAttribute="leading" secondItem="4MF-3Y-5n0" secondAttribute="leading" constant="312" id="WFV-QX-MFd"/>
                             <constraint firstItem="4MF-3Y-5n0" firstAttribute="trailing" secondItem="15i-mj-BEe" secondAttribute="trailing" constant="256" id="aeU-J8-XWP"/>
-                            <constraint firstItem="4MF-3Y-5n0" firstAttribute="trailing" secondItem="ouf-33-Uwg" secondAttribute="trailing" constant="312" id="eia-Ev-weI"/>
                             <constraint firstItem="Xyb-oS-2Tg" firstAttribute="top" secondItem="8Kj-m1-mUq" secondAttribute="top" constant="50" id="gfc-pD-fRP"/>
                             <constraint firstItem="CK8-nk-Brk" firstAttribute="leading" secondItem="4MF-3Y-5n0" secondAttribute="leading" constant="344" id="hSx-Ci-SQR"/>
                             <constraint firstItem="15i-mj-BEe" firstAttribute="top" secondItem="CK8-nk-Brk" secondAttribute="bottom" constant="29" id="kNT-1v-3Kr"/>
                             <constraint firstItem="ouf-33-Uwg" firstAttribute="top" secondItem="15i-mj-BEe" secondAttribute="bottom" constant="30" id="lyG-tu-0Re"/>
-                            <constraint firstItem="ouf-33-Uwg" firstAttribute="leading" secondItem="4MF-3Y-5n0" secondAttribute="leading" constant="312" id="msI-YK-5c6"/>
                             <constraint firstItem="15i-mj-BEe" firstAttribute="leading" secondItem="4MF-3Y-5n0" secondAttribute="leading" constant="257" id="pDO-RG-rSR"/>
                             <constraint firstItem="UX1-M9-nDn" firstAttribute="top" secondItem="8Kj-m1-mUq" secondAttribute="top" id="vob-eG-bbw"/>
                             <constraint firstItem="UX1-M9-nDn" firstAttribute="leading" secondItem="8Kj-m1-mUq" secondAttribute="leading" id="y8l-nc-hBy"/>
+                            <constraint firstItem="4MF-3Y-5n0" firstAttribute="trailing" secondItem="ouf-33-Uwg" secondAttribute="trailing" constant="312" id="yQ7-Wr-fif"/>
                         </constraints>
                     </view>
                     <connections>
@@ -93,6 +92,16 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="eg5-hx-2yT" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="35.491071428571423" y="924.63768115942037"/>
+        </scene>
+        <!--Main-->
+        <scene sceneID="1SW-dh-IbL">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Main" id="Daf-CS-ZPm" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="P6U-58-8Gg"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ASy-6y-ats" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="629" y="909"/>
         </scene>
     </scenes>
     <resources>

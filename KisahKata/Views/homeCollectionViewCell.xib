@@ -19,13 +19,6 @@
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="KSm-RF-GAw">
                         <rect key="frame" x="0.0" y="0.0" width="200" height="245"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="story_1_1" translatesAutoresizingMaskIntoConstraints="NO" id="u9D-BY-8DS">
-                                <rect key="frame" x="2" y="0.0" width="196" height="206"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="206" id="0DK-co-zem"/>
-                                    <constraint firstAttribute="width" constant="196" id="G0e-wq-fWy"/>
-                                </constraints>
-                            </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BfK-bR-mE5">
                                 <rect key="frame" x="2" y="207" width="196" height="38"/>
                                 <constraints>
@@ -36,6 +29,13 @@
                                 <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="story_1_1" translatesAutoresizingMaskIntoConstraints="NO" id="u9D-BY-8DS">
+                                <rect key="frame" x="2" y="0.0" width="196" height="206"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="206" id="0DK-co-zem"/>
+                                    <constraint firstAttribute="width" constant="196" id="G0e-wq-fWy"/>
+                                </constraints>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" red="0.75686274509803919" green="0.8683219552" blue="0.97648650410000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <constraints>

@@ -10,18 +10,24 @@ import UIKit
 class IntroViewController: UIViewController {
     @IBOutlet weak var userNameTextField: UITextField!
     @IBOutlet weak var startLearningButton: UIButton!
+    @IBOutlet weak var titleLabel: UILabel!
+    @IBOutlet weak var nameLabel: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
         startLearningButton.layer.cornerRadius =  12
-        startLearningButton.setTitle("Mulai belajar", for: .normal)
+        startLearningButton.setTitle("Yuk belajar", for: .normal)
         startLearningButton.backgroundColor = UIColor(named: "PrimaryColor")
         startLearningButton.setImage(UIImage(systemName: "chevron.backward"), for: .normal)
         startLearningButton.semanticContentAttribute = .forceRightToLeft
         startLearningButton.imageEdgeInsets = UIEdgeInsets(top: 0, left: 30, bottom: 0, right: 0)
         startLearningButton.frame.size.height = 45
+        
+        nameLabel.font = UIFont(name: "Ubuntu-Regular", size: 18)
+        titleLabel.font = UIFont(name: "Ubuntu-Bold", size: 30)
+        
         
     }
     

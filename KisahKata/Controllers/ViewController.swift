@@ -13,9 +13,11 @@ class ViewController: UIViewController {
     @IBOutlet weak var temaLabel: UILabel!
     @IBOutlet weak var judulCollectionView: UICollectionView!
     
+    @IBOutlet weak var haloLabel: UILabel!
     @IBOutlet weak var previewImage: UIImageView!
     @IBOutlet weak var userLabel: UILabel!
     @IBOutlet var BlurView: UIVisualEffectView!
+    @IBOutlet weak var backButton: UIButton!
     
     @IBOutlet weak var homeCollectionView: UICollectionView!
     let userDefault = UserDefaults()
@@ -81,75 +83,25 @@ class ViewController: UIViewController {
         flowLayoutJudul.sectionInset = UIEdgeInsets(top: 10, left: 0, bottom: 10, right: 0)
         judulCollectionView.collectionViewLayout = flowLayoutJudul
         
+        haloLabel.font = UIFont(name: "Ubuntu-Bold", size: 30)
+        userLabel.font = UIFont(name: "Ubuntu-Bold", size: 36)
+        userLabel.text = UserDefaults.standard.string(forKey: "username") ?? ""
+        
+        let config = UIImage.SymbolConfiguration(
+            pointSize: 25, weight: .medium, scale: .default)
+        let image = UIImage(systemName: "xmark.circle.fill", withConfiguration: config)
+        backButton.setImage(image, for: .normal)
+        
+        
+        
+        
+        
         homeCollectionView.delegate = self
         homeCollectionView.dataSource = self
         judulCollectionView.delegate = self
         judulCollectionView.dataSource = self
     }
-    private func _animateIn(desiredView: UIView) {
-        let backgroundView = self.view!
-        
-        // attach our desired view to the screen
-        backgroundView.addSubview(desiredView)
-        
-        // set view to scalling to be 120%
-        desiredView.transform = CGAffineTransform(scaleX: 1.2, y: 1.2)
-        desiredView.alpha = 0
-        desiredView.center = backgroundView.center
-        
-        // animate the effect
-        UIView.animate(withDuration: 0.3, animations: {
-            desiredView.transform = CGAffineTransform(scaleX: 1.0, y: 1.0)
-            desiredView.alpha = 1
-            
-        })
-    }
     
-    private func _animateOut(desiredView: UIView) {
-        // animate the effect
-        UIView.animate(withDuration: 0.3, animations: {
-            desiredView.transform = CGAffineTransform(scaleX: 1.2, y: 1.2)
-            desiredView.alpha = 0
-        }, completion: {_ in
-            desiredView.removeFromSuperview()
-        })
-        
-        BlurView.bounds = self.view.bounds
-        
-        
-        
-//        view.addSubview(nextFloatingButton)
-//        nextFloatingButton.addTarget(self, action: #selector(didTapNextButton), for: .touchUpInside)
-        
-    }
-//    private func _animateIn(desiredView: UIView) {
-//        let backgroundView = self.view!
-//
-//        // attach our desired view to the screen
-//        backgroundView.addSubview(desiredView)
-//
-//        // set view to scalling to be 120%
-//        desiredView.transform = CGAffineTransform(scaleX: 1.2, y: 1.2)
-//        desiredView.alpha = 0
-//        desiredView.center = backgroundView.center
-//
-//        // animate the effect
-//        UIView.animate(withDuration: 0.3, animations: {
-//            desiredView.transform = CGAffineTransform(scaleX: 1.0, y: 1.0)
-//            desiredView.alpha = 1
-//
-//        })
-//    }
-//
-//    private func _animateOut(desiredView: UIView) {
-//        // animate the effect
-//        UIView.animate(withDuration: 0.3, animations: {
-//            desiredView.transform = CGAffineTransform(scaleX: 1.2, y: 1.2)
-//            desiredView.alpha = 0
-//        }, completion: {_ in
-//            desiredView.removeFromSuperview()
-//        })
-//    }
     
     @IBAction func closeButtonBlurView(_ sender: Any) {
         _animateOut(desiredView: bgBlurJudul)
@@ -267,11 +219,12 @@ extension ViewController: UICollectionViewDelegate, UICollectionViewDataSource{
         let username: String = UserDefaults.standard.string(forKey: "username") ?? ""
         
         if username == "" {
-            self.performSegue(withIdentifier: "loginScreen", sender: nil)
-//            let controller = TesViewController()
-//            controller.modalPresentationStyle = .fullScreen
-//            controller.modalTransitionStyle = .coverVertical
-//            self.present(controller, animated: true, completion: nil)
+            
+            let storyboard = UIStoryboard.init(name: "UserIntro", bundle: nil)
+            let controller = storyboard.instantiateViewController(withIdentifier: "loginScreen")
+            controller.modalPresentationStyle = .fullScreen
+            controller.modalTransitionStyle = .coverVertical
+            self.present(controller, animated: true, completion: nil)
         }
     }
     

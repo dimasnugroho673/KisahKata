@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="3PU-4T-5gm">
     <device id="retina6_0" orientation="landscape" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
@@ -98,8 +98,11 @@
                             <constraint firstAttribute="trailing" secondItem="3L0-YI-pCI" secondAttribute="trailing" id="qCb-5B-xI6"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="2kt-qi-S3v"/>
                     <connections>
+                        <outlet property="backButton" destination="OIX-xm-kQd" id="k6O-pP-F9T"/>
                         <outlet property="bgBlurJudul" destination="RdR-QZ-ofF" id="Phv-eL-owc"/>
+                        <outlet property="haloLabel" destination="kCY-gH-Aog" id="4he-z3-oS1"/>
                         <outlet property="homeCollectionView" destination="3VG-wy-yZp" id="Rdx-E8-VH3"/>
                         <outlet property="judulCollectionView" destination="pFS-gM-Ho6" id="OoW-CE-dYd"/>
                         <outlet property="previewImage" destination="l27-Wm-fpR" id="plf-uu-IZv"/>
@@ -153,8 +156,10 @@
                                 </constraints>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OIX-xm-kQd">
-                                <rect key="frame" x="37" y="39" width="39" height="30"/>
-                                <state key="normal" title="Close"/>
+                                <rect key="frame" x="37" y="39" width="30" height="30"/>
+                                <state key="normal">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
                                 <connections>
                                     <action selector="closeButtonBlurView:" destination="BYZ-38-t0r" eventType="touchUpInside" id="L32-ct-0SH"/>
                                 </connections>
@@ -177,6 +182,23 @@
                     </view>
                     <blurEffect style="systemUltraThinMaterialDark"/>
                 </visualEffectView>
+            </objects>
+            <point key="canvasLocation" x="765.63981042654029" y="-3.0769230769230766"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="p54-wo-s0s">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" navigationBarHidden="YES" id="3PU-4T-5gm" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="5e4-oy-Rm2">
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="J3G-zI-qOi"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="odG-D8-3LO" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="13.507109004739336" y="-3.0769230769230766"/>
         </scene>

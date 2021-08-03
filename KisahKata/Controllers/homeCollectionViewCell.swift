@@ -26,7 +26,26 @@ class homeCollectionViewCell: UICollectionViewCell {
             self.cntnView.layer.shadowOffset = .zero
             self.cntnView.layer.shadowPath = UIBezierPath(rect: self.cntnView.bounds).cgPath
             //self.cntnView.layer.shouldRasterize = true
+            self.temaImage.roundCorners(corners: [.topLeft, .topRight], radius: 12)
+//            self.temaImage.roundCorners(corners: .topRight, radius: 12)
+            
         }
+        
+        
     }
+    
+    
 
+}
+
+
+extension UIView
+{
+  func roundCorners(corners:UIRectCorner, radius: CGFloat)
+  {
+    let path = UIBezierPath(roundedRect: self.bounds, byRoundingCorners: corners, cornerRadii: CGSize(width: radius, height: radius))
+    let mask = CAShapeLayer()
+    mask.path = path.cgPath
+    self.layer.mask = mask
+  }
 }

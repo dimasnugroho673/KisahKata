@@ -19,21 +19,22 @@ class ViewController: UIViewController {
     @IBOutlet weak var homeCollectionView: UICollectionView!
     
     fileprivate var currentPage: Int = 0 {
-            didSet {
-                print("page at centre = \(currentPage)")
-            }
+        didSet {
+            
+            print("page at centre = \(currentPage)")
         }
-        
-        fileprivate var pageSize: CGSize {
-            let layout = self.homeCollectionView.collectionViewLayout as! UPCarouselFlowLayout
-            var pageSize = layout.itemSize
-            if layout.scrollDirection == .horizontal {
-                pageSize.width += layout.minimumLineSpacing
-            } else {
-                pageSize.height += layout.minimumLineSpacing
-            }
-            return pageSize
+    }
+    
+    fileprivate var pageSize: CGSize {
+        let layout = self.homeCollectionView.collectionViewLayout as! UPCarouselFlowLayout
+        var pageSize = layout.itemSize
+        if layout.scrollDirection == .horizontal {
+            pageSize.width += layout.minimumLineSpacing
+        } else {
+            pageSize.height += layout.minimumLineSpacing
         }
+        return pageSize
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -65,6 +66,8 @@ class ViewController: UIViewController {
         
         homeCollectionView.delegate = self
         homeCollectionView.dataSource = self
+        judulCollectionView.delegate = self
+        judulCollectionView.dataSource = self
     }
     private func _animateIn(desiredView: UIView) {
         let backgroundView = self.view!
@@ -81,7 +84,7 @@ class ViewController: UIViewController {
         UIView.animate(withDuration: 0.3, animations: {
             desiredView.transform = CGAffineTransform(scaleX: 1.0, y: 1.0)
             desiredView.alpha = 1
-           
+            
         })
     }
     
@@ -93,6 +96,10 @@ class ViewController: UIViewController {
         }, completion: {_ in
             desiredView.removeFromSuperview()
         })
+    }
+    
+    @IBAction func closeButtonBlurView(_ sender: Any) {
+        _animateOut(desiredView: bgBlurJudul)
     }
     
 }
@@ -108,18 +115,21 @@ extension ViewController: UICollectionViewDelegate, UICollectionViewDataSource{
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        if (collectionView == homeCollectionView){
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "temaCell", for: indexPath)as! homeCollectionViewCell
             let tema = dataTema[indexPath.row]
             cell.temaImage.image = tema.picture
             cell.temaLabel.text = tema.nama
             
             if indexPath.row < 1 {
-                //cell.lockImage.image = UIImage(named: "img_star2")
+                cell.lockImage.isHidden = true
                 print("Item Terbuka")
             } else {
                 cell.lockImage.image = UIImage(named: "ic_lock")
             }
-        if (collectionView == judulCollectionView) {
+            return cell
+        }else
+        {
             let cellJudul = collectionView.dequeueReusableCell(withReuseIdentifier: "judulCell", for: indexPath)as! JudulCollectionViewCell
             let judul = dataJudul[indexPath.row]
             cellJudul.judulLabel.text = judul.nama
@@ -133,12 +143,11 @@ extension ViewController: UICollectionViewDelegate, UICollectionViewDataSource{
             
             return cellJudul
         }
-            
-            return cell
-        }
-
-        
-        
+    }
+    
+    
+    
+    
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         if collectionView == homeCollectionView && indexPath.row < 1 {
@@ -167,7 +176,7 @@ extension ViewController: UICollectionViewDelegate, UICollectionViewDataSource{
         let pageSide = (layout.scrollDirection == .vertical) ? self.pageSize.width : self.pageSize.height
         let offset = (layout.scrollDirection == .vertical) ? scrollView.contentOffset.x : scrollView.contentOffset.y
         currentPage = Int(floor((offset - pageSide / 2) / pageSide) + 1)
-    
+        
     }
     
     

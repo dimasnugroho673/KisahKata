@@ -16,6 +16,7 @@ class JudulCollectionViewCell: UICollectionViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
+        self.cntnView.layer.cornerRadius = 13
     }
 
 }

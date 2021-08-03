@@ -121,9 +121,9 @@
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="pFS-gM-Ho6">
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="pFS-gM-Ho6">
                                 <rect key="frame" x="61" y="107" width="300" height="229"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="300" id="l4X-fC-TCr"/>
                                     <constraint firstAttribute="height" constant="229" id="nJ3-xJ-2vL"/>
@@ -152,15 +152,24 @@
                                     <constraint firstAttribute="width" constant="422" id="vr7-Y7-ZNj"/>
                                 </constraints>
                             </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OIX-xm-kQd">
+                                <rect key="frame" x="37" y="39" width="39" height="30"/>
+                                <state key="normal" title="Close"/>
+                                <connections>
+                                    <action selector="closeButtonBlurView:" destination="BYZ-38-t0r" eventType="touchUpInside" id="L32-ct-0SH"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <constraints>
                             <constraint firstAttribute="bottom" secondItem="pFS-gM-Ho6" secondAttribute="bottom" constant="54" id="0jM-B6-qLa"/>
+                            <constraint firstItem="OIX-xm-kQd" firstAttribute="top" secondItem="IIn-2J-lL7" secondAttribute="top" constant="39" id="7bD-hZ-oSZ"/>
                             <constraint firstItem="74g-gp-AmI" firstAttribute="top" secondItem="IIn-2J-lL7" secondAttribute="top" constant="55" id="H0x-9t-ru2"/>
                             <constraint firstAttribute="trailing" secondItem="l27-Wm-fpR" secondAttribute="trailing" id="IVb-7V-u9m"/>
                             <constraint firstItem="l27-Wm-fpR" firstAttribute="leading" secondItem="74g-gp-AmI" secondAttribute="trailing" constant="148" id="JUl-h6-tzh"/>
                             <constraint firstItem="74g-gp-AmI" firstAttribute="leading" secondItem="IIn-2J-lL7" secondAttribute="leading" constant="148" id="Msw-s0-Rcg"/>
                             <constraint firstItem="pFS-gM-Ho6" firstAttribute="top" secondItem="74g-gp-AmI" secondAttribute="bottom" constant="23" id="TMM-Tz-9Jp"/>
                             <constraint firstItem="l27-Wm-fpR" firstAttribute="top" secondItem="IIn-2J-lL7" secondAttribute="top" id="VI9-8d-HFf"/>
+                            <constraint firstItem="OIX-xm-kQd" firstAttribute="leading" secondItem="IIn-2J-lL7" secondAttribute="leading" constant="37" id="W2g-F4-JCf"/>
                             <constraint firstItem="pFS-gM-Ho6" firstAttribute="leading" secondItem="IIn-2J-lL7" secondAttribute="leading" constant="61" id="mA5-j9-Vaq"/>
                             <constraint firstItem="l27-Wm-fpR" firstAttribute="leading" secondItem="pFS-gM-Ho6" secondAttribute="trailing" constant="61" id="q6V-hA-zhK"/>
                             <constraint firstAttribute="bottom" secondItem="l27-Wm-fpR" secondAttribute="bottom" id="qjL-By-Obw"/>

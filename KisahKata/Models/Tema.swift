@@ -12,3 +12,7 @@ struct Tema {
     let nama: String
     let picture: UIImage
 }
+
+struct Judul {
+    let nama: String
+}

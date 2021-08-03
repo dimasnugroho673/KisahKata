@@ -13,3 +13,9 @@ var dataTema: [Tema] = [
     Tema(nama: "Pertemanan", picture: UIImage(named: "story_1_1")!),
     Tema(nama: "Sekolah", picture: UIImage(named: "story_1_1")!)
 ]
+
+var dataJudul: [Judul] = [
+    Judul(nama: "Salam Kenal"),
+    Judul(nama: "Hobi"),
+    Judul(nama: "Cita-Cita")
+]

@@ -130,6 +130,7 @@ extension ViewController: UICollectionViewDelegate, UICollectionViewDataSource{
             if indexPath.row < 1 {
                 cellJudul.scoreImage.image = UIImage(named: "img_star-0")
             }else {
+                
                 cellJudul.scoreImage.image = UIImage(named: "ic_lock")
             }
             
@@ -142,7 +143,9 @@ extension ViewController: UICollectionViewDelegate, UICollectionViewDataSource{
             _animateIn(desiredView: bgBlurJudul)
             
             print("Cell \(indexPath.row) ditekan")
-        } else {
+        } else if collectionView == judulCollectionView{
+            print("Cell judul \(indexPath.row) ditekan")
+        } else{
             var dialogMessage = UIAlertController(title: "Cerita masih terkunci", message: "Cerita masih terkunci, kamu harus menyelesaikan tema sebelumnya untuk membuka cerita ini", preferredStyle: .alert)
             
             let ok = UIAlertAction(title: "OK", style: .default, handler: {(action) -> Void in
@@ -150,7 +153,6 @@ extension ViewController: UICollectionViewDelegate, UICollectionViewDataSource{
             dialogMessage.addAction(ok)
             self.present(dialogMessage, animated: true, completion: nil)
         }
-        
         
         
     }

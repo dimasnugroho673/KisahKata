@@ -91,34 +91,34 @@ class ViewController: UIViewController {
 //        nextFloatingButton.addTarget(self, action: #selector(didTapNextButton), for: .touchUpInside)
         
     }
-    private func _animateIn(desiredView: UIView) {
-        let backgroundView = self.view!
-        
-        // attach our desired view to the screen
-        backgroundView.addSubview(desiredView)
-        
-        // set view to scalling to be 120%
-        desiredView.transform = CGAffineTransform(scaleX: 1.2, y: 1.2)
-        desiredView.alpha = 0
-        desiredView.center = backgroundView.center
-        
-        // animate the effect
-        UIView.animate(withDuration: 0.3, animations: {
-            desiredView.transform = CGAffineTransform(scaleX: 1.0, y: 1.0)
-            desiredView.alpha = 1
-           
-        })
-    }
-    
-    private func _animateOut(desiredView: UIView) {
-        // animate the effect
-        UIView.animate(withDuration: 0.3, animations: {
-            desiredView.transform = CGAffineTransform(scaleX: 1.2, y: 1.2)
-            desiredView.alpha = 0
-        }, completion: {_ in
-            desiredView.removeFromSuperview()
-        })
-    }
+//    private func _animateIn(desiredView: UIView) {
+//        let backgroundView = self.view!
+//
+//        // attach our desired view to the screen
+//        backgroundView.addSubview(desiredView)
+//
+//        // set view to scalling to be 120%
+//        desiredView.transform = CGAffineTransform(scaleX: 1.2, y: 1.2)
+//        desiredView.alpha = 0
+//        desiredView.center = backgroundView.center
+//
+//        // animate the effect
+//        UIView.animate(withDuration: 0.3, animations: {
+//            desiredView.transform = CGAffineTransform(scaleX: 1.0, y: 1.0)
+//            desiredView.alpha = 1
+//
+//        })
+//    }
+//
+//    private func _animateOut(desiredView: UIView) {
+//        // animate the effect
+//        UIView.animate(withDuration: 0.3, animations: {
+//            desiredView.transform = CGAffineTransform(scaleX: 1.2, y: 1.2)
+//            desiredView.alpha = 0
+//        }, completion: {_ in
+//            desiredView.removeFromSuperview()
+//        })
+//    }
     
 }
 

@@ -13,6 +13,7 @@ class ViewController: UIViewController {
     @IBOutlet var BlurView: UIVisualEffectView!
     
     @IBOutlet weak var homeCollectionView: UICollectionView!
+    let userDefault = UserDefaults()
     
     fileprivate var currentPage: Int = 0 {
             didSet {
@@ -153,15 +154,13 @@ extension ViewController: UICollectionViewDelegate, UICollectionViewDataSource{
     private func _checkUserIsLogged() {
         let username: String = UserDefaults.standard.string(forKey: "username") ?? ""
         
-//        if username == "" {
-            
-            let storyboard = UIStoryboard(name: "UserIntro", bundle: nil)
-            let controller = storyboard.instantiateViewController(withIdentifier: "IntroVC") as! IntroViewController
-            controller.modalPresentationStyle = .fullScreen
-            controller.modalTransitionStyle = .coverVertical
-            present(controller, animated: true, completion: nil)
-//        }
+        if username == "" {
+            self.performSegue(withIdentifier: "loginScreen", sender: nil)
+//            let controller = TesViewController()
+//            controller.modalPresentationStyle = .fullScreen
+//            controller.modalTransitionStyle = .coverVertical
+//            self.present(controller, animated: true, completion: nil)
+        }
     }
-    
     
 }

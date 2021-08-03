@@ -21,21 +21,22 @@ class ViewController: UIViewController {
     let userDefault = UserDefaults()
     
     fileprivate var currentPage: Int = 0 {
-            didSet {
-                print("page at centre = \(currentPage)")
-            }
+        didSet {
+            
+            print("page at centre = \(currentPage)")
         }
-        
-        fileprivate var pageSize: CGSize {
-            let layout = self.homeCollectionView.collectionViewLayout as! UPCarouselFlowLayout
-            var pageSize = layout.itemSize
-            if layout.scrollDirection == .horizontal {
-                pageSize.width += layout.minimumLineSpacing
-            } else {
-                pageSize.height += layout.minimumLineSpacing
-            }
-            return pageSize
+    }
+    
+    fileprivate var pageSize: CGSize {
+        let layout = self.homeCollectionView.collectionViewLayout as! UPCarouselFlowLayout
+        var pageSize = layout.itemSize
+        if layout.scrollDirection == .horizontal {
+            pageSize.width += layout.minimumLineSpacing
+        } else {
+            pageSize.height += layout.minimumLineSpacing
         }
+        return pageSize
+    }
     
     private let nextFloatingButton: UIButton = {
         let button = UIButton()
@@ -82,6 +83,36 @@ class ViewController: UIViewController {
         
         homeCollectionView.delegate = self
         homeCollectionView.dataSource = self
+        judulCollectionView.delegate = self
+        judulCollectionView.dataSource = self
+    }
+    private func _animateIn(desiredView: UIView) {
+        let backgroundView = self.view!
+        
+        // attach our desired view to the screen
+        backgroundView.addSubview(desiredView)
+        
+        // set view to scalling to be 120%
+        desiredView.transform = CGAffineTransform(scaleX: 1.2, y: 1.2)
+        desiredView.alpha = 0
+        desiredView.center = backgroundView.center
+        
+        // animate the effect
+        UIView.animate(withDuration: 0.3, animations: {
+            desiredView.transform = CGAffineTransform(scaleX: 1.0, y: 1.0)
+            desiredView.alpha = 1
+            
+        })
+    }
+    
+    private func _animateOut(desiredView: UIView) {
+        // animate the effect
+        UIView.animate(withDuration: 0.3, animations: {
+            desiredView.transform = CGAffineTransform(scaleX: 1.2, y: 1.2)
+            desiredView.alpha = 0
+        }, completion: {_ in
+            desiredView.removeFromSuperview()
+        })
         
         BlurView.bounds = self.view.bounds
         
@@ -120,6 +151,10 @@ class ViewController: UIViewController {
 //        })
 //    }
     
+    @IBAction func closeButtonBlurView(_ sender: Any) {
+        _animateOut(desiredView: bgBlurJudul)
+    }
+    
 }
 
 extension ViewController: UICollectionViewDelegate, UICollectionViewDataSource{
@@ -133,21 +168,21 @@ extension ViewController: UICollectionViewDelegate, UICollectionViewDataSource{
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        if collectionView == homeCollectionView{
+        if (collectionView == homeCollectionView){
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "temaCell", for: indexPath)as! homeCollectionViewCell
             let tema = dataTema[indexPath.row]
             cell.temaImage.image = tema.picture
             cell.temaLabel.text = tema.nama
             
             if indexPath.row < 1 {
-                //cell.lockImage.image = UIImage(named: "img_star2")
+                cell.lockImage.isHidden = true
                 print("Item Terbuka")
             } else {
                 cell.lockImage.image = UIImage(named: "ic_lock")
             }
-            
             return cell
-        }else {
+        }else
+        {
             let cellJudul = collectionView.dequeueReusableCell(withReuseIdentifier: "judulCell", for: indexPath)as! JudulCollectionViewCell
             let judul = dataJudul[indexPath.row]
             cellJudul.judulLabel.text = judul.nama
@@ -155,19 +190,26 @@ extension ViewController: UICollectionViewDelegate, UICollectionViewDataSource{
             if indexPath.row < 1 {
                 cellJudul.scoreImage.image = UIImage(named: "img_star-0")
             }else {
+                
                 cellJudul.scoreImage.image = UIImage(named: "ic_lock")
             }
             
             return cellJudul
         }
-        
     }
+    
+    
+    
+    
+    
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         if collectionView == homeCollectionView && indexPath.row < 1 {
             _animateIn(desiredView: bgBlurJudul)
             
             print("Cell \(indexPath.row) ditekan")
-        } else {
+        } else if collectionView == judulCollectionView{
+            print("Cell judul \(indexPath.row) ditekan")
+        } else{
             var dialogMessage = UIAlertController(title: "Cerita masih terkunci", message: "Cerita masih terkunci, kamu harus menyelesaikan tema sebelumnya untuk membuka cerita ini", preferredStyle: .alert)
             
             let ok = UIAlertAction(title: "OK", style: .default, handler: {(action) -> Void in
@@ -177,15 +219,17 @@ extension ViewController: UICollectionViewDelegate, UICollectionViewDataSource{
         }
         
         
-        
     }
     
     func scrollViewDidEndDecelerating(_ scrollView: UIScrollView) {
+        let layoutA = self.judulCollectionView.collectionViewLayout as! UPCarouselFlowLayout
+        let pageSideA = (layoutA.scrollDirection == .vertical) ? self.pageSize.width : self.pageSize.height
+        let offsetA = (layoutA.scrollDirection == .vertical) ? scrollView.contentOffset.x : scrollView.contentOffset.y
         let layout = self.homeCollectionView.collectionViewLayout as! UPCarouselFlowLayout
         let pageSide = (layout.scrollDirection == .vertical) ? self.pageSize.width : self.pageSize.height
         let offset = (layout.scrollDirection == .vertical) ? scrollView.contentOffset.x : scrollView.contentOffset.y
         currentPage = Int(floor((offset - pageSide / 2) / pageSide) + 1)
-    
+        
     }
     
     

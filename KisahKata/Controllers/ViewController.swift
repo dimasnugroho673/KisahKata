@@ -108,7 +108,6 @@ extension ViewController: UICollectionViewDelegate, UICollectionViewDataSource{
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        if collectionView == homeCollectionView{
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "temaCell", for: indexPath)as! homeCollectionViewCell
             let tema = dataTema[indexPath.row]
             cell.temaImage.image = tema.picture
@@ -120,9 +119,7 @@ extension ViewController: UICollectionViewDelegate, UICollectionViewDataSource{
             } else {
                 cell.lockImage.image = UIImage(named: "ic_lock")
             }
-            
-            return cell
-        }else {
+        if (collectionView == judulCollectionView) {
             let cellJudul = collectionView.dequeueReusableCell(withReuseIdentifier: "judulCell", for: indexPath)as! JudulCollectionViewCell
             let judul = dataJudul[indexPath.row]
             cellJudul.judulLabel.text = judul.nama
@@ -136,8 +133,13 @@ extension ViewController: UICollectionViewDelegate, UICollectionViewDataSource{
             
             return cellJudul
         }
+            
+            return cell
+        }
+
         
-    }
+        
+    
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         if collectionView == homeCollectionView && indexPath.row < 1 {
             _animateIn(desiredView: bgBlurJudul)
@@ -158,6 +160,9 @@ extension ViewController: UICollectionViewDelegate, UICollectionViewDataSource{
     }
     
     func scrollViewDidEndDecelerating(_ scrollView: UIScrollView) {
+        let layoutA = self.judulCollectionView.collectionViewLayout as! UPCarouselFlowLayout
+        let pageSideA = (layoutA.scrollDirection == .vertical) ? self.pageSize.width : self.pageSize.height
+        let offsetA = (layoutA.scrollDirection == .vertical) ? scrollView.contentOffset.x : scrollView.contentOffset.y
         let layout = self.homeCollectionView.collectionViewLayout as! UPCarouselFlowLayout
         let pageSide = (layout.scrollDirection == .vertical) ? self.pageSize.width : self.pageSize.height
         let offset = (layout.scrollDirection == .vertical) ? scrollView.contentOffset.x : scrollView.contentOffset.y

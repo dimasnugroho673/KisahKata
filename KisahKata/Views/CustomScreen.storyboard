@@ -1,0 +1,216 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_0" orientation="landscape" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Ubuntu-Bold.ttf">
+            <string>Ubuntu-Bold</string>
+        </array>
+        <array key="Ubuntu-Regular.ttf">
+            <string>Ubuntu-Regular</string>
+        </array>
+    </customFonts>
+    <scenes>
+        <!--Alert Exit View Controller-->
+        <scene sceneID="kXE-VE-P9y">
+            <objects>
+                <viewController storyboardIdentifier="AlertExitVC" modalTransitionStyle="crossDissolve" modalPresentationStyle="overFullScreen" id="JFd-hl-DL9" customClass="AlertExitViewController" customModule="KisahKata" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="lnd-Mv-2xv">
+                        <rect key="frame" x="0.0" y="0.0" width="844" height="390"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="img_Layer-RadialGradient" translatesAutoresizingMaskIntoConstraints="NO" id="FjT-8L-a3n">
+                                <rect key="frame" x="0.0" y="0.0" width="844" height="390"/>
+                            </imageView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Hsb-aq-M5K">
+                                <rect key="frame" x="182.66666666666663" y="44" width="479" height="302"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ingin keluar?" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fuu-d1-HhY">
+                                        <rect key="frame" x="24" y="126.00000000000001" width="431" height="25.666666666666671"/>
+                                        <fontDescription key="fontDescription" name="Ubuntu-Bold" family="Ubuntu" pointSize="22"/>
+                                        <color key="textColor" name="TextPrimaryColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Kamu ingin keluar dari aktifitas ini dan kembali ke halaman utama?" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="27U-qr-nV4">
+                                        <rect key="frame" x="24" y="166.66666666666666" width="431" height="37.333333333333343"/>
+                                        <fontDescription key="fontDescription" name="Ubuntu-Regular" family="Ubuntu" pointSize="16"/>
+                                        <color key="textColor" name="TextPrimaryColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="70" translatesAutoresizingMaskIntoConstraints="NO" id="DOi-kh-ucf">
+                                        <rect key="frame" x="23" y="236" width="433" height="50"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="W0m-A9-Rfn">
+                                                <rect key="frame" x="0.0" y="0.0" width="181.33333333333334" height="50"/>
+                                                <fontDescription key="fontDescription" name="Ubuntu-Bold" family="Ubuntu" pointSize="18"/>
+                                                <state key="normal" title="Keluar">
+                                                    <color key="titleColor" name="TextPrimaryColor"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="didTapLeave:" destination="JFd-hl-DL9" eventType="touchUpInside" id="VPR-5W-Uhm"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ng5-W6-s1S">
+                                                <rect key="frame" x="251.33333333333337" y="0.0" width="181.66666666666663" height="50"/>
+                                                <color key="backgroundColor" name="SecondaryColor"/>
+                                                <fontDescription key="fontDescription" name="Ubuntu-Bold" family="Ubuntu" pointSize="18"/>
+                                                <state key="normal" title="Lanjut belajar">
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="didTapResume:" destination="JFd-hl-DL9" eventType="touchUpInside" id="ZKd-TL-Es2"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="50" id="UG5-Tc-ren"/>
+                                        </constraints>
+                                    </stackView>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="img_M-Eggy-Gone" translatesAutoresizingMaskIntoConstraints="NO" id="oAT-L6-0V4">
+                                        <rect key="frame" x="175.00000000000003" y="-36" width="128.99999999999997" height="142"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="129" id="krd-8o-6BZ"/>
+                                            <constraint firstAttribute="height" constant="142" id="nvY-z8-8aN"/>
+                                        </constraints>
+                                    </imageView>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstItem="oAT-L6-0V4" firstAttribute="top" secondItem="Hsb-aq-M5K" secondAttribute="top" constant="-36" id="1yV-oa-ELQ"/>
+                                    <constraint firstItem="fuu-d1-HhY" firstAttribute="top" secondItem="oAT-L6-0V4" secondAttribute="bottom" constant="20" id="4aC-8e-Yjv"/>
+                                    <constraint firstAttribute="trailingMargin" secondItem="DOi-kh-ucf" secondAttribute="trailing" constant="15" id="4b9-bH-sIH"/>
+                                    <constraint firstItem="27U-qr-nV4" firstAttribute="top" secondItem="fuu-d1-HhY" secondAttribute="bottom" constant="15" id="6bi-Of-qMP"/>
+                                    <constraint firstItem="27U-qr-nV4" firstAttribute="leading" secondItem="Hsb-aq-M5K" secondAttribute="leading" constant="24" id="Ce5-Wa-Sh0"/>
+                                    <constraint firstItem="DOi-kh-ucf" firstAttribute="leading" secondItem="Hsb-aq-M5K" secondAttribute="leadingMargin" constant="15" id="V2b-5q-DhC"/>
+                                    <constraint firstAttribute="bottomMargin" secondItem="DOi-kh-ucf" secondAttribute="bottom" constant="8" id="X55-qT-OIQ"/>
+                                    <constraint firstAttribute="trailing" secondItem="fuu-d1-HhY" secondAttribute="trailing" constant="24" id="ZeS-i8-Mxh"/>
+                                    <constraint firstAttribute="trailing" secondItem="oAT-L6-0V4" secondAttribute="trailing" constant="175" id="b91-zD-QAS"/>
+                                    <constraint firstItem="oAT-L6-0V4" firstAttribute="leading" secondItem="Hsb-aq-M5K" secondAttribute="leading" constant="175" id="fF6-si-jP2"/>
+                                    <constraint firstAttribute="trailing" secondItem="27U-qr-nV4" secondAttribute="trailing" constant="24" id="nVd-cu-Ifg"/>
+                                    <constraint firstItem="fuu-d1-HhY" firstAttribute="leading" secondItem="Hsb-aq-M5K" secondAttribute="leading" constant="24" id="qvu-bB-Nas"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="iod-hR-or2"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="FjT-8L-a3n" secondAttribute="bottom" id="EuH-Ig-BLc"/>
+                            <constraint firstItem="FjT-8L-a3n" firstAttribute="leading" secondItem="lnd-Mv-2xv" secondAttribute="leading" id="FLB-Cb-G5F"/>
+                            <constraint firstItem="Hsb-aq-M5K" firstAttribute="centerX" secondItem="FjT-8L-a3n" secondAttribute="centerX" id="NMU-uB-fxq"/>
+                            <constraint firstItem="Hsb-aq-M5K" firstAttribute="top" secondItem="iod-hR-or2" secondAttribute="top" constant="44" id="Uu4-ba-ivY"/>
+                            <constraint firstItem="FjT-8L-a3n" firstAttribute="top" secondItem="iod-hR-or2" secondAttribute="top" id="i7e-gL-PuT"/>
+                            <constraint firstAttribute="trailing" secondItem="FjT-8L-a3n" secondAttribute="trailing" id="pOt-hZ-vXT"/>
+                            <constraint firstItem="Hsb-aq-M5K" firstAttribute="centerY" secondItem="FjT-8L-a3n" secondAttribute="centerY" id="v4B-tw-ZuW"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="alertContainerView" destination="Hsb-aq-M5K" id="Lcu-Ef-drG"/>
+                        <outlet property="leaveButton" destination="W0m-A9-Rfn" id="8mw-zd-xUb"/>
+                        <outlet property="resumeButton" destination="Ng5-W6-s1S" id="8Zi-1V-i0U"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Mhy-z5-Jah" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="138.6255924170616" y="115.38461538461539"/>
+        </scene>
+        <!--Hint Story View Controller-->
+        <scene sceneID="fXB-IO-GLJ">
+            <objects>
+                <viewController storyboardIdentifier="HintStoryVC" modalTransitionStyle="crossDissolve" modalPresentationStyle="overFullScreen" id="w5N-CC-b4A" customClass="HintStoryViewController" customModule="KisahKata" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="v5l-UI-VyI">
+                        <rect key="frame" x="0.0" y="0.0" width="844" height="390"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="img_Layer-RadialGradient" translatesAutoresizingMaskIntoConstraints="NO" id="SuS-DC-KiE">
+                                <rect key="frame" x="0.0" y="0.0" width="844" height="390"/>
+                            </imageView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="HiY-Mp-vkS">
+                                <rect key="frame" x="182.66666666666663" y="44" width="479" height="302"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Petunjuk belajar" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="weU-UD-Pjb">
+                                        <rect key="frame" x="24" y="25" width="431" height="25"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="431" id="0SX-v0-L6Q"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="Ubuntu-Bold" family="Ubuntu" pointSize="22"/>
+                                        <color key="textColor" name="TextPrimaryColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="img_hint_story" translatesAutoresizingMaskIntoConstraints="NO" id="vh2-Ry-joi">
+                                        <rect key="frame" x="65" y="100" width="349" height="103"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="103" id="NZz-Ho-XfX"/>
+                                        </constraints>
+                                    </imageView>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dOA-A7-Cee">
+                                        <rect key="frame" x="114.00000000000003" y="237" width="250.99999999999997" height="50"/>
+                                        <color key="backgroundColor" name="SecondaryColor"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="50" id="l6N-RT-rkh"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="Ubuntu-Bold" family="Ubuntu" pointSize="18"/>
+                                        <state key="normal" title="Saya mengerti">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="didTapClose:" destination="w5N-CC-b4A" eventType="touchUpInside" id="WkA-R7-4ag"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="dOA-A7-Cee" secondAttribute="trailing" constant="114" id="GEN-6U-ILV"/>
+                                    <constraint firstAttribute="bottom" secondItem="dOA-A7-Cee" secondAttribute="bottom" constant="15" id="J8Y-LE-ndj"/>
+                                    <constraint firstItem="vh2-Ry-joi" firstAttribute="top" secondItem="weU-UD-Pjb" secondAttribute="bottom" constant="50" id="JiE-xq-tfv"/>
+                                    <constraint firstAttribute="trailing" secondItem="vh2-Ry-joi" secondAttribute="trailing" constant="65" id="bxj-2E-0tM"/>
+                                    <constraint firstItem="weU-UD-Pjb" firstAttribute="top" secondItem="HiY-Mp-vkS" secondAttribute="top" constant="25" id="gew-vE-3IG"/>
+                                    <constraint firstItem="dOA-A7-Cee" firstAttribute="leading" secondItem="HiY-Mp-vkS" secondAttribute="leading" constant="114" id="ip2-W6-anz"/>
+                                    <constraint firstItem="weU-UD-Pjb" firstAttribute="leading" secondItem="HiY-Mp-vkS" secondAttribute="leading" constant="24" id="mAg-hF-Qwu"/>
+                                    <constraint firstItem="vh2-Ry-joi" firstAttribute="leading" secondItem="HiY-Mp-vkS" secondAttribute="leading" constant="65" id="sh4-Q7-fOX"/>
+                                    <constraint firstAttribute="trailing" secondItem="weU-UD-Pjb" secondAttribute="trailing" constant="24" id="yJu-5n-xgg"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="PM1-2d-Ew5"/>
+                        <color key="backgroundColor" white="1" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="HiY-Mp-vkS" firstAttribute="top" secondItem="PM1-2d-Ew5" secondAttribute="top" constant="44" id="7FG-dK-L6K"/>
+                            <constraint firstItem="HiY-Mp-vkS" firstAttribute="centerX" secondItem="SuS-DC-KiE" secondAttribute="centerX" id="LNP-QR-Yds"/>
+                            <constraint firstItem="SuS-DC-KiE" firstAttribute="leading" secondItem="v5l-UI-VyI" secondAttribute="leading" id="Oxx-ib-mRD"/>
+                            <constraint firstItem="SuS-DC-KiE" firstAttribute="top" secondItem="PM1-2d-Ew5" secondAttribute="top" id="WOL-CN-ZUJ"/>
+                            <constraint firstItem="HiY-Mp-vkS" firstAttribute="centerY" secondItem="SuS-DC-KiE" secondAttribute="centerY" id="XDS-bw-5xm"/>
+                            <constraint firstAttribute="trailing" secondItem="SuS-DC-KiE" secondAttribute="trailing" id="ha0-Wp-Hr5"/>
+                            <constraint firstAttribute="bottom" secondItem="SuS-DC-KiE" secondAttribute="bottom" id="jlt-vb-cWk"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="closeHintButton" destination="dOA-A7-Cee" id="P78-mh-SfJ"/>
+                        <outlet property="hintContainerView" destination="HiY-Mp-vkS" id="bdJ-VX-9cX"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dJq-b6-vAG" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="940.52132701421795" y="113.84615384615384"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="img_Layer-RadialGradient" width="842" height="389"/>
+        <image name="img_M-Eggy-Gone" width="151" height="153"/>
+        <image name="img_hint_story" width="442" height="117"/>
+        <namedColor name="SecondaryColor">
+            <color red="0.0039215686274509803" green="0.5725490196078431" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="TextPrimaryColor">
+            <color red="0.019607843137254902" green="0.23137254901960785" blue="0.45490196078431372" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

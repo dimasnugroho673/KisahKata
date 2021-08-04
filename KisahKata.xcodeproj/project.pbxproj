@@ -35,6 +35,15 @@
 		4033062526B5A55600506E7C /* sibi_bermain.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 4033061D26B5A55600506E7C /* sibi_bermain.mp4 */; };
 		4033062726B5A57100506E7C /* List2_D_TransferLearning.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 4033062626B5A57100506E7C /* List2_D_TransferLearning.mlmodel */; };
 		4033062A26B5A5CE00506E7C /* Stories.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4033062926B5A5CE00506E7C /* Stories.swift */; };
+		403B93F526BA43310071A376 /* CustomStoryProgressBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 403B93F426BA43310071A376 /* CustomStoryProgressBar.swift */; };
+		403B93F726BA434D0071A376 /* LabelTapGesture.swift in Sources */ = {isa = PBXBuildFile; fileRef = 403B93F626BA434D0071A376 /* LabelTapGesture.swift */; };
+		403B93FA26BA437B0071A376 /* AlertExitService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 403B93F926BA437B0071A376 /* AlertExitService.swift */; };
+		403B93FC26BA439D0071A376 /* HintService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 403B93FB26BA439D0071A376 /* HintService.swift */; };
+		403B93FE26BA43C10071A376 /* AlertExitViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 403B93FD26BA43C10071A376 /* AlertExitViewController.swift */; };
+		403B940026BA43DB0071A376 /* HintStoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 403B93FF26BA43DB0071A376 /* HintStoryViewController.swift */; };
+		403B940226BA43F50071A376 /* StoryOverviewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 403B940126BA43F50071A376 /* StoryOverviewViewController.swift */; };
+		403B940426BA440B0071A376 /* StorytellingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 403B940326BA440B0071A376 /* StorytellingViewController.swift */; };
+		403B940626BA45030071A376 /* CustomScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 403B940526BA45030071A376 /* CustomScreen.storyboard */; };
 		40EB3E1C26B257A400D9DEC9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40EB3E1B26B257A400D9DEC9 /* AppDelegate.swift */; };
 		40EB3E1E26B257A400D9DEC9 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40EB3E1D26B257A400D9DEC9 /* SceneDelegate.swift */; };
 		40EB3E2026B257A400D9DEC9 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40EB3E1F26B257A400D9DEC9 /* ViewController.swift */; };
@@ -86,6 +95,15 @@
 		4033061D26B5A55600506E7C /* sibi_bermain.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = sibi_bermain.mp4; sourceTree = "<group>"; };
 		4033062626B5A57100506E7C /* List2_D_TransferLearning.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = List2_D_TransferLearning.mlmodel; sourceTree = "<group>"; };
 		4033062926B5A5CE00506E7C /* Stories.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Stories.swift; sourceTree = "<group>"; };
+		403B93F426BA43310071A376 /* CustomStoryProgressBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomStoryProgressBar.swift; sourceTree = "<group>"; };
+		403B93F626BA434D0071A376 /* LabelTapGesture.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LabelTapGesture.swift; sourceTree = "<group>"; };
+		403B93F926BA437B0071A376 /* AlertExitService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertExitService.swift; sourceTree = "<group>"; };
+		403B93FB26BA439D0071A376 /* HintService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HintService.swift; sourceTree = "<group>"; };
+		403B93FD26BA43C10071A376 /* AlertExitViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertExitViewController.swift; sourceTree = "<group>"; };
+		403B93FF26BA43DB0071A376 /* HintStoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HintStoryViewController.swift; sourceTree = "<group>"; };
+		403B940126BA43F50071A376 /* StoryOverviewViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryOverviewViewController.swift; sourceTree = "<group>"; };
+		403B940326BA440B0071A376 /* StorytellingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StorytellingViewController.swift; sourceTree = "<group>"; };
+		403B940526BA45030071A376 /* CustomScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = CustomScreen.storyboard; sourceTree = "<group>"; };
 		40EB3E1826B257A400D9DEC9 /* KisahKata.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KisahKata.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		40EB3E1B26B257A400D9DEC9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		40EB3E1D26B257A400D9DEC9 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -127,6 +145,7 @@
 				403305EA26B59FE500506E7C /* Extension.swift */,
 				403305FD26B5A0DD00506E7C /* GifImage.swift */,
 				517AFAA626B5C91B00C4DC6C /* UPCarouselFlowLayout.swift */,
+				403B93F626BA434D0071A376 /* LabelTapGesture.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -158,6 +177,8 @@
 				4033060A26B5A24300506E7C /* Practice.storyboard */,
 				E3EEF81B26B6E5E1002D1F0F /* EndStory.storyboard */,
 				E3D9AB1526B9835C00DBCDB5 /* UserIntro.storyboard */,
+				403B93F426BA43310071A376 /* CustomStoryProgressBar.swift */,
+				403B940526BA45030071A376 /* CustomScreen.storyboard */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -172,6 +193,10 @@
 				E33AE72D26B5AF9000CCEA2E /* StoryEndViewController.swift */,
 				E3F2177426B39618003B4CB5 /* IntroViewController.swift */,
 				E3A76F8626B7B3E000E1FEF3 /* TesViewController.swift */,
+				403B93FD26BA43C10071A376 /* AlertExitViewController.swift */,
+				403B93FF26BA43DB0071A376 /* HintStoryViewController.swift */,
+				403B940126BA43F50071A376 /* StoryOverviewViewController.swift */,
+				403B940326BA440B0071A376 /* StorytellingViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -231,6 +256,15 @@
 			path = MLModels;
 			sourceTree = "<group>";
 		};
+		403B93F826BA435E0071A376 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				403B93F926BA437B0071A376 /* AlertExitService.swift */,
+				403B93FB26BA439D0071A376 /* HintService.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
 		40EB3E0F26B257A400D9DEC9 = {
 			isa = PBXGroup;
 			children = (
@@ -250,6 +284,7 @@
 		40EB3E1A26B257A400D9DEC9 /* KisahKata */ = {
 			isa = PBXGroup;
 			children = (
+				403B93F826BA435E0071A376 /* Services */,
 				4033060226B5A17300506E7C /* Resources */,
 				4033060126B5A15400506E7C /* Models */,
 				4033060026B5A14E00506E7C /* Controllers */,
@@ -331,6 +366,7 @@
 				4033061326B5A54600506E7C /* story_1_3.jpeg in Resources */,
 				403305F926B5A09E00506E7C /* Ubuntu-BoldItalic.ttf in Resources */,
 				4033061226B5A54600506E7C /* story_1_2.jpeg in Resources */,
+				403B940626BA45030071A376 /* CustomScreen.storyboard in Resources */,
 				4033061F26B5A55600506E7C /* sibi_memperkenalkan.mp4 in Resources */,
 				4033060726B5A21600506E7C /* Storytelling.storyboard in Resources */,
 				40EB3E2B26B257A500D9DEC9 /* LaunchScreen.storyboard in Resources */,
@@ -364,10 +400,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				E3EEF82326B6EF3E002D1F0F /* SubStoryViewController.swift in Sources */,
+				403B940426BA440B0071A376 /* StorytellingViewController.swift in Sources */,
 				403305EB26B59FE500506E7C /* Extension.swift in Sources */,
 				E3F2177526B39618003B4CB5 /* IntroViewController.swift in Sources */,
+				403B93FE26BA43C10071A376 /* AlertExitViewController.swift in Sources */,
+				403B940026BA43DB0071A376 /* HintStoryViewController.swift in Sources */,
 				4033062A26B5A5CE00506E7C /* Stories.swift in Sources */,
 				517AFAA726B5C91B00C4DC6C /* UPCarouselFlowLayout.swift in Sources */,
+				403B93F526BA43310071A376 /* CustomStoryProgressBar.swift in Sources */,
 				517AFA9F26B5C5D300C4DC6C /* Tema.swift in Sources */,
 				40EB3E2026B257A400D9DEC9 /* ViewController.swift in Sources */,
 				515E426C26B9016600DE21E7 /* JudulCollectionViewCell.swift in Sources */,
@@ -376,8 +416,12 @@
 				517AFAA426B5C71900C4DC6C /* homeCollectionViewCell.swift in Sources */,
 				40EB3E1C26B257A400D9DEC9 /* AppDelegate.swift in Sources */,
 				517AFAA126B5C62F00C4DC6C /* DataTema.swift in Sources */,
+				403B93FC26BA439D0071A376 /* HintService.swift in Sources */,
+				403B940226BA43F50071A376 /* StoryOverviewViewController.swift in Sources */,
 				40EB3E1E26B257A400D9DEC9 /* SceneDelegate.swift in Sources */,
 				E3A76F8726B7B3E000E1FEF3 /* TesViewController.swift in Sources */,
+				403B93FA26BA437B0071A376 /* AlertExitService.swift in Sources */,
+				403B93F726BA434D0071A376 /* LabelTapGesture.swift in Sources */,
 				4033062726B5A57100506E7C /* List2_D_TransferLearning.mlmodel in Sources */,
 				40EB3E2626B257A400D9DEC9 /* KisahKata.xcdatamodeld in Sources */,
 			);

@@ -117,7 +117,7 @@
                         <outlet property="previewImage" destination="l27-Wm-fpR" id="plf-uu-IZv"/>
                         <outlet property="temaLabel" destination="74g-gp-AmI" id="eFg-nJ-SQf"/>
                         <outlet property="userLabel" destination="5TB-hw-I59" id="UdQ-fe-5Xg"/>
-                        <segue destination="fEe-KI-pmQ" kind="show" id="B3I-hT-kev"/>
+                        <segue destination="fEe-KI-pmQ" kind="presentation" modalPresentationStyle="fullScreen" id="B3I-hT-kev"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

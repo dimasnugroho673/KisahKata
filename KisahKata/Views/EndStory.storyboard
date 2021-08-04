@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="bHY-Ka-K0X">
     <device id="retina6_0" orientation="landscape" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
@@ -7,6 +7,14 @@
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="Ubuntu-Bold.ttf">
+            <string>Ubuntu-Bold</string>
+        </array>
+        <array key="Ubuntu-Regular.ttf">
+            <string>Ubuntu-Regular</string>
+        </array>
+    </customFonts>
     <scenes>
         <!--Story End View Controller-->
         <scene sceneID="z8Q-L6-DL3">
@@ -16,44 +24,67 @@
                         <rect key="frame" x="0.0" y="0.0" width="844" height="390"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="EndBackground" translatesAutoresizingMaskIntoConstraints="NO" id="ciC-gO-5ZX">
-                                <rect key="frame" x="0.0" y="0.0" width="896" height="414"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="EndBackground" translatesAutoresizingMaskIntoConstraints="NO" id="ciC-gO-5ZX">
+                                <rect key="frame" x="0.0" y="0.0" width="844" height="390"/>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Berhasil" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hY4-pJ-Nl3">
-                                <rect key="frame" x="272" y="52" width="353" height="66"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="34"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Berhasil!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hY4-pJ-Nl3">
+                                <rect key="frame" x="60" y="60" width="724" height="40.666666666666657"/>
+                                <fontDescription key="fontDescription" name="Ubuntu-Bold" family="Ubuntu" pointSize="36"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="img_star-3" translatesAutoresizingMaskIntoConstraints="NO" id="oGq-1d-uzt">
-                                <rect key="frame" x="328" y="126" width="240" height="82"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Kamu telah menyelesaikan kisah dengan baik" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0cA-cD-gYL">
-                                <rect key="frame" x="296" y="216" width="304" height="59"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Kamu telah menyelesaikan kisah dengan baik" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0cA-cD-gYL">
+                                <rect key="frame" x="270" y="191.66666666666666" width="304" height="40.666666666666657"/>
+                                <fontDescription key="fontDescription" name="Ubuntu-Regular" family="Ubuntu" pointSize="18"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7uI-I7-tmX">
-                                <rect key="frame" x="310" y="283" width="276" height="53"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7uI-I7-tmX">
+                                <rect key="frame" x="284" y="272" width="276" height="50"/>
                                 <color key="backgroundColor" red="0.25101926920000001" green="0.56500226259999997" blue="0.96867746109999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                <state key="normal" title="􀎟 Kembali ke menu awal">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="rjJ-j8-0xD"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Ubuntu-Bold" family="Ubuntu" pointSize="18"/>
+                                <state key="normal" title="Kembali ke menu awal">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
+                                <connections>
+                                    <action selector="didTapGoToHomeButton:" destination="bHY-Ka-K0X" eventType="touchUpInside" id="qJE-EQ-vZC"/>
+                                </connections>
                             </button>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="img_star-3" translatesAutoresizingMaskIntoConstraints="NO" id="oGq-1d-uzt">
+                                <rect key="frame" x="347" y="125.66666666666669" width="150" height="41"/>
+                            </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="Xhi-I6-1eg"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="ciC-gO-5ZX" firstAttribute="leading" secondItem="ghi-XB-LjR" secondAttribute="leading" id="734-c8-yhv"/>
+                            <constraint firstItem="oGq-1d-uzt" firstAttribute="leading" secondItem="Xhi-I6-1eg" secondAttribute="leading" constant="303" id="84x-CQ-FsX"/>
+                            <constraint firstItem="7uI-I7-tmX" firstAttribute="leading" secondItem="Xhi-I6-1eg" secondAttribute="leading" constant="240" id="9Bl-4v-bGu"/>
+                            <constraint firstAttribute="bottomMargin" secondItem="7uI-I7-tmX" secondAttribute="bottom" constant="47" id="CzU-yD-S1K"/>
+                            <constraint firstItem="0cA-cD-gYL" firstAttribute="top" secondItem="oGq-1d-uzt" secondAttribute="bottom" constant="25" id="IFX-vM-yCQ"/>
+                            <constraint firstItem="Xhi-I6-1eg" firstAttribute="trailing" secondItem="hY4-pJ-Nl3" secondAttribute="trailing" constant="16" id="N6D-iV-DAm"/>
+                            <constraint firstItem="ciC-gO-5ZX" firstAttribute="top" secondItem="Xhi-I6-1eg" secondAttribute="top" id="P4Q-sx-6XF"/>
+                            <constraint firstItem="Xhi-I6-1eg" firstAttribute="trailing" secondItem="0cA-cD-gYL" secondAttribute="trailing" constant="226" id="QDw-nR-1Tk"/>
+                            <constraint firstAttribute="bottom" secondItem="ciC-gO-5ZX" secondAttribute="bottom" id="ZTJ-NV-8Es"/>
+                            <constraint firstItem="hY4-pJ-Nl3" firstAttribute="top" secondItem="Xhi-I6-1eg" secondAttribute="top" constant="60" id="aLq-nT-wYo"/>
+                            <constraint firstItem="0cA-cD-gYL" firstAttribute="leading" secondItem="Xhi-I6-1eg" secondAttribute="leading" constant="226" id="bnc-7D-WQs"/>
+                            <constraint firstItem="hY4-pJ-Nl3" firstAttribute="leading" secondItem="Xhi-I6-1eg" secondAttribute="leading" constant="16" id="dB8-FS-zNz"/>
+                            <constraint firstItem="Xhi-I6-1eg" firstAttribute="trailing" secondItem="7uI-I7-tmX" secondAttribute="trailing" constant="240" id="fkO-dr-Xxi"/>
+                            <constraint firstItem="oGq-1d-uzt" firstAttribute="top" secondItem="hY4-pJ-Nl3" secondAttribute="bottom" constant="25" id="gwN-Zy-PEu"/>
+                            <constraint firstItem="Xhi-I6-1eg" firstAttribute="trailing" secondItem="oGq-1d-uzt" secondAttribute="trailing" constant="303" id="io3-PE-dOs"/>
+                            <constraint firstAttribute="trailing" secondItem="ciC-gO-5ZX" secondAttribute="trailing" id="uJl-TH-iPN"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="endStoryAcceptButton" destination="7uI-I7-tmX" id="9j1-OZ-mK5"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="DPf-bs-An3" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="35" y="-767"/>
+            <point key="canvasLocation" x="34.834123222748815" y="-767.69230769230762"/>
         </scene>
     </scenes>
     <resources>

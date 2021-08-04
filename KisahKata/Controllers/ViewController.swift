@@ -24,7 +24,6 @@ class ViewController: UIViewController {
     
     fileprivate var currentPage: Int = 0 {
         didSet {
-            
             print("page at centre = \(currentPage)")
         }
     }
@@ -159,15 +158,15 @@ extension ViewController: UICollectionViewDelegate, UICollectionViewDataSource{
             _animateIn(desiredView: bgBlurJudul)
             
             print("Cell \(indexPath.row) ditekan")
-        } else if collectionView == judulCollectionView{
+        } else if collectionView == judulCollectionView {
+            
+            performSegue(withIdentifier: "goToStoryOverview", sender: nil)
+            
             print("Cell judul \(indexPath.row) ditekan")
         } else{
-            var dialogMessage = UIAlertController(title: "Cerita masih terkunci", message: "Cerita masih terkunci, kamu harus menyelesaikan tema sebelumnya untuk membuka cerita ini", preferredStyle: .alert)
-            
-            let ok = UIAlertAction(title: "OK", style: .default, handler: {(action) -> Void in
-            })
-            dialogMessage.addAction(ok)
-            self.present(dialogMessage, animated: true, completion: nil)
+            let alert = AlertLockItemService()
+            let alertVC = alert.alert(title: "Tema terkunci", message: "Tema masih terkunci, selesaikan tema sebelumnya untuk membuka tema baru")
+            present(alertVC, animated: true)
         }
         
         
@@ -175,13 +174,12 @@ extension ViewController: UICollectionViewDelegate, UICollectionViewDataSource{
     
     func scrollViewDidEndDecelerating(_ scrollView: UIScrollView) {
         let layoutA = self.judulCollectionView.collectionViewLayout as! UPCarouselFlowLayout
-        let pageSideA = (layoutA.scrollDirection == .vertical) ? self.pageSize.width : self.pageSize.height
-        let offsetA = (layoutA.scrollDirection == .vertical) ? scrollView.contentOffset.x : scrollView.contentOffset.y
+        _ = (layoutA.scrollDirection == .vertical) ? self.pageSize.width : self.pageSize.height
+        _ = (layoutA.scrollDirection == .vertical) ? scrollView.contentOffset.x : scrollView.contentOffset.y
         let layout = self.homeCollectionView.collectionViewLayout as! UPCarouselFlowLayout
         let pageSide = (layout.scrollDirection == .vertical) ? self.pageSize.width : self.pageSize.height
         let offset = (layout.scrollDirection == .vertical) ? scrollView.contentOffset.x : scrollView.contentOffset.y
         currentPage = Int(floor((offset - pageSide / 2) / pageSide) + 1)
-        
     }
     
     

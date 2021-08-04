@@ -17,6 +17,7 @@ class StorytellingViewController: UIViewController {
     
     let story: [String] = ["*Selamat pagi*, semuanya.", "Saya ingin *memperkenalkan*, nama saya M-Eggy.", "Tapi kalian bisa *panggil* saya Megi.", "Saya anak kedua dari tiga *bersaudara*.", "Umur saya 9 tahun. Saya lahir di Batam, 23 Februari 2012."]
     let highlightedWords = ["Selamat pagi", "memperkenalkan", "panggil", "bersaudara"]
+    let storyIlustrations: [String] = ["img_story_sample", "img_Story-BG-Crop", "img_story_sample", "img_Story-BG-Crop", "img_story_sample"]
     let storyInArray: [String] = []
     var activePart: Int = 0
     var wordTemp: String = ""
@@ -30,6 +31,7 @@ class StorytellingViewController: UIViewController {
     @IBOutlet weak var descriptionTextView: UITextView!
     @IBOutlet weak var closeHintButton: UIButton!
     @IBOutlet weak var storyProgressBar: UIProgressView!
+    @IBOutlet weak var ilustrationStoryImage: UIImageView!
     
     var playerLayer = AVPlayerLayer()
     let playVideoButton = UIButton(frame: CGRect(x: 100, y: 400, width: 200, height: 60))
@@ -80,9 +82,6 @@ class StorytellingViewController: UIViewController {
         
         closeHintButton.layer.cornerRadius = 12
         
-        /// init progressbar
-        storyProgressBar.progress = Float(Float(activePart) / Float(story.count - 1))
-        
         /// setup label click
         _generateContent()
     }
@@ -110,17 +109,14 @@ class StorytellingViewController: UIViewController {
             self.activePart += 1
             _generateContent()
             
-//            _fetchPageControl(page: self.activePart)
 //            self._animateSpringView(sender)
         } else if self.activePart == story.count - 1 {
             _generateContent()
             nextButton.setImage(UIImage(named: "ic_complete"), for: .normal)
             
             /// cerita selesai
-            
 //            self._animateSpringView(sender)
-//            performSegue(withIdentifier: "scoreStorySegue", sender: nil)
-//            performSegue(withIdentifier: "endStorySegue", sender: nil)
+            performSegue(withIdentifier: "goToEndStory", sender: nil)
         }
 
         UIImpactFeedbackGenerator(style: .soft).impactOccurred()
@@ -147,12 +143,20 @@ class StorytellingViewController: UIViewController {
     
     
     
-    //MARK:- Setup Blur Video Sign Language
+    //MARK:- Setup all components
     private func _generateContent() {
-//        _fetchIlustration()
+        _fetchIlustration()
         _fetchProgressBar()
         _fetchScriptStory()
         _fetchButton()
+    }
+    
+    private func _fetchIlustration() {
+        /// change image with transition
+        _transitionImage(desiredView: ilustrationStoryImage)
+        
+        ilustrationStoryImage.contentMode = .scaleAspectFill
+        
     }
     
     private func _fetchProgressBar() {
@@ -161,19 +165,33 @@ class StorytellingViewController: UIViewController {
         if Float(Float(activePart) / Float(story.count - 1)) == 1.0 {
             storyProgressBar.progressTintColor = UIColor(named: "SuccessColor")
         } else {
-            storyProgressBar.progressTintColor = UIColor(named: "SecondaryColor")
+            if Float(Float(activePart) / Float(story.count - 1)) == 0.0 {
+                storyProgressBar.progress = Float(Float(activePart + 1) / Float(story.count - 1))
+            } else {
+                storyProgressBar.progress = Float(Float(activePart) / Float(story.count - 1))
+                storyProgressBar.progressTintColor = UIColor(named: "SecondaryColor")
+            }
         }
     }
     
     private func _fetchButton() {
         if self.activePart == 0 {
-            previousButton.isHidden = true
+            UIView.transition(with: previousButton, duration: 0.75, options: .transitionCrossDissolve, animations: {
+                self.previousButton.isHidden = true
+            }, completion: nil)
         } else {
-            previousButton.isHidden = false
+            UIView.transition(with: previousButton, duration: 0.75, options: .transitionCrossDissolve, animations: {
+                self.previousButton.isHidden = false
+            }, completion: nil)
             if self.activePart == story.count - 1 {
-                nextButton.setImage(UIImage(named: "ic_complete"), for: .normal)
+                /// cerita selesai
+                UIView.transition(with: nextButton, duration: 0.5, options: .transitionCrossDissolve, animations: {
+                    self.nextButton.setImage(UIImage(named: "ic_complete"), for: .normal)
+                }, completion: nil)
             } else {
-                nextButton.setImage(UIImage(named: "ic_next"), for: .normal)
+                UIView.transition(with: nextButton, duration: 0.5, options: .transitionCrossDissolve, animations: {
+                    self.nextButton.setImage(UIImage(named: "ic_next"), for: .normal)
+                }, completion: nil)
             }
             
         }
@@ -254,6 +272,23 @@ class StorytellingViewController: UIViewController {
     //MARK:- OBSERVER
     @objc func videoDidEnd(notification: NSNotification) {
         playVideoButton.isHidden = false
+    }
+    
+    //MARK:- fadeeIn
+    private func _transitionImage(desiredView: UIView) {
+        
+        UIView.transition(with: self.ilustrationStoryImage, duration: 0.75, options: .transitionCrossDissolve, animations: {
+            self.ilustrationStoryImage.image = UIImage(named: self.storyIlustrations[self.activePart])
+        }, completion: nil)
+    }
+    
+    //MARK:- fadeOut
+    private func _fadeOut(desiredView: UIView) {
+        desiredView.alpha = 1
+        
+        UIView.animate(withDuration: 0.8, animations: {
+            desiredView.alpha = 0
+        })
     }
     
     
@@ -344,7 +379,6 @@ class StorytellingViewController: UIViewController {
             let attributedStr = (NSAttributedString.init(string: arrayText?[i] ?? "", attributes: attributes as [NSAttributedString.Key : Any]))
             
             if i != 0 {
-                
                 finalAttributedString.append(NSAttributedString.init(string: ""))
             }
             

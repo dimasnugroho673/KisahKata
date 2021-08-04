@@ -121,6 +121,7 @@
                         <outlet property="closeHintButton" destination="ZdQ-nY-KlW" id="XpF-YH-89d"/>
                         <outlet property="descriptionTextView" destination="tjv-7c-5EV" id="fnM-aE-y2i"/>
                         <outlet property="hintBgBlurView" destination="k3m-VK-dwO" id="8Nl-2g-8HC"/>
+                        <outlet property="ilustrationStoryImage" destination="WVn-f9-azE" id="oa9-k8-ReE"/>
                         <outlet property="nextButton" destination="NdB-TS-Squ" id="xlS-rT-gYG"/>
                         <outlet property="previousButton" destination="Zp0-lM-4D8" id="XcS-fX-mbd"/>
                         <outlet property="scriptContainerView" destination="Tib-Bc-4BJ" id="gpl-O5-gcc"/>
@@ -128,6 +129,7 @@
                         <outlet property="storyProgressBar" destination="lzy-5N-WgW" id="HPf-h5-PuE"/>
                         <outlet property="titleHintLabel" destination="uHL-bR-bW0" id="Zmj-uA-Vw9"/>
                         <outlet property="videoContainerView" destination="uDy-6m-E1O" id="Lqj-8i-Dhq"/>
+                        <segue destination="4Pp-Pd-mGY" kind="show" identifier="goToEndStory" id="7AJ-Dp-znn"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="KLT-23-nzf" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -184,6 +186,16 @@
                 </visualEffectView>
             </objects>
             <point key="canvasLocation" x="-14.218009478672984" y="84.615384615384613"/>
+        </scene>
+        <!--EndStory-->
+        <scene sceneID="1Bk-AG-Fws">
+            <objects>
+                <viewControllerPlaceholder storyboardName="EndStory" id="4Pp-Pd-mGY" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="Ccg-zn-qOA"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="lyH-Fe-jB8" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="584" y="68"/>
         </scene>
     </scenes>
     <resources>

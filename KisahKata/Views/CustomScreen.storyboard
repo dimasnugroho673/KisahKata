@@ -198,11 +198,103 @@
             </objects>
             <point key="canvasLocation" x="940.52132701421795" y="113.84615384615384"/>
         </scene>
+        <!--Alert Lock Item View Controller-->
+        <scene sceneID="aO6-aH-6UO">
+            <objects>
+                <viewController storyboardIdentifier="AlertLockItemVC" modalTransitionStyle="crossDissolve" modalPresentationStyle="overFullScreen" id="oZc-t6-W4H" customClass="AlertLockItemViewController" customModule="KisahKata" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="uiq-gZ-zu4">
+                        <rect key="frame" x="0.0" y="0.0" width="844" height="390"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="img_Layer-RadialGradient" translatesAutoresizingMaskIntoConstraints="NO" id="6jW-RY-ups">
+                                <rect key="frame" x="0.0" y="0.0" width="844" height="390"/>
+                            </imageView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nd0-rI-fKj">
+                                <rect key="frame" x="182.66666666666663" y="44" width="479" height="302"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Terkunci" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mby-O2-zcD">
+                                        <rect key="frame" x="24" y="25" width="431" height="25"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="431" id="YE7-qz-RrU"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="Ubuntu-Bold" family="Ubuntu" pointSize="22"/>
+                                        <color key="textColor" name="TextPrimaryColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="siV-2M-0ox">
+                                        <rect key="frame" x="114.00000000000003" y="237" width="250.99999999999997" height="50"/>
+                                        <color key="backgroundColor" name="SecondaryColor"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="50" id="my6-25-bDR"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="Ubuntu-Bold" family="Ubuntu" pointSize="18"/>
+                                        <state key="normal" title="Oke">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="didTapClose:" destination="oZc-t6-W4H" eventType="touchUpInside" id="Qsd-Wj-vpT"/>
+                                        </connections>
+                                    </button>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="img_lock" translatesAutoresizingMaskIntoConstraints="NO" id="LeM-fF-yMi">
+                                        <rect key="frame" x="218.00000000000003" y="84" width="42.999999999999972" height="51"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="51" id="HGH-Jq-eBq"/>
+                                            <constraint firstAttribute="width" constant="43" id="ZhC-yw-nT7"/>
+                                        </constraints>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tema masih terkunci, selesaikan tema sebelumnya untuk membuka tema baru" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lcm-QZ-AK1">
+                                        <rect key="frame" x="24" y="171" width="431" height="37.333333333333343"/>
+                                        <fontDescription key="fontDescription" name="Ubuntu-Regular" family="Ubuntu" pointSize="16"/>
+                                        <color key="textColor" name="TextPrimaryColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstItem="LeM-fF-yMi" firstAttribute="top" secondItem="mby-O2-zcD" secondAttribute="bottom" constant="34" id="3BH-Bj-mGc"/>
+                                    <constraint firstAttribute="trailing" secondItem="siV-2M-0ox" secondAttribute="trailing" constant="114" id="4PU-2b-DSZ"/>
+                                    <constraint firstAttribute="trailing" secondItem="lcm-QZ-AK1" secondAttribute="trailing" constant="24" id="G6G-hM-xDM"/>
+                                    <constraint firstItem="LeM-fF-yMi" firstAttribute="leading" secondItem="nd0-rI-fKj" secondAttribute="leading" constant="218" id="Hif-L6-OLY"/>
+                                    <constraint firstAttribute="trailing" secondItem="LeM-fF-yMi" secondAttribute="trailing" constant="218" id="JVz-jC-q1W"/>
+                                    <constraint firstAttribute="trailing" secondItem="mby-O2-zcD" secondAttribute="trailing" constant="24" id="O0S-nE-7Yo"/>
+                                    <constraint firstItem="lcm-QZ-AK1" firstAttribute="top" secondItem="LeM-fF-yMi" secondAttribute="bottom" constant="36" id="Za2-Yb-l2R"/>
+                                    <constraint firstItem="mby-O2-zcD" firstAttribute="top" secondItem="nd0-rI-fKj" secondAttribute="top" constant="25" id="bc4-vU-XLS"/>
+                                    <constraint firstAttribute="bottom" secondItem="siV-2M-0ox" secondAttribute="bottom" constant="15" id="cpD-0l-LEe"/>
+                                    <constraint firstItem="lcm-QZ-AK1" firstAttribute="leading" secondItem="nd0-rI-fKj" secondAttribute="leading" constant="24" id="nET-vC-R8o"/>
+                                    <constraint firstItem="siV-2M-0ox" firstAttribute="leading" secondItem="nd0-rI-fKj" secondAttribute="leading" constant="114" id="oPH-cW-CzJ"/>
+                                    <constraint firstItem="mby-O2-zcD" firstAttribute="leading" secondItem="nd0-rI-fKj" secondAttribute="leading" constant="24" id="p4L-D2-eOF"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="RjG-Ae-1qo"/>
+                        <color key="backgroundColor" white="1" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="6jW-RY-ups" secondAttribute="bottom" id="4Zy-ei-Bio"/>
+                            <constraint firstAttribute="trailing" secondItem="6jW-RY-ups" secondAttribute="trailing" id="Fsn-Oq-XM7"/>
+                            <constraint firstItem="nd0-rI-fKj" firstAttribute="centerY" secondItem="6jW-RY-ups" secondAttribute="centerY" id="Hcd-FW-pLI"/>
+                            <constraint firstItem="nd0-rI-fKj" firstAttribute="centerX" secondItem="6jW-RY-ups" secondAttribute="centerX" id="K6I-tC-Jgm"/>
+                            <constraint firstItem="nd0-rI-fKj" firstAttribute="top" secondItem="RjG-Ae-1qo" secondAttribute="top" constant="44" id="Wql-CD-eB5"/>
+                            <constraint firstItem="6jW-RY-ups" firstAttribute="top" secondItem="RjG-Ae-1qo" secondAttribute="top" id="jer-uW-qZS"/>
+                            <constraint firstItem="6jW-RY-ups" firstAttribute="leading" secondItem="uiq-gZ-zu4" secondAttribute="leading" id="waJ-k6-xl5"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="alertContainerView" destination="nd0-rI-fKj" id="MXG-yM-Q0j"/>
+                        <outlet property="alertTitleLabel" destination="mby-O2-zcD" id="jt0-MF-wUe"/>
+                        <outlet property="closeAlertButton" destination="siV-2M-0ox" id="aXy-qW-Nzc"/>
+                        <outlet property="messageLabel" destination="lcm-QZ-AK1" id="eoD-6c-Xxx"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="42q-ds-3SA" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1768.7203791469194" y="113.84615384615384"/>
+        </scene>
     </scenes>
     <resources>
         <image name="img_Layer-RadialGradient" width="842" height="389"/>
         <image name="img_M-Eggy-Gone" width="151" height="153"/>
         <image name="img_hint_story" width="442" height="117"/>
+        <image name="img_lock" width="56" height="64"/>
         <namedColor name="SecondaryColor">
             <color red="0.0039215686274509803" green="0.5725490196078431" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>

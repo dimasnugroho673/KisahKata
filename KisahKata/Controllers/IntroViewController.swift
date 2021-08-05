@@ -7,11 +7,18 @@
 
 import UIKit
 
+// MARK: - Protocol Save UserData
+protocol SaveUserDataDelegate: AnyObject {
+    func didSaveUserData(username: String)
+}
+
 class IntroViewController: UIViewController {
     @IBOutlet weak var userNameTextField: UITextField!
     @IBOutlet weak var startLearningButton: UIButton!
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var nameLabel: UILabel!
+    
+    weak var delegate: SaveUserDataDelegate?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -41,7 +48,8 @@ class IntroViewController: UIViewController {
         if userNameTextField.text != "" {
             UserDefaults.standard.set(userNameTextField.text, forKey: "username")
             
-            print(userNameTextField)
+            /// trigger function in Home
+            delegate?.didSaveUserData(username: "\(userNameTextField.text!)")
             
             dismiss(animated: true, completion: nil)
             UserDefaults.standard.synchronize()

@@ -7,8 +7,8 @@
 
 import UIKit
 
-class ViewController: UIViewController {
-    
+class ViewController: UIViewController, SaveUserDataDelegate {
+
     @IBOutlet var bgBlurJudul: UIVisualEffectView!
     @IBOutlet weak var temaLabel: UILabel!
     @IBOutlet weak var judulCollectionView: UICollectionView!
@@ -117,6 +117,17 @@ class ViewController: UIViewController {
         }
         
         return getCurrentPage()
+    }
+    
+    func didSaveUserData(username: String) {
+        userLabel.text = username
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let introVC = segue.destination as? IntroViewController {
+            /// call delegate in IntroViewController ad assign with this class
+            introVC.delegate = self
+        }
     }
     
 }
@@ -231,12 +242,8 @@ extension ViewController: UICollectionViewDelegate, UICollectionViewDataSource{
         let username: String = UserDefaults.standard.string(forKey: "username") ?? ""
         
         if username == "" {
-            
-            let storyboard = UIStoryboard.init(name: "UserIntro", bundle: nil)
-            let controller = storyboard.instantiateViewController(withIdentifier: "loginScreen")
-            controller.modalPresentationStyle = .fullScreen
-            controller.modalTransitionStyle = .coverVertical
-            self.present(controller, animated: true, completion: nil)
+          /// segue ke IntroViewController
+            performSegue(withIdentifier: "goToIntro", sender: nil)
         }
     }
     

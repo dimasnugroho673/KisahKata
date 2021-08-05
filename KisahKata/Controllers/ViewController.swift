@@ -21,23 +21,26 @@ class ViewController: UIViewController {
     
     @IBOutlet weak var homeCollectionView: UICollectionView!
     let userDefault = UserDefaults()
+    fileprivate var items = dataTema
     
     fileprivate var currentPage: Int = 0 {
         didSet {
+            let preview = self.items[self.currentPage]
+            self.previewImage.image = preview.picture
             print("page at centre = \(currentPage)")
         }
     }
     
-    fileprivate var pageSize: CGSize {
-        let layout = self.homeCollectionView.collectionViewLayout as! UPCarouselFlowLayout
-        var pageSize = layout.itemSize
-        if layout.scrollDirection == .horizontal {
-            pageSize.width += layout.minimumLineSpacing
-        } else {
-            pageSize.height += layout.minimumLineSpacing
-        }
-        return pageSize
-    }
+//    fileprivate var pageSize: CGSize {
+//        let layout = self.homeCollectionView.collectionViewLayout as! UPCarouselFlowLayout
+//        var pageSize = layout.itemSize
+//        if layout.scrollDirection == .horizontal {
+//            pageSize.width += layout.minimumLineSpacing
+//        } else {
+//            pageSize.height += layout.minimumLineSpacing
+//        }
+//        return pageSize
+//    }
     
     private let nextFloatingButton: UIButton = {
         let button = UIButton()
@@ -104,6 +107,16 @@ class ViewController: UIViewController {
     
     @IBAction func closeButtonBlurView(_ sender: Any) {
         _animateOut(desiredView: bgBlurJudul)
+    }
+    
+    func getCurrentPage() -> Int {
+        let visibleRect = CGRect(origin: judulCollectionView.contentOffset, size: judulCollectionView.bounds.size)
+        let visiblePoint = CGPoint(x: visibleRect.midX, y: visibleRect.midY)
+        if let visibleIndexPath = judulCollectionView.indexPathForItem(at: visiblePoint) {
+            return visibleIndexPath.row
+        }
+        
+        return getCurrentPage()
     }
     
 }
@@ -173,13 +186,14 @@ extension ViewController: UICollectionViewDelegate, UICollectionViewDataSource{
     }
     
     func scrollViewDidEndDecelerating(_ scrollView: UIScrollView) {
-        let layoutA = self.judulCollectionView.collectionViewLayout as! UPCarouselFlowLayout
-        _ = (layoutA.scrollDirection == .vertical) ? self.pageSize.width : self.pageSize.height
-        _ = (layoutA.scrollDirection == .vertical) ? scrollView.contentOffset.x : scrollView.contentOffset.y
-        let layout = self.homeCollectionView.collectionViewLayout as! UPCarouselFlowLayout
-        let pageSide = (layout.scrollDirection == .vertical) ? self.pageSize.width : self.pageSize.height
-        let offset = (layout.scrollDirection == .vertical) ? scrollView.contentOffset.x : scrollView.contentOffset.y
-        currentPage = Int(floor((offset - pageSide / 2) / pageSide) + 1)
+//        let layoutA = self.judulCollectionView.collectionViewLayout as! UPCarouselFlowLayout
+//        _ = (layoutA.scrollDirection == .vertical) ? self.pageSize.width : self.pageSize.height
+//        _ = (layoutA.scrollDirection == .vertical) ? scrollView.contentOffset.x : scrollView.contentOffset.y
+//        let layout = self.homeCollectionView.collectionViewLayout as! UPCarouselFlowLayout
+//        let pageSide = (layout.scrollDirection == .vertical) ? self.pageSize.width : self.pageSize.height
+//        let offset = (layout.scrollDirection == .vertical) ? scrollView.contentOffset.x : scrollView.contentOffset.y
+//        currentPage = Int(floor((offset - pageSide / 2) / pageSide) + 1)
+        currentPage = getCurrentPage()
     }
     
     

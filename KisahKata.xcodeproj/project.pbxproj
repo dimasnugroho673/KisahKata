@@ -181,7 +181,6 @@
 				4033060A26B5A24300506E7C /* Practice.storyboard */,
 				E3EEF81B26B6E5E1002D1F0F /* EndStory.storyboard */,
 				E3D9AB1526B9835C00DBCDB5 /* UserIntro.storyboard */,
-				403B93F426BA43310071A376 /* CustomStoryProgressBar.swift */,
 				403B940526BA45030071A376 /* CustomScreen.storyboard */,
 			);
 			path = Views;
@@ -202,6 +201,7 @@
 				403B93FF26BA43DB0071A376 /* HintStoryViewController.swift */,
 				403B940126BA43F50071A376 /* StoryOverviewViewController.swift */,
 				403B940326BA440B0071A376 /* StorytellingViewController.swift */,
+				403B93F426BA43310071A376 /* CustomStoryProgressBar.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";

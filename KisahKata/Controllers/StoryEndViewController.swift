@@ -9,13 +9,18 @@ import UIKit
 
 class StoryEndViewController: UIViewController {
 
+    @IBOutlet weak var endStoryAcceptButton: UIButton!
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        endStoryAcceptButton.layer.cornerRadius = 12
     }
     
-
+    @IBAction func didTapGoToHomeButton(_ sender: Any) {
+        dismiss(animated: true, completion: nil)
+    }
+    
     /*
     // MARK: - Navigation
 

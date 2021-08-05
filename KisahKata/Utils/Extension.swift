@@ -55,3 +55,60 @@ extension UIDevice {
     }
 }
 
+//MARK - Fonts Constants
+struct Fonts {
+    
+    static func italicFontWithSize(size: CGFloat) -> UIFont {
+        return UIFont(name:"Ubuntu-Italic", size: size)!
+    }
+    
+    static func lightFontWithSize(size: CGFloat) -> UIFont {
+        return UIFont(name:"Ubuntu-Light", size: size)!
+    }
+    
+    static func lightItalicFontWithSize(size: CGFloat) -> UIFont {
+        return UIFont(name:"Ubuntu-LightItalic", size: size)!
+    }
+    
+    static func regularFontWithSize(size: CGFloat) -> UIFont {
+        return UIFont(name:"Ubuntu-Regular", size: size)!
+    }
+    
+    static func mediumFontWithSize(size: CGFloat) -> UIFont {
+        return UIFont(name:"Ubuntu-Medium", size: size)!
+    }
+    
+    static func mediumItalicFontWithSize(size: CGFloat) -> UIFont {
+        return UIFont(name:"Ubuntu-MediumItalic", size: size)!
+    }
+    
+    static func boldFontWithSize(size: CGFloat) -> UIFont {
+        return UIFont(name:"Ubuntu-Bold", size: size)!
+    }
+    
+    static func boldItalicFontWithSize(size: CGFloat) -> UIFont {
+        return UIFont(name:"Ubuntu-BoldItalic", size: size)!
+    }
+    
+}
+
+struct Colors {
+    
+    static let carmine = UIColor.init(red: 169.0/255.0, green: 1.0/255.0, blue: 25.0/255.0, alpha: 1.0)
+    
+    static let greyColor = UIColor.init(red: 108.0/255.0, green: 108.0/255.0, blue: 108.0/255.0, alpha: 1.0)
+}
+
+
+// Hide keyboard
+extension UIViewController {
+    func hideKeyboardWhenTappedAround() {
+        let tap = UITapGestureRecognizer(target: self, action: #selector(UIViewController.dismissKeyboard))
+        tap.cancelsTouchesInView = false
+        view.addGestureRecognizer(tap)
+    }
+    
+    @objc func dismissKeyboard() {
+        view.endEditing(true)
+    }
+}

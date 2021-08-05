@@ -28,8 +28,11 @@ class IntroViewController: UIViewController {
         nameLabel.font = UIFont(name: "Ubuntu-Regular", size: 18)
         titleLabel.font = UIFont(name: "Ubuntu-Bold", size: 30)
         
-        
+        /// call gesture to hide keyboard when user click anywhere
+        self.hideKeyboardWhenTappedAround()
     }
+    
+    
     
     @IBAction func startLearn(_ sender: UIButton) {
         

@@ -139,7 +139,7 @@ extension ViewController: UICollectionViewDelegate, UICollectionViewDataSource{
             cell.temaLabel.text = tema.nama
             
             if indexPath.row < 1 {
-                cell.lockImage.isHidden = true
+                cell.lockImage.image = UIImage(named: "")
                 print("Item Terbuka")
             } else {
                 cell.lockImage.image = UIImage(named: "ic_lock")
@@ -171,14 +171,14 @@ extension ViewController: UICollectionViewDelegate, UICollectionViewDataSource{
             _animateIn(desiredView: bgBlurJudul)
             
             print("Cell \(indexPath.row) ditekan")
-        } else if collectionView == judulCollectionView {
+        } else if collectionView == judulCollectionView && indexPath.row < 1{
             
             performSegue(withIdentifier: "goToStoryOverview", sender: nil)
             
             print("Cell judul \(indexPath.row) ditekan")
         } else{
             let alert = AlertLockItemService()
-            let alertVC = alert.alert(title: "Tema terkunci", message: "Tema masih terkunci, selesaikan tema sebelumnya untuk membuka tema baru")
+            let alertVC = alert.alert(title: "Cerita terkunci", message: "Cerita masih terkunci, selesaikan cerita sebelumnya untuk membuka cerita baru")
             present(alertVC, animated: true)
         }
         

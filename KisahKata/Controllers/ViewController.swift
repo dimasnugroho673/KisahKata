@@ -91,6 +91,7 @@ class ViewController: UIViewController {
             pointSize: 25, weight: .medium, scale: .default)
         let image = UIImage(systemName: "xmark.circle.fill", withConfiguration: config)
         backButton.setImage(image, for: .normal)
+        backButton.tintColor = .white
         
         
         
@@ -127,7 +128,7 @@ extension ViewController: UICollectionViewDelegate, UICollectionViewDataSource{
             cell.temaLabel.text = tema.nama
             
             if indexPath.row < 1 {
-                cell.lockImage.isHidden = true
+                cell.lockImage.image = UIImage(named: "")
                 print("Item Terbuka")
             } else {
                 cell.lockImage.image = UIImage(named: "ic_lock")
@@ -155,10 +156,13 @@ extension ViewController: UICollectionViewDelegate, UICollectionViewDataSource{
     
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        let tema = dataTema[indexPath.row]
+        temaLabel.text = tema.nama
         if collectionView == homeCollectionView && indexPath.row < 1 {
             _animateIn(desiredView: bgBlurJudul)
             
             print("Cell \(indexPath.row) ditekan")
+            
         } else if collectionView == judulCollectionView{
             print("Cell judul \(indexPath.row) ditekan")
         } else{
@@ -181,6 +185,7 @@ extension ViewController: UICollectionViewDelegate, UICollectionViewDataSource{
         let pageSide = (layout.scrollDirection == .vertical) ? self.pageSize.width : self.pageSize.height
         let offset = (layout.scrollDirection == .vertical) ? scrollView.contentOffset.x : scrollView.contentOffset.y
         currentPage = Int(floor((offset - pageSide / 2) / pageSide) + 1)
+        
         
     }
     

@@ -7,8 +7,8 @@
 
 import UIKit
 
-class ViewController: UIViewController {
-    
+class ViewController: UIViewController, SaveUserDataDelegate {
+
     @IBOutlet var bgBlurJudul: UIVisualEffectView!
     @IBOutlet weak var temaLabel: UILabel!
     @IBOutlet weak var judulCollectionView: UICollectionView!
@@ -69,6 +69,9 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         _checkUserIsLogged()
         // Do any additional setup after loading the view.
+        let namaTema = self.items[self.currentPage]
+        self.temaLabel.text = namaTema.nama
+        
         let cellNib = UINib(nibName: "homeCollectionViewCell", bundle: nil)
         self.homeCollectionView.register(cellNib, forCellWithReuseIdentifier: "temaCell")
         let cellNibJudul = UINib(nibName: "JudulCollectionViewCell", bundle: nil)
@@ -133,6 +136,17 @@ class ViewController: UIViewController {
         return getCurrentPage()
     }
     
+    func didSaveUserData(username: String) {
+        userLabel.text = username
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let introVC = segue.destination as? IntroViewController {
+            /// call delegate in IntroViewController ad assign with this class
+            introVC.delegate = self
+        }
+    }
+    
 }
 
 extension ViewController: UICollectionViewDelegate, UICollectionViewDataSource{
@@ -187,14 +201,14 @@ extension ViewController: UICollectionViewDelegate, UICollectionViewDataSource{
             _animateIn(desiredView: bgBlurJudul)
             
             print("Cell \(indexPath.row) ditekan")
-        } else if collectionView == judulCollectionView {
+        } else if collectionView == judulCollectionView && indexPath.row < 1{
             
             performSegue(withIdentifier: "goToStoryOverview", sender: nil)
             
             print("Cell judul \(indexPath.row) ditekan")
         } else{
             let alert = AlertLockItemService()
-            let alertVC = alert.alert(title: "Tema terkunci", message: "Tema masih terkunci, selesaikan tema sebelumnya untuk membuka tema baru")
+            let alertVC = alert.alert(title: "Cerita terkunci", message: "Cerita masih terkunci, selesaikan cerita sebelumnya untuk membuka cerita baru")
             present(alertVC, animated: true)
         }
         
@@ -247,12 +261,8 @@ extension ViewController: UICollectionViewDelegate, UICollectionViewDataSource{
         let username: String = UserDefaults.standard.string(forKey: "username") ?? ""
         
         if username == "" {
-            
-            let storyboard = UIStoryboard.init(name: "UserIntro", bundle: nil)
-            let controller = storyboard.instantiateViewController(withIdentifier: "loginScreen")
-            controller.modalPresentationStyle = .fullScreen
-            controller.modalTransitionStyle = .coverVertical
-            self.present(controller, animated: true, completion: nil)
+          /// segue ke IntroViewController
+            performSegue(withIdentifier: "goToIntro", sender: nil)
         }
     }
 

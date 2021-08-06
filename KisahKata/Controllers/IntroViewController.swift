@@ -7,8 +7,9 @@
 
 import UIKit
 
-protocol LoginSelectionDelegate {
-    func didTapChoice(name: String)
+// MARK: - Protocol Save UserData
+protocol SaveUserDataDelegate: AnyObject {
+    func didSaveUserData(username: String)
 }
 
 class IntroViewController: UIViewController {
@@ -17,7 +18,7 @@ class IntroViewController: UIViewController {
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var nameLabel: UILabel!
     
-    var selectionDelegate : LoginSelectionDelegate!
+    weak var delegate: SaveUserDataDelegate?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -51,12 +52,11 @@ class IntroViewController: UIViewController {
             
             
             UserDefaults.standard.set(userNameTextField.text, forKey: "username")
-            nama  = userNameTextField.text!
-            selectionDelegate.didTapChoice(name: "\(nama)")
             
-            print(nama)
+            /// trigger function in Home
+            delegate?.didSaveUserData(username: "\(userNameTextField.text!)")
             
-            
+            dismiss(animated: true, completion: nil)
             UserDefaults.standard.synchronize()
         } else {
             var userdefault = UserDefaults.standard.string(forKey: "username") ?? ""

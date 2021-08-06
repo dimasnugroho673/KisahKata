@@ -21,7 +21,7 @@ class ViewController: UIViewController {
     
     @IBOutlet weak var homeCollectionView: UICollectionView!
     let userDefault = UserDefaults()
-    fileprivate var items = dataTema
+//    fileprivate var items = dataTema
     
     fileprivate var currentPage: Int = 0 {
         didSet {
@@ -56,6 +56,15 @@ class ViewController: UIViewController {
         return button
     }()
     
+    let persistenceManager: PersistenceManager
+    
+    init(persistenceManager:PersistenceManager) {
+        self.persistenceManager = persistenceManager
+        super.init(nibName:nil, bundle:nil)
+    }
+    
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         _checkUserIsLogged()
@@ -87,7 +96,7 @@ class ViewController: UIViewController {
         
         haloLabel.font = UIFont(name: "Ubuntu-Bold", size: 30)
         userLabel.font = UIFont(name: "Ubuntu-Bold", size: 36)
-        userLabel.text = UserDefaults.standard.string(forKey: "username") ?? ""
+//        userLabel.text = UserDefaults.standard.string(forKey: "username") ?? ""
         
         let config = UIImage.SymbolConfiguration(
             pointSize: 25, weight: .medium, scale: .default)
@@ -97,12 +106,16 @@ class ViewController: UIViewController {
         
         
         
+        didTapChoice(name: "")
+        
         
         
         homeCollectionView.delegate = self
         homeCollectionView.dataSource = self
         judulCollectionView.delegate = self
         judulCollectionView.dataSource = self
+        
+        persistenceManager.save()
     }
     
     
@@ -242,5 +255,13 @@ extension ViewController: UICollectionViewDelegate, UICollectionViewDataSource{
             self.present(controller, animated: true, completion: nil)
         }
     }
+
     
+    }
+
+extension ViewController : LoginSelectionDelegate {
+    func didTapChoice(name: String) {
+        userLabel.text = name
+    }
+
 }

@@ -7,11 +7,17 @@
 
 import UIKit
 
+protocol LoginSelectionDelegate {
+    func didTapChoice(name: String)
+}
+
 class IntroViewController: UIViewController {
     @IBOutlet weak var userNameTextField: UITextField!
     @IBOutlet weak var startLearningButton: UIButton!
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var nameLabel: UILabel!
+    
+    var selectionDelegate : LoginSelectionDelegate!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -37,16 +43,30 @@ class IntroViewController: UIViewController {
     @IBAction func startLearn(_ sender: UIButton) {
         
         self._animateSpringView(sender)
+        var nama : String = ""
         
+        let controller = ViewController()
+//        controller.delegate = self
         if userNameTextField.text != "" {
+            
+            
             UserDefaults.standard.set(userNameTextField.text, forKey: "username")
+            nama  = userNameTextField.text!
+            selectionDelegate.didTapChoice(name: "\(nama)")
             
-            print(userNameTextField)
+            print(nama)
             
-            dismiss(animated: true, completion: nil)
+            
             UserDefaults.standard.synchronize()
+        } else {
+            var userdefault = UserDefaults.standard.string(forKey: "username") ?? ""
+            nama = userdefault
+            selectionDelegate.didTapChoice(name: "\(nama)")
+            print(nama)
+            
         }
         
+        dismiss(animated: true, completion: nil)
         
     }
     

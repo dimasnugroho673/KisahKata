@@ -1,4 +1,46 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="1" systemVersion="11A491" minimumToolsVersion="Automatic" sourceLanguage="Swift" usedWithCloudKit="false" userDefinedModelVersionIdentifier="">
-    <elements/>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="18154" systemVersion="20G80" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+    <entity name="Highlghtword" representedClassName="Highlghtword" syncable="YES">
+        <attribute name="deskripsi" optional="YES" attributeType="String"/>
+        <attribute name="deskripsiVideo" optional="YES" attributeType="String"/>
+        <attribute name="id" optional="YES" attributeType="UUID" usesScalarValueType="NO"/>
+        <attribute name="kata" optional="YES" attributeType="String"/>
+        <attribute name="sudahDipelajari" optional="YES" attributeType="Boolean" usesScalarValueType="YES"/>
+        <attribute name="urlVideo" optional="YES" attributeType="String"/>
+        <relationship name="substories" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="SubStories" inverseName="kosakata" inverseEntity="SubStories"/>
+    </entity>
+    <entity name="Stories" representedClassName="Stories" syncable="YES">
+        <attribute name="coverImage" optional="YES" attributeType="Binary"/>
+        <attribute name="id" optional="YES" attributeType="UUID" usesScalarValueType="NO"/>
+        <attribute name="lock" optional="YES" attributeType="Boolean" usesScalarValueType="YES"/>
+        <attribute name="title" optional="YES" attributeType="String"/>
+        <relationship name="substories" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="SubStories" inverseName="stories" inverseEntity="SubStories"/>
+        <relationship name="tema" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Tema" inverseName="stories" inverseEntity="Tema"/>
+    </entity>
+    <entity name="StoryIlustration" representedClassName="StoryIlustration" syncable="YES">
+        <attribute name="id" optional="YES" attributeType="UUID" usesScalarValueType="NO"/>
+        <attribute name="storyIlustration" optional="YES" attributeType="Binary"/>
+        <relationship name="substories" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="SubStories" inverseName="ilustration" inverseEntity="SubStories"/>
+    </entity>
+    <entity name="SubStories" representedClassName="SubStories" syncable="YES">
+        <attribute name="cerita" optional="YES" attributeType="String"/>
+        <attribute name="id" optional="YES" attributeType="UUID" usesScalarValueType="NO"/>
+        <relationship name="ilustration" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="StoryIlustration" inverseName="substories" inverseEntity="StoryIlustration"/>
+        <relationship name="kosakata" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Highlghtword" inverseName="substories" inverseEntity="Highlghtword"/>
+        <relationship name="stories" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Stories" inverseName="substories" inverseEntity="Stories"/>
+    </entity>
+    <entity name="Tema" representedClassName="Tema" syncable="YES">
+        <attribute name="id" optional="YES" attributeType="UUID" usesScalarValueType="NO"/>
+        <attribute name="lock" optional="YES" attributeType="Boolean" usesScalarValueType="YES"/>
+        <attribute name="temaImage" optional="YES" attributeType="Binary"/>
+        <attribute name="title" optional="YES" attributeType="String"/>
+        <relationship name="stories" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Stories" inverseName="tema" inverseEntity="Stories"/>
+    </entity>
+    <elements>
+        <element name="Highlghtword" positionX="0" positionY="72" width="128" height="134"/>
+        <element name="Stories" positionX="-54" positionY="18" width="128" height="119"/>
+        <element name="StoryIlustration" positionX="-18" positionY="54" width="128" height="74"/>
+        <element name="SubStories" positionX="-36" positionY="45" width="128" height="104"/>
+        <element name="Tema" positionX="-63" positionY="-18" width="128" height="104"/>
+    </elements>
 </model>

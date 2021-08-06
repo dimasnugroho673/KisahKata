@@ -60,6 +60,9 @@ class ViewController: UIViewController, SaveUserDataDelegate {
         super.viewDidLoad()
         _checkUserIsLogged()
         // Do any additional setup after loading the view.
+        let namaTema = self.items[self.currentPage]
+        self.temaLabel.text = namaTema.nama
+        
         let cellNib = UINib(nibName: "homeCollectionViewCell", bundle: nil)
         self.homeCollectionView.register(cellNib, forCellWithReuseIdentifier: "temaCell")
         let cellNibJudul = UINib(nibName: "JudulCollectionViewCell", bundle: nil)

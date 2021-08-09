@@ -87,7 +87,7 @@
                                 </constraints>
                             </view>
                             <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.69999998807907104" translatesAutoresizingMaskIntoConstraints="NO" id="lzy-5N-WgW" customClass="CustomStoryProgressBar" customModule="KisahKata" customModuleProvider="target">
-                                <rect key="frame" x="731" y="48" width="53" height="10"/>
+                                <rect key="frame" x="715" y="46" width="53" height="10"/>
                                 <color key="tintColor" name="SecondaryColor"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="10" id="geV-dQ-SkN"/>
@@ -96,24 +96,37 @@
                                 <color key="progressTintColor" name="SecondaryColor"/>
                                 <color key="trackTintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </progressView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qo9-Lx-nOY">
+                                <rect key="frame" x="783" y="36" width="20" height="20"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="20" id="Icz-8b-IM3"/>
+                                    <constraint firstAttribute="width" constant="20" id="URN-lP-gMX"/>
+                                </constraints>
+                                <state key="normal" title="Button" image="ic_complete"/>
+                                <connections>
+                                    <action selector="petunjukButton:" destination="KzP-yE-cGm" eventType="touchUpInside" id="cfT-Zl-hbT"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="EGi-XM-h4s"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="lzy-5N-WgW" firstAttribute="top" secondItem="EGi-XM-h4s" secondAttribute="top" constant="48" id="5qx-fg-5bz"/>
                             <constraint firstAttribute="trailing" secondItem="WVn-f9-azE" secondAttribute="trailing" id="7sP-vl-3Ov"/>
                             <constraint firstAttribute="bottomMargin" secondItem="Zp0-lM-4D8" secondAttribute="bottom" constant="12" id="A20-co-aNE"/>
                             <constraint firstItem="ud5-A0-m5p" firstAttribute="leading" secondItem="Zp0-lM-4D8" secondAttribute="leading" id="Hxy-KK-NFs"/>
+                            <constraint firstItem="lzy-5N-WgW" firstAttribute="top" secondItem="EGi-XM-h4s" secondAttribute="top" constant="46" id="JaN-bX-HGF"/>
                             <constraint firstItem="EGi-XM-h4s" firstAttribute="bottom" secondItem="Tib-Bc-4BJ" secondAttribute="bottom" constant="8" id="Lot-FE-th8"/>
-                            <constraint firstItem="EGi-XM-h4s" firstAttribute="trailing" secondItem="lzy-5N-WgW" secondAttribute="trailing" constant="16" id="OMa-0G-3CO"/>
                             <constraint firstAttribute="bottom" secondItem="WVn-f9-azE" secondAttribute="bottom" id="Quq-7e-kS7"/>
                             <constraint firstItem="ud5-A0-m5p" firstAttribute="top" secondItem="EGi-XM-h4s" secondAttribute="top" constant="33" id="S56-83-nOM"/>
                             <constraint firstItem="Zp0-lM-4D8" firstAttribute="leading" secondItem="o6H-rD-EAn" secondAttribute="leadingMargin" id="T2z-n9-ojg"/>
                             <constraint firstItem="WVn-f9-azE" firstAttribute="top" secondItem="EGi-XM-h4s" secondAttribute="top" id="TvG-Hv-ihX"/>
                             <constraint firstItem="EGi-XM-h4s" firstAttribute="bottom" secondItem="NdB-TS-Squ" secondAttribute="bottom" constant="12" id="Vuq-pw-5Hq"/>
                             <constraint firstItem="Tib-Bc-4BJ" firstAttribute="centerY" secondItem="Zp0-lM-4D8" secondAttribute="centerY" id="h9f-RA-8fs"/>
+                            <constraint firstItem="qo9-Lx-nOY" firstAttribute="top" secondItem="EGi-XM-h4s" secondAttribute="top" constant="36" id="jCp-BW-cvJ"/>
                             <constraint firstItem="EGi-XM-h4s" firstAttribute="trailing" secondItem="NdB-TS-Squ" secondAttribute="trailing" constant="16" id="mxh-Se-HIL"/>
+                            <constraint firstItem="qo9-Lx-nOY" firstAttribute="leading" secondItem="lzy-5N-WgW" secondAttribute="trailing" constant="15" id="tHs-oE-5ST"/>
                             <constraint firstItem="WVn-f9-azE" firstAttribute="leading" secondItem="o6H-rD-EAn" secondAttribute="leading" id="xen-HM-OOz"/>
+                            <constraint firstAttribute="trailing" secondItem="qo9-Lx-nOY" secondAttribute="trailing" constant="41" id="xw8-3C-hWe"/>
                             <constraint firstItem="Tib-Bc-4BJ" firstAttribute="leading" secondItem="Zp0-lM-4D8" secondAttribute="trailing" constant="32" id="yLv-dj-MTd"/>
                         </constraints>
                     </view>
@@ -123,6 +136,7 @@
                         <outlet property="hintBgBlurView" destination="k3m-VK-dwO" id="8Nl-2g-8HC"/>
                         <outlet property="ilustrationStoryImage" destination="WVn-f9-azE" id="oa9-k8-ReE"/>
                         <outlet property="nextButton" destination="NdB-TS-Squ" id="xlS-rT-gYG"/>
+                        <outlet property="openPetunjukButton" destination="qo9-Lx-nOY" id="GQL-7P-sAp"/>
                         <outlet property="previousButton" destination="Zp0-lM-4D8" id="XcS-fX-mbd"/>
                         <outlet property="scriptContainerView" destination="Tib-Bc-4BJ" id="gpl-O5-gcc"/>
                         <outlet property="scriptStoryLabel" destination="6dw-bt-LeG" id="Ysz-aH-tQ1"/>
@@ -199,6 +213,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="ic_complete" width="50" height="50"/>
         <image name="ic_next" width="50" height="50"/>
         <image name="ic_previous" width="50" height="50"/>
         <image name="img_story_sample" width="3376" height="1560"/>

@@ -2,7 +2,7 @@
 //  SubStories+CoreDataClass.swift
 //  KisahKata
 //
-//  Created by Mulazi Azi on 06/08/21.
+//  Created by Mulazi Azi on 07/08/21.
 //
 //
 

@@ -1,5 +1,13 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="18154" systemVersion="20G80" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+    <entity name="Cerita" representedClassName="Cerita" syncable="YES">
+        <attribute name="coverImage" optional="YES" attributeType="String"/>
+        <attribute name="id" optional="YES" attributeType="UUID" usesScalarValueType="NO"/>
+        <attribute name="lock" optional="YES" attributeType="Boolean" usesScalarValueType="YES"/>
+        <attribute name="title" optional="YES" attributeType="String"/>
+        <relationship name="substories" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="SubStories" inverseName="stories" inverseEntity="SubStories"/>
+        <relationship name="tema" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="TemaCerita" inverseName="stories" inverseEntity="TemaCerita"/>
+    </entity>
     <entity name="Highlghtword" representedClassName="Highlghtword" syncable="YES">
         <attribute name="deskripsi" optional="YES" attributeType="String"/>
         <attribute name="deskripsiVideo" optional="YES" attributeType="String"/>
@@ -8,14 +16,6 @@
         <attribute name="sudahDipelajari" optional="YES" attributeType="Boolean" usesScalarValueType="YES"/>
         <attribute name="urlVideo" optional="YES" attributeType="String"/>
         <relationship name="substories" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="SubStories" inverseName="kosakata" inverseEntity="SubStories"/>
-    </entity>
-    <entity name="Stories" representedClassName="Stories" syncable="YES">
-        <attribute name="coverImage" optional="YES" attributeType="Binary"/>
-        <attribute name="id" optional="YES" attributeType="UUID" usesScalarValueType="NO"/>
-        <attribute name="lock" optional="YES" attributeType="Boolean" usesScalarValueType="YES"/>
-        <attribute name="title" optional="YES" attributeType="String"/>
-        <relationship name="substories" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="SubStories" inverseName="stories" inverseEntity="SubStories"/>
-        <relationship name="tema" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Tema" inverseName="stories" inverseEntity="Tema"/>
     </entity>
     <entity name="StoryIlustration" representedClassName="StoryIlustration" syncable="YES">
         <attribute name="id" optional="YES" attributeType="UUID" usesScalarValueType="NO"/>
@@ -27,20 +27,20 @@
         <attribute name="id" optional="YES" attributeType="UUID" usesScalarValueType="NO"/>
         <relationship name="ilustration" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="StoryIlustration" inverseName="substories" inverseEntity="StoryIlustration"/>
         <relationship name="kosakata" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Highlghtword" inverseName="substories" inverseEntity="Highlghtword"/>
-        <relationship name="stories" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Stories" inverseName="substories" inverseEntity="Stories"/>
+        <relationship name="stories" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Cerita" inverseName="substories" inverseEntity="Cerita"/>
     </entity>
-    <entity name="Tema" representedClassName="Tema" syncable="YES">
+    <entity name="TemaCerita" representedClassName="TemaCerita" syncable="YES">
         <attribute name="id" optional="YES" attributeType="UUID" usesScalarValueType="NO"/>
         <attribute name="lock" optional="YES" attributeType="Boolean" usesScalarValueType="YES"/>
-        <attribute name="temaImage" optional="YES" attributeType="Binary"/>
+        <attribute name="temaImage" optional="YES" attributeType="String"/>
         <attribute name="title" optional="YES" attributeType="String"/>
-        <relationship name="stories" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Stories" inverseName="tema" inverseEntity="Stories"/>
+        <relationship name="stories" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Cerita" inverseName="tema" inverseEntity="Cerita"/>
     </entity>
     <elements>
-        <element name="Highlghtword" positionX="0" positionY="72" width="128" height="134"/>
-        <element name="Stories" positionX="-54" positionY="18" width="128" height="119"/>
-        <element name="StoryIlustration" positionX="-18" positionY="54" width="128" height="74"/>
-        <element name="SubStories" positionX="-36" positionY="45" width="128" height="104"/>
-        <element name="Tema" positionX="-63" positionY="-18" width="128" height="104"/>
+        <element name="Cerita" positionX="-597.35498046875" positionY="-92.52360534667969" width="128" height="119"/>
+        <element name="Highlghtword" positionX="-379.09033203125" positionY="466.578857421875" width="128" height="134"/>
+        <element name="StoryIlustration" positionX="-404.4524536132812" positionY="756.3491821289062" width="128" height="74"/>
+        <element name="SubStories" positionX="-397.0650634765625" positionY="297.755859375" width="128" height="104"/>
+        <element name="TemaCerita" positionX="-105.4725341796875" positionY="-252.7630462646484" width="128" height="104"/>
     </elements>
 </model>

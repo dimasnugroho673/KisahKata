@@ -24,7 +24,54 @@ class PersistenceManager  {
         return container
     }()
     
-    lazy var context = persistentContainer.viewContext
+    func setTemaCerita(lock: Bool, title: String, temaImage: String) {
+        let temaCerita = TemaCerita(context: persistentContainer.viewContext)
+        temaCerita.lock = lock
+        temaCerita.title = title
+        temaCerita.temaImage = temaImage
+        save()
+        
+    }
+    
+    func setCerita(coverImage : String, lock : Bool, title : String) {
+        let cerita = KisahKata.Cerita(context: persistentContainer.viewContext)
+        cerita.coverImage = coverImage
+        cerita.lock = lock
+        cerita.title = title
+        save()
+    }
+    
+    func fetchTemaCerita() -> [TemaCerita] {
+        let request : NSFetchRequest<TemaCerita> = TemaCerita.fetchRequest()
+        
+        var temaCerita : [TemaCerita] = []
+        
+        do {
+            temaCerita = try persistentContainer.viewContext.fetch(request)
+        } catch {
+            print("Error fetching tema")
+        }
+        
+        return temaCerita
+    }
+    
+    func fetchCerita(tema: TemaCerita) -> [Cerita] {
+        let request: NSFetchRequest<Cerita> =  Cerita.fetchRequest()
+        
+        request.predicate = NSPredicate(format: "(tema = %@)", tema)
+        
+        request.sortDescriptors = [NSSortDescriptor(key: "title", ascending: true)]
+        
+        var ceritas : [Cerita] = []
+        
+        do{
+            ceritas = try persistentContainer.viewContext.fetch(request)
+        }catch {
+            print("Error fetching stories data")
+        }
+        return ceritas
+    }
+    
     
     func save () {
         let context = persistentContainer.viewContext

@@ -1,8 +1,8 @@
 //
-//  Tema+CoreDataProperties.swift
+//  TemaCerita+CoreDataProperties.swift
 //  KisahKata
 //
-//  Created by Mulazi Azi on 06/08/21.
+//  Created by Mulazi Azi on 08/08/21.
 //
 //
 
@@ -10,28 +10,28 @@ import Foundation
 import CoreData
 
 
-extension Tema {
+extension TemaCerita {
 
-    @nonobjc public class func fetchRequest() -> NSFetchRequest<Tema> {
-        return NSFetchRequest<Tema>(entityName: "Tema")
+    @nonobjc public class func fetchRequest() -> NSFetchRequest<TemaCerita> {
+        return NSFetchRequest<TemaCerita>(entityName: "TemaCerita")
     }
 
     @NSManaged public var id: UUID?
     @NSManaged public var lock: Bool
-    @NSManaged public var temaImage: Data?
+    @NSManaged public var temaImage: String?
     @NSManaged public var title: String?
     @NSManaged public var stories: NSSet?
 
 }
 
 // MARK: Generated accessors for stories
-extension Tema {
+extension TemaCerita {
 
     @objc(addStoriesObject:)
-    @NSManaged public func addToStories(_ value: Stories)
+    @NSManaged public func addToStories(_ value: Cerita)
 
     @objc(removeStoriesObject:)
-    @NSManaged public func removeFromStories(_ value: Stories)
+    @NSManaged public func removeFromStories(_ value: Cerita)
 
     @objc(addStories:)
     @NSManaged public func addToStories(_ values: NSSet)
@@ -41,6 +41,6 @@ extension Tema {
 
 }
 
-extension Tema : Identifiable {
+extension TemaCerita : Identifiable {
 
 }

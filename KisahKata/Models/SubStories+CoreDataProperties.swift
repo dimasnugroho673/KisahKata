@@ -2,7 +2,7 @@
 //  SubStories+CoreDataProperties.swift
 //  KisahKata
 //
-//  Created by Mulazi Azi on 06/08/21.
+//  Created by Mulazi Azi on 07/08/21.
 //
 //
 
@@ -20,7 +20,7 @@ extension SubStories {
     @NSManaged public var id: UUID?
     @NSManaged public var ilustration: StoryIlustration?
     @NSManaged public var kosakata: NSSet?
-    @NSManaged public var stories: Stories?
+    @NSManaged public var stories: Cerita?
 
 }
 

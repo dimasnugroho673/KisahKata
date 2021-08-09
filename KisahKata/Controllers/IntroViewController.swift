@@ -46,7 +46,7 @@ class IntroViewController: UIViewController {
         self._animateSpringView(sender)
         var nama : String = ""
         
-        let controller = ViewController()
+//        let controller = ViewController(persistenceManager: PersistenceManager)
 //        controller.delegate = self
         if userNameTextField.text != "" {
             
@@ -61,7 +61,7 @@ class IntroViewController: UIViewController {
         } else {
             var userdefault = UserDefaults.standard.string(forKey: "username") ?? ""
             nama = userdefault
-            selectionDelegate.didTapChoice(name: "\(nama)")
+//            selectionDelegate.didTapChoice(name: "\(nama)")
             print(nama)
             
         }

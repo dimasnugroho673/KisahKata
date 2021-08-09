@@ -29,8 +29,15 @@ class homeCollectionViewCell: UICollectionViewCell {
             self.temaImage.roundCorners(corners: [.topLeft, .topRight], radius: 12)
 //            self.temaImage.roundCorners(corners: .topRight, radius: 12)
             
+            
+            
         }
         
+        
+    }
+    
+    func setDataIntoCell(tema: TemaCerita) {
+        self.temaLabel.text = tema.title
         
     }
     

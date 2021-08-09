@@ -1,8 +1,8 @@
 //
-//  Stories+CoreDataProperties.swift
+//  Cerita+CoreDataProperties.swift
 //  KisahKata
 //
-//  Created by Mulazi Azi on 06/08/21.
+//  Created by Mulazi Azi on 09/08/21.
 //
 //
 
@@ -10,23 +10,23 @@ import Foundation
 import CoreData
 
 
-extension Stories {
+extension Cerita {
 
-    @nonobjc public class func fetchRequest() -> NSFetchRequest<Stories> {
-        return NSFetchRequest<Stories>(entityName: "Stories")
+    @nonobjc public class func fetchRequest() -> NSFetchRequest<Cerita> {
+        return NSFetchRequest<Cerita>(entityName: "Cerita")
     }
 
-    @NSManaged public var coverImage: Data?
+    @NSManaged public var coverImage: String?
     @NSManaged public var id: UUID?
     @NSManaged public var lock: Bool
     @NSManaged public var title: String?
     @NSManaged public var substories: NSSet?
-    @NSManaged public var tema: Tema?
+    @NSManaged public var tema: TemaCerita?
 
 }
 
 // MARK: Generated accessors for substories
-extension Stories {
+extension Cerita {
 
     @objc(addSubstoriesObject:)
     @NSManaged public func addToSubstories(_ value: SubStories)
@@ -42,6 +42,6 @@ extension Stories {
 
 }
 
-extension Stories : Identifiable {
+extension Cerita : Identifiable {
 
 }

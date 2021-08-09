@@ -86,8 +86,8 @@
                                     <constraint firstAttribute="trailing" secondItem="6dw-bt-LeG" secondAttribute="trailing" constant="17" id="xDa-M0-g2k"/>
                                 </constraints>
                             </view>
-                            <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.69999998807907104" translatesAutoresizingMaskIntoConstraints="NO" id="lzy-5N-WgW" customClass="CustomStoryProgressBar" customModule="KisahKata" customModuleProvider="target">
-                                <rect key="frame" x="715" y="46" width="53" height="10"/>
+                            <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" misplaced="YES" progress="0.69999998807907104" translatesAutoresizingMaskIntoConstraints="NO" id="lzy-5N-WgW" customClass="CustomStoryProgressBar" customModule="KisahKata" customModuleProvider="target">
+                                <rect key="frame" x="714" y="44" width="53" height="10"/>
                                 <color key="tintColor" name="SecondaryColor"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="10" id="geV-dQ-SkN"/>
@@ -97,12 +97,14 @@
                                 <color key="trackTintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </progressView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qo9-Lx-nOY">
-                                <rect key="frame" x="783" y="36" width="20" height="20"/>
+                                <rect key="frame" x="771" y="31" width="30" height="30"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="20" id="Icz-8b-IM3"/>
-                                    <constraint firstAttribute="width" constant="20" id="URN-lP-gMX"/>
+                                    <constraint firstAttribute="height" constant="30" id="Icz-8b-IM3"/>
+                                    <constraint firstAttribute="width" constant="30" id="URN-lP-gMX"/>
                                 </constraints>
-                                <state key="normal" title="Button" image="ic_complete"/>
+                                <state key="normal" title="Button" image="ic_questionmark.fill">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
                                 <connections>
                                     <action selector="petunjukButton:" destination="KzP-yE-cGm" eventType="touchUpInside" id="cfT-Zl-hbT"/>
                                 </connections>
@@ -114,7 +116,7 @@
                             <constraint firstAttribute="trailing" secondItem="WVn-f9-azE" secondAttribute="trailing" id="7sP-vl-3Ov"/>
                             <constraint firstAttribute="bottomMargin" secondItem="Zp0-lM-4D8" secondAttribute="bottom" constant="12" id="A20-co-aNE"/>
                             <constraint firstItem="ud5-A0-m5p" firstAttribute="leading" secondItem="Zp0-lM-4D8" secondAttribute="leading" id="Hxy-KK-NFs"/>
-                            <constraint firstItem="lzy-5N-WgW" firstAttribute="top" secondItem="EGi-XM-h4s" secondAttribute="top" constant="46" id="JaN-bX-HGF"/>
+                            <constraint firstItem="lzy-5N-WgW" firstAttribute="top" secondItem="EGi-XM-h4s" secondAttribute="top" constant="44" id="JaN-bX-HGF"/>
                             <constraint firstItem="EGi-XM-h4s" firstAttribute="bottom" secondItem="Tib-Bc-4BJ" secondAttribute="bottom" constant="8" id="Lot-FE-th8"/>
                             <constraint firstAttribute="bottom" secondItem="WVn-f9-azE" secondAttribute="bottom" id="Quq-7e-kS7"/>
                             <constraint firstItem="ud5-A0-m5p" firstAttribute="top" secondItem="EGi-XM-h4s" secondAttribute="top" constant="33" id="S56-83-nOM"/>
@@ -122,11 +124,11 @@
                             <constraint firstItem="WVn-f9-azE" firstAttribute="top" secondItem="EGi-XM-h4s" secondAttribute="top" id="TvG-Hv-ihX"/>
                             <constraint firstItem="EGi-XM-h4s" firstAttribute="bottom" secondItem="NdB-TS-Squ" secondAttribute="bottom" constant="12" id="Vuq-pw-5Hq"/>
                             <constraint firstItem="Tib-Bc-4BJ" firstAttribute="centerY" secondItem="Zp0-lM-4D8" secondAttribute="centerY" id="h9f-RA-8fs"/>
-                            <constraint firstItem="qo9-Lx-nOY" firstAttribute="top" secondItem="EGi-XM-h4s" secondAttribute="top" constant="36" id="jCp-BW-cvJ"/>
+                            <constraint firstItem="qo9-Lx-nOY" firstAttribute="top" secondItem="EGi-XM-h4s" secondAttribute="top" constant="31" id="jCp-BW-cvJ"/>
                             <constraint firstItem="EGi-XM-h4s" firstAttribute="trailing" secondItem="NdB-TS-Squ" secondAttribute="trailing" constant="16" id="mxh-Se-HIL"/>
-                            <constraint firstItem="qo9-Lx-nOY" firstAttribute="leading" secondItem="lzy-5N-WgW" secondAttribute="trailing" constant="15" id="tHs-oE-5ST"/>
+                            <constraint firstItem="qo9-Lx-nOY" firstAttribute="leading" secondItem="lzy-5N-WgW" secondAttribute="trailing" constant="4" id="tHs-oE-5ST"/>
                             <constraint firstItem="WVn-f9-azE" firstAttribute="leading" secondItem="o6H-rD-EAn" secondAttribute="leading" id="xen-HM-OOz"/>
-                            <constraint firstAttribute="trailing" secondItem="qo9-Lx-nOY" secondAttribute="trailing" constant="41" id="xw8-3C-hWe"/>
+                            <constraint firstAttribute="trailing" secondItem="qo9-Lx-nOY" secondAttribute="trailing" constant="43" id="xw8-3C-hWe"/>
                             <constraint firstItem="Tib-Bc-4BJ" firstAttribute="leading" secondItem="Zp0-lM-4D8" secondAttribute="trailing" constant="32" id="yLv-dj-MTd"/>
                         </constraints>
                     </view>
@@ -213,9 +215,9 @@
         </scene>
     </scenes>
     <resources>
-        <image name="ic_complete" width="50" height="50"/>
         <image name="ic_next" width="50" height="50"/>
         <image name="ic_previous" width="50" height="50"/>
+        <image name="ic_questionmark.fill" width="28" height="28"/>
         <image name="img_story_sample" width="3376" height="1560"/>
         <image name="xmark.circle.fill" catalog="system" width="128" height="121"/>
         <namedColor name="SecondaryColor">

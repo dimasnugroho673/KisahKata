@@ -32,6 +32,7 @@ class StorytellingViewController: UIViewController {
     @IBOutlet weak var closeHintButton: UIButton!
     @IBOutlet weak var storyProgressBar: UIProgressView!
     @IBOutlet weak var ilustrationStoryImage: UIImageView!
+    @IBOutlet weak var openPetunjukButton: UIButton!
     
     var playerLayer = AVPlayerLayer()
     let playVideoButton = UIButton(frame: CGRect(x: 100, y: 400, width: 200, height: 60))
@@ -89,6 +90,15 @@ class StorytellingViewController: UIViewController {
     override func viewWillDisappear(_ animated: Bool) {
         NotificationCenter.default.removeObserver(self)
     }
+    
+    @IBAction func petunjukButton(_ sender: Any) {
+        let alert = HintStoryService()
+        let alertVC = alert.alert()
+            
+        present(alertVC, animated: true)
+        
+    }
+    
     
     
     @IBAction func backTap(_ sender: Any) {

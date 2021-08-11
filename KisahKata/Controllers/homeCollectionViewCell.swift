@@ -21,16 +21,23 @@ class homeCollectionViewCell: UICollectionViewCell {
         DispatchQueue.main.async {
             self.cntnView.layer.cornerRadius = 12.0
             self.cntnView.layer.shadowColor = UIColor.gray.cgColor
-            self.cntnView.layer.shadowOpacity = 0.5
-            self.cntnView.layer.shadowOpacity = 10.0
+//            self.cntnView.layer.shadowOpacity = 0.5
+//            self.cntnView.layer.shadowOpacity = 10.0
             self.cntnView.layer.shadowOffset = .zero
             self.cntnView.layer.shadowPath = UIBezierPath(rect: self.cntnView.bounds).cgPath
             //self.cntnView.layer.shouldRasterize = true
             self.temaImage.roundCorners(corners: [.topLeft, .topRight], radius: 12)
 //            self.temaImage.roundCorners(corners: .topRight, radius: 12)
             
+            
+            
         }
         
+        
+    }
+    
+    func setDataIntoCell(tema: TemaCerita) {
+        self.temaLabel.text = tema.title
         
     }
     

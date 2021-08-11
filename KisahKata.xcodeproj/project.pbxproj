@@ -34,7 +34,6 @@
 		4033062426B5A55600506E7C /* sibi_panggil.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 4033061C26B5A55600506E7C /* sibi_panggil.mp4 */; };
 		4033062526B5A55600506E7C /* sibi_bermain.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 4033061D26B5A55600506E7C /* sibi_bermain.mp4 */; };
 		4033062726B5A57100506E7C /* List2_D_TransferLearning.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 4033062626B5A57100506E7C /* List2_D_TransferLearning.mlmodel */; };
-		4033062A26B5A5CE00506E7C /* Stories.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4033062926B5A5CE00506E7C /* Stories.swift */; };
 		403B93F526BA43310071A376 /* CustomStoryProgressBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 403B93F426BA43310071A376 /* CustomStoryProgressBar.swift */; };
 		403B93F726BA434D0071A376 /* LabelTapGesture.swift in Sources */ = {isa = PBXBuildFile; fileRef = 403B93F626BA434D0071A376 /* LabelTapGesture.swift */; };
 		403B93FA26BA437B0071A376 /* AlertExitService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 403B93F926BA437B0071A376 /* AlertExitService.swift */; };
@@ -50,22 +49,61 @@
 		40EB3E1E26B257A400D9DEC9 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40EB3E1D26B257A400D9DEC9 /* SceneDelegate.swift */; };
 		40EB3E2026B257A400D9DEC9 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40EB3E1F26B257A400D9DEC9 /* ViewController.swift */; };
 		40EB3E2326B257A400D9DEC9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 40EB3E2126B257A400D9DEC9 /* Main.storyboard */; };
-		40EB3E2626B257A400D9DEC9 /* KisahKata.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 40EB3E2426B257A400D9DEC9 /* KisahKata.xcdatamodeld */; };
 		40EB3E2826B257A500D9DEC9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 40EB3E2726B257A500D9DEC9 /* Assets.xcassets */; };
 		40EB3E2B26B257A500D9DEC9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 40EB3E2926B257A500D9DEC9 /* LaunchScreen.storyboard */; };
+		51509FA326C361790022D259 /* Kosakata+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51509FA126C361790022D259 /* Kosakata+CoreDataClass.swift */; };
+		51509FA426C361790022D259 /* Kosakata+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51509FA226C361790022D259 /* Kosakata+CoreDataProperties.swift */; };
+		51509FA926C3647B0022D259 /* part2-Story2.gif in Resources */ = {isa = PBXBuildFile; fileRef = 51509FA526C3647A0022D259 /* part2-Story2.gif */; };
+		51509FAA26C3647B0022D259 /* part2-Story4.gif in Resources */ = {isa = PBXBuildFile; fileRef = 51509FA626C3647A0022D259 /* part2-Story4.gif */; };
+		51509FAB26C3647B0022D259 /* part2-Story1.gif in Resources */ = {isa = PBXBuildFile; fileRef = 51509FA726C3647B0022D259 /* part2-Story1.gif */; };
+		51509FAC26C3647B0022D259 /* part2-Story3.gif in Resources */ = {isa = PBXBuildFile; fileRef = 51509FA826C3647B0022D259 /* part2-Story3.gif */; };
+		51509FB926C367DB0022D259 /* Bersaudara.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 51509FAD26C367DA0022D259 /* Bersaudara.mp4 */; };
+		51509FBA26C367DB0022D259 /* Bersaudara.AAE in Resources */ = {isa = PBXBuildFile; fileRef = 51509FAE26C367DA0022D259 /* Bersaudara.AAE */; };
+		51509FBB26C367DB0022D259 /* bermain.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 51509FAF26C367DA0022D259 /* bermain.mp4 */; };
+		51509FBC26C367DB0022D259 /* panggil.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 51509FB026C367DA0022D259 /* panggil.mp4 */; };
+		51509FBD26C367DB0022D259 /* membanggakan.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 51509FB126C367DA0022D259 /* membanggakan.mp4 */; };
+		51509FBE26C367DB0022D259 /* Selamat Pagi.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 51509FB226C367DA0022D259 /* Selamat Pagi.mp4 */; };
+		51509FBF26C367DB0022D259 /* Olahraga.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 51509FB326C367DB0022D259 /* Olahraga.mp4 */; };
+		51509FC026C367DB0022D259 /* Selamat Pagi.AAE in Resources */ = {isa = PBXBuildFile; fileRef = 51509FB426C367DB0022D259 /* Selamat Pagi.AAE */; };
+		51509FC126C367DB0022D259 /* Cita-Cita.AAE in Resources */ = {isa = PBXBuildFile; fileRef = 51509FB526C367DB0022D259 /* Cita-Cita.AAE */; };
+		51509FC226C367DB0022D259 /* Cita-Cita.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 51509FB626C367DB0022D259 /* Cita-Cita.mp4 */; };
+		51509FC326C367DB0022D259 /* mengenalkan.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 51509FB726C367DB0022D259 /* mengenalkan.mp4 */; };
+		51509FC426C367DB0022D259 /* Olahraga.AAE in Resources */ = {isa = PBXBuildFile; fileRef = 51509FB826C367DB0022D259 /* Olahraga.AAE */; };
+		51509FC926C38DAD0022D259 /* Cita-Cita.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 51509FC526C38DAD0022D259 /* Cita-Cita.mp4 */; };
+		51509FCA26C38DAD0022D259 /* mengenalkan.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 51509FC626C38DAD0022D259 /* mengenalkan.mp4 */; };
+		51509FCB26C38DAD0022D259 /* Olahraga.AAE in Resources */ = {isa = PBXBuildFile; fileRef = 51509FC726C38DAD0022D259 /* Olahraga.AAE */; };
+		51509FCC26C38DAD0022D259 /* Cita-Cita.AAE in Resources */ = {isa = PBXBuildFile; fileRef = 51509FC826C38DAD0022D259 /* Cita-Cita.AAE */; };
 		515E426C26B9016600DE21E7 /* JudulCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 515E426A26B9016600DE21E7 /* JudulCollectionViewCell.swift */; };
 		515E426D26B9016600DE21E7 /* JudulCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 515E426B26B9016600DE21E7 /* JudulCollectionViewCell.xib */; };
-		517AFA9F26B5C5D300C4DC6C /* Tema.swift in Sources */ = {isa = PBXBuildFile; fileRef = 517AFA9E26B5C5D300C4DC6C /* Tema.swift */; };
-		517AFAA126B5C62F00C4DC6C /* DataTema.swift in Sources */ = {isa = PBXBuildFile; fileRef = 517AFAA026B5C62F00C4DC6C /* DataTema.swift */; };
 		517AFAA426B5C71900C4DC6C /* homeCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 517AFAA226B5C71900C4DC6C /* homeCollectionViewCell.swift */; };
 		517AFAA526B5C71900C4DC6C /* homeCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 517AFAA326B5C71900C4DC6C /* homeCollectionViewCell.xib */; };
 		517AFAA726B5C91B00C4DC6C /* UPCarouselFlowLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 517AFAA626B5C91B00C4DC6C /* UPCarouselFlowLayout.swift */; };
+		51B7A6F626C0CE2700068A43 /* Story3.gif in Resources */ = {isa = PBXBuildFile; fileRef = 51B7A6F126C0CE2600068A43 /* Story3.gif */; };
+		51B7A6F726C0CE2700068A43 /* Story4.gif in Resources */ = {isa = PBXBuildFile; fileRef = 51B7A6F226C0CE2700068A43 /* Story4.gif */; };
+		51B7A6F826C0CE2700068A43 /* Story1.gif in Resources */ = {isa = PBXBuildFile; fileRef = 51B7A6F326C0CE2700068A43 /* Story1.gif */; };
+		51B7A6F926C0CE2700068A43 /* Story5.gif in Resources */ = {isa = PBXBuildFile; fileRef = 51B7A6F426C0CE2700068A43 /* Story5.gif */; };
+		51B7A6FA26C0CE2700068A43 /* Story2.gif in Resources */ = {isa = PBXBuildFile; fileRef = 51B7A6F526C0CE2700068A43 /* Story2.gif */; };
+		E316A02026C0CCB800D5569A /* Cerita+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = E316A01E26C0CCB800D5569A /* Cerita+CoreDataClass.swift */; };
+		E316A02126C0CCB800D5569A /* Cerita+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = E316A01F26C0CCB800D5569A /* Cerita+CoreDataProperties.swift */; };
+		E335974526BE4B1400F71F0A /* StoryIlustration+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = E335973B26BE4B1400F71F0A /* StoryIlustration+CoreDataClass.swift */; };
+		E335974626BE4B1400F71F0A /* StoryIlustration+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = E335973C26BE4B1400F71F0A /* StoryIlustration+CoreDataProperties.swift */; };
+		E335974726BE4B1400F71F0A /* SubStories+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = E335973D26BE4B1400F71F0A /* SubStories+CoreDataClass.swift */; };
+		E335974826BE4B1400F71F0A /* SubStories+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = E335973E26BE4B1400F71F0A /* SubStories+CoreDataProperties.swift */; };
+		E335974B26BE4B1400F71F0A /* Highlghtword+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = E335974126BE4B1400F71F0A /* Highlghtword+CoreDataClass.swift */; };
+		E335974C26BE4B1400F71F0A /* Highlghtword+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = E335974226BE4B1400F71F0A /* Highlghtword+CoreDataProperties.swift */; };
 		E33AE72E26B5AF9000CCEA2E /* StoryEndViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E33AE72D26B5AF9000CCEA2E /* StoryEndViewController.swift */; };
+		E376D43926BCED8100A13739 /* KisahKata.xcdatamodeld in Resources */ = {isa = PBXBuildFile; fileRef = 40EB3E2426B257A400D9DEC9 /* KisahKata.xcdatamodeld */; };
+		E376D44F26BCF0C400A13739 /* DataTema.swift in Sources */ = {isa = PBXBuildFile; fileRef = E376D44E26BCF0C400A13739 /* DataTema.swift */; };
+		E376D45126BCF0D200A13739 /* Tema.swift in Sources */ = {isa = PBXBuildFile; fileRef = E376D45026BCF0D200A13739 /* Tema.swift */; };
+		E376D45326BCF0ED00A13739 /* Stories.swift in Sources */ = {isa = PBXBuildFile; fileRef = E376D45226BCF0ED00A13739 /* Stories.swift */; };
 		E3A76F8726B7B3E000E1FEF3 /* TesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3A76F8626B7B3E000E1FEF3 /* TesViewController.swift */; };
+		E3D2230D26C032900072BB78 /* TemaCerita+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3D2230B26C032900072BB78 /* TemaCerita+CoreDataClass.swift */; };
+		E3D2230E26C032900072BB78 /* TemaCerita+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3D2230C26C032900072BB78 /* TemaCerita+CoreDataProperties.swift */; };
 		E3D9AB1626B9835C00DBCDB5 /* UserIntro.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E3D9AB1526B9835C00DBCDB5 /* UserIntro.storyboard */; };
 		E3EEF81C26B6E5E1002D1F0F /* EndStory.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E3EEF81B26B6E5E1002D1F0F /* EndStory.storyboard */; };
 		E3EEF82326B6EF3E002D1F0F /* SubStoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3EEF82126B6EF3E002D1F0F /* SubStoryViewController.swift */; };
 		E3F2177526B39618003B4CB5 /* IntroViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3F2177426B39618003B4CB5 /* IntroViewController.swift */; };
+		E3F438B426BCDDB2005A5A21 /* PersistenceManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3F438B326BCDDB2005A5A21 /* PersistenceManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -96,7 +134,6 @@
 		4033061C26B5A55600506E7C /* sibi_panggil.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = sibi_panggil.mp4; sourceTree = "<group>"; };
 		4033061D26B5A55600506E7C /* sibi_bermain.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = sibi_bermain.mp4; sourceTree = "<group>"; };
 		4033062626B5A57100506E7C /* List2_D_TransferLearning.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = List2_D_TransferLearning.mlmodel; sourceTree = "<group>"; };
-		4033062926B5A5CE00506E7C /* Stories.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Stories.swift; sourceTree = "<group>"; };
 		403B93F426BA43310071A376 /* CustomStoryProgressBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomStoryProgressBar.swift; sourceTree = "<group>"; };
 		403B93F626BA434D0071A376 /* LabelTapGesture.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LabelTapGesture.swift; sourceTree = "<group>"; };
 		403B93F926BA437B0071A376 /* AlertExitService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertExitService.swift; sourceTree = "<group>"; };
@@ -117,19 +154,58 @@
 		40EB3E2726B257A500D9DEC9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		40EB3E2A26B257A500D9DEC9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		40EB3E2C26B257A500D9DEC9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		51509FA126C361790022D259 /* Kosakata+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Kosakata+CoreDataClass.swift"; sourceTree = "<group>"; };
+		51509FA226C361790022D259 /* Kosakata+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Kosakata+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		51509FA526C3647A0022D259 /* part2-Story2.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = "part2-Story2.gif"; sourceTree = "<group>"; };
+		51509FA626C3647A0022D259 /* part2-Story4.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = "part2-Story4.gif"; sourceTree = "<group>"; };
+		51509FA726C3647B0022D259 /* part2-Story1.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = "part2-Story1.gif"; sourceTree = "<group>"; };
+		51509FA826C3647B0022D259 /* part2-Story3.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = "part2-Story3.gif"; sourceTree = "<group>"; };
+		51509FAD26C367DA0022D259 /* Bersaudara.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = Bersaudara.mp4; sourceTree = "<group>"; };
+		51509FAE26C367DA0022D259 /* Bersaudara.AAE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = Bersaudara.AAE; sourceTree = "<group>"; };
+		51509FAF26C367DA0022D259 /* bermain.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = bermain.mp4; sourceTree = "<group>"; };
+		51509FB026C367DA0022D259 /* panggil.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = panggil.mp4; sourceTree = "<group>"; };
+		51509FB126C367DA0022D259 /* membanggakan.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = membanggakan.mp4; sourceTree = "<group>"; };
+		51509FB226C367DA0022D259 /* Selamat Pagi.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Selamat Pagi.mp4"; sourceTree = "<group>"; };
+		51509FB326C367DB0022D259 /* Olahraga.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = Olahraga.mp4; sourceTree = "<group>"; };
+		51509FB426C367DB0022D259 /* Selamat Pagi.AAE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = "Selamat Pagi.AAE"; sourceTree = "<group>"; };
+		51509FB526C367DB0022D259 /* Cita-Cita.AAE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = "Cita-Cita.AAE"; sourceTree = "<group>"; };
+		51509FB626C367DB0022D259 /* Cita-Cita.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Cita-Cita.mp4"; sourceTree = "<group>"; };
+		51509FB726C367DB0022D259 /* mengenalkan.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = mengenalkan.mp4; sourceTree = "<group>"; };
+		51509FB826C367DB0022D259 /* Olahraga.AAE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = Olahraga.AAE; sourceTree = "<group>"; };
+		51509FC526C38DAD0022D259 /* Cita-Cita.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Cita-Cita.mp4"; path = "../../../../../../Downloads/VideoSL/Compress/Cita-Cita.mp4"; sourceTree = "<group>"; };
+		51509FC626C38DAD0022D259 /* mengenalkan.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; name = mengenalkan.mp4; path = ../../../../../../Downloads/VideoSL/Compress/mengenalkan.mp4; sourceTree = "<group>"; };
+		51509FC726C38DAD0022D259 /* Olahraga.AAE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; name = Olahraga.AAE; path = ../../../../../../Downloads/VideoSL/Compress/Olahraga.AAE; sourceTree = "<group>"; };
+		51509FC826C38DAD0022D259 /* Cita-Cita.AAE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; name = "Cita-Cita.AAE"; path = "../../../../../../Downloads/VideoSL/Compress/Cita-Cita.AAE"; sourceTree = "<group>"; };
 		515E426A26B9016600DE21E7 /* JudulCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JudulCollectionViewCell.swift; sourceTree = "<group>"; };
 		515E426B26B9016600DE21E7 /* JudulCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = JudulCollectionViewCell.xib; sourceTree = "<group>"; };
-		517AFA9E26B5C5D300C4DC6C /* Tema.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tema.swift; sourceTree = "<group>"; };
-		517AFAA026B5C62F00C4DC6C /* DataTema.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataTema.swift; sourceTree = "<group>"; };
 		517AFAA226B5C71900C4DC6C /* homeCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = homeCollectionViewCell.swift; sourceTree = "<group>"; };
 		517AFAA326B5C71900C4DC6C /* homeCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = homeCollectionViewCell.xib; sourceTree = "<group>"; };
 		517AFAA626B5C91B00C4DC6C /* UPCarouselFlowLayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UPCarouselFlowLayout.swift; sourceTree = "<group>"; };
+		51B7A6F126C0CE2600068A43 /* Story3.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = Story3.gif; sourceTree = "<group>"; };
+		51B7A6F226C0CE2700068A43 /* Story4.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = Story4.gif; sourceTree = "<group>"; };
+		51B7A6F326C0CE2700068A43 /* Story1.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = Story1.gif; sourceTree = "<group>"; };
+		51B7A6F426C0CE2700068A43 /* Story5.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = Story5.gif; sourceTree = "<group>"; };
+		51B7A6F526C0CE2700068A43 /* Story2.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = Story2.gif; sourceTree = "<group>"; };
+		E316A01E26C0CCB800D5569A /* Cerita+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Cerita+CoreDataClass.swift"; sourceTree = "<group>"; };
+		E316A01F26C0CCB800D5569A /* Cerita+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Cerita+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		E335973B26BE4B1400F71F0A /* StoryIlustration+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "StoryIlustration+CoreDataClass.swift"; sourceTree = "<group>"; };
+		E335973C26BE4B1400F71F0A /* StoryIlustration+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "StoryIlustration+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		E335973D26BE4B1400F71F0A /* SubStories+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SubStories+CoreDataClass.swift"; sourceTree = "<group>"; };
+		E335973E26BE4B1400F71F0A /* SubStories+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SubStories+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		E335974126BE4B1400F71F0A /* Highlghtword+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Highlghtword+CoreDataClass.swift"; sourceTree = "<group>"; };
+		E335974226BE4B1400F71F0A /* Highlghtword+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Highlghtword+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		E33AE72D26B5AF9000CCEA2E /* StoryEndViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryEndViewController.swift; sourceTree = "<group>"; };
+		E376D44E26BCF0C400A13739 /* DataTema.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataTema.swift; sourceTree = "<group>"; };
+		E376D45026BCF0D200A13739 /* Tema.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Tema.swift; sourceTree = "<group>"; };
+		E376D45226BCF0ED00A13739 /* Stories.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Stories.swift; sourceTree = "<group>"; };
 		E3A76F8626B7B3E000E1FEF3 /* TesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TesViewController.swift; sourceTree = "<group>"; };
+		E3D2230B26C032900072BB78 /* TemaCerita+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TemaCerita+CoreDataClass.swift"; sourceTree = "<group>"; };
+		E3D2230C26C032900072BB78 /* TemaCerita+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TemaCerita+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		E3D9AB1526B9835C00DBCDB5 /* UserIntro.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = UserIntro.storyboard; sourceTree = "<group>"; };
 		E3EEF81B26B6E5E1002D1F0F /* EndStory.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = EndStory.storyboard; sourceTree = "<group>"; };
 		E3EEF82126B6EF3E002D1F0F /* SubStoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubStoryViewController.swift; sourceTree = "<group>"; };
 		E3F2177426B39618003B4CB5 /* IntroViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntroViewController.swift; sourceTree = "<group>"; };
+		E3F438B326BCDDB2005A5A21 /* PersistenceManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersistenceManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -209,9 +285,21 @@
 		4033060126B5A15400506E7C /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				4033062926B5A5CE00506E7C /* Stories.swift */,
-				517AFA9E26B5C5D300C4DC6C /* Tema.swift */,
-				517AFAA026B5C62F00C4DC6C /* DataTema.swift */,
+				51509FA126C361790022D259 /* Kosakata+CoreDataClass.swift */,
+				51509FA226C361790022D259 /* Kosakata+CoreDataProperties.swift */,
+				E316A01E26C0CCB800D5569A /* Cerita+CoreDataClass.swift */,
+				E316A01F26C0CCB800D5569A /* Cerita+CoreDataProperties.swift */,
+				E3D2230B26C032900072BB78 /* TemaCerita+CoreDataClass.swift */,
+				E3D2230C26C032900072BB78 /* TemaCerita+CoreDataProperties.swift */,
+				E335973B26BE4B1400F71F0A /* StoryIlustration+CoreDataClass.swift */,
+				E335973C26BE4B1400F71F0A /* StoryIlustration+CoreDataProperties.swift */,
+				E335973D26BE4B1400F71F0A /* SubStories+CoreDataClass.swift */,
+				E335973E26BE4B1400F71F0A /* SubStories+CoreDataProperties.swift */,
+				E335974126BE4B1400F71F0A /* Highlghtword+CoreDataClass.swift */,
+				E335974226BE4B1400F71F0A /* Highlghtword+CoreDataProperties.swift */,
+				E376D45226BCF0ED00A13739 /* Stories.swift */,
+				E376D44E26BCF0C400A13739 /* DataTema.swift */,
+				E376D45026BCF0D200A13739 /* Tema.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -229,6 +317,22 @@
 		4033060326B5A18000506E7C /* Videos */ = {
 			isa = PBXGroup;
 			children = (
+				51509FAF26C367DA0022D259 /* bermain.mp4 */,
+				51509FAE26C367DA0022D259 /* Bersaudara.AAE */,
+				51509FAD26C367DA0022D259 /* Bersaudara.mp4 */,
+				51509FB526C367DB0022D259 /* Cita-Cita.AAE */,
+				51509FC826C38DAD0022D259 /* Cita-Cita.AAE */,
+				51509FB626C367DB0022D259 /* Cita-Cita.mp4 */,
+				51509FC526C38DAD0022D259 /* Cita-Cita.mp4 */,
+				51509FC626C38DAD0022D259 /* mengenalkan.mp4 */,
+				51509FC726C38DAD0022D259 /* Olahraga.AAE */,
+				51509FB126C367DA0022D259 /* membanggakan.mp4 */,
+				51509FB726C367DB0022D259 /* mengenalkan.mp4 */,
+				51509FB826C367DB0022D259 /* Olahraga.AAE */,
+				51509FB326C367DB0022D259 /* Olahraga.mp4 */,
+				51509FB026C367DA0022D259 /* panggil.mp4 */,
+				51509FB426C367DB0022D259 /* Selamat Pagi.AAE */,
+				51509FB226C367DA0022D259 /* Selamat Pagi.mp4 */,
 				4033061D26B5A55600506E7C /* sibi_bermain.mp4 */,
 				4033061626B5A55500506E7C /* sibi_bersaudara.mp4 */,
 				4033061926B5A55500506E7C /* sibi_cita-cita.mp4 */,
@@ -245,6 +349,15 @@
 			isa = PBXGroup;
 			children = (
 				4033060F26B5A54600506E7C /* story_1_1.jpeg */,
+				51B7A6F326C0CE2700068A43 /* Story1.gif */,
+				51509FA726C3647B0022D259 /* part2-Story1.gif */,
+				51509FA526C3647A0022D259 /* part2-Story2.gif */,
+				51509FA826C3647B0022D259 /* part2-Story3.gif */,
+				51509FA626C3647A0022D259 /* part2-Story4.gif */,
+				51B7A6F526C0CE2700068A43 /* Story2.gif */,
+				51B7A6F126C0CE2600068A43 /* Story3.gif */,
+				51B7A6F226C0CE2700068A43 /* Story4.gif */,
+				51B7A6F426C0CE2700068A43 /* Story5.gif */,
 				4033060D26B5A54600506E7C /* story_1_2.jpeg */,
 				4033060E26B5A54600506E7C /* story_1_3.jpeg */,
 				4033061026B5A54600506E7C /* story_1_4.jpeg */,
@@ -302,6 +415,7 @@
 				40EB3E2726B257A500D9DEC9 /* Assets.xcassets */,
 				40EB3E2C26B257A500D9DEC9 /* Info.plist */,
 				40EB3E2426B257A400D9DEC9 /* KisahKata.xcdatamodeld */,
+				E3F438B326BCDDB2005A5A21 /* PersistenceManager.swift */,
 			);
 			path = KisahKata;
 			sourceTree = "<group>";
@@ -363,38 +477,64 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				51509FAC26C3647B0022D259 /* part2-Story3.gif in Resources */,
+				51509FBF26C367DB0022D259 /* Olahraga.mp4 in Resources */,
+				E376D43926BCED8100A13739 /* KisahKata.xcdatamodeld in Resources */,
 				4033061526B5A54600506E7C /* story_1_4.jpeg in Resources */,
+				51509FC926C38DAD0022D259 /* Cita-Cita.mp4 in Resources */,
 				4033062426B5A55600506E7C /* sibi_panggil.mp4 in Resources */,
+				51B7A6F826C0CE2700068A43 /* Story1.gif in Resources */,
 				4033060926B5A22600506E7C /* Quiz.storyboard in Resources */,
+				51509FBB26C367DB0022D259 /* bermain.mp4 in Resources */,
+				51B7A6F926C0CE2700068A43 /* Story5.gif in Resources */,
 				517AFAA526B5C71900C4DC6C /* homeCollectionViewCell.xib in Resources */,
+				51509FBD26C367DB0022D259 /* membanggakan.mp4 in Resources */,
 				4033061126B5A54600506E7C /* story_1_5.jpeg in Resources */,
+				51509FBA26C367DB0022D259 /* Bersaudara.AAE in Resources */,
+				51B7A6F726C0CE2700068A43 /* Story4.gif in Resources */,
 				403305FB26B5A09E00506E7C /* Ubuntu-Bold.ttf in Resources */,
 				4033061326B5A54600506E7C /* story_1_3.jpeg in Resources */,
 				403305F926B5A09E00506E7C /* Ubuntu-BoldItalic.ttf in Resources */,
 				4033061226B5A54600506E7C /* story_1_2.jpeg in Resources */,
+				51509FC126C367DB0022D259 /* Cita-Cita.AAE in Resources */,
 				403B940626BA45030071A376 /* CustomScreen.storyboard in Resources */,
 				4033061F26B5A55600506E7C /* sibi_memperkenalkan.mp4 in Resources */,
 				4033060726B5A21600506E7C /* Storytelling.storyboard in Resources */,
+				51B7A6FA26C0CE2700068A43 /* Story2.gif in Resources */,
 				40EB3E2B26B257A500D9DEC9 /* LaunchScreen.storyboard in Resources */,
 				40EB3E2826B257A500D9DEC9 /* Assets.xcassets in Resources */,
+				51509FBE26C367DB0022D259 /* Selamat Pagi.mp4 in Resources */,
+				51509FC026C367DB0022D259 /* Selamat Pagi.AAE in Resources */,
 				4033061E26B5A55600506E7C /* sibi_bersaudara.mp4 in Resources */,
+				51509FCB26C38DAD0022D259 /* Olahraga.AAE in Resources */,
 				403305F826B5A09E00506E7C /* Ubuntu-Medium.ttf in Resources */,
 				40EB3E2326B257A400D9DEC9 /* Main.storyboard in Resources */,
 				515E426D26B9016600DE21E7 /* JudulCollectionViewCell.xib in Resources */,
+				51509FAA26C3647B0022D259 /* part2-Story4.gif in Resources */,
+				51509FC426C367DB0022D259 /* Olahraga.AAE in Resources */,
 				4033062326B5A55600506E7C /* sibi_membanggakan.mp4 in Resources */,
 				403305F626B5A09E00506E7C /* Ubuntu-Regular.ttf in Resources */,
 				4033062526B5A55600506E7C /* sibi_bermain.mp4 in Resources */,
+				51509FC226C367DB0022D259 /* Cita-Cita.mp4 in Resources */,
+				51B7A6F626C0CE2700068A43 /* Story3.gif in Resources */,
 				E3EEF81C26B6E5E1002D1F0F /* EndStory.storyboard in Resources */,
+				51509FBC26C367DB0022D259 /* panggil.mp4 in Resources */,
 				E3D9AB1626B9835C00DBCDB5 /* UserIntro.storyboard in Resources */,
+				51509FAB26C3647B0022D259 /* part2-Story1.gif in Resources */,
 				4033062126B5A55600506E7C /* sibi_cita-cita.mp4 in Resources */,
 				4033062026B5A55600506E7C /* sibi_selamatpagi.mp4 in Resources */,
+				51509FC326C367DB0022D259 /* mengenalkan.mp4 in Resources */,
 				4033060B26B5A24300506E7C /* Practice.storyboard in Resources */,
 				403305F726B5A09E00506E7C /* Ubuntu-LightItalic.ttf in Resources */,
 				403305FA26B5A09E00506E7C /* Ubuntu-Light.ttf in Resources */,
 				4033061426B5A54600506E7C /* story_1_1.jpeg in Resources */,
 				4033062226B5A55600506E7C /* sibi_olahraga.mp4 in Resources */,
+				51509FA926C3647B0022D259 /* part2-Story2.gif in Resources */,
+				51509FB926C367DB0022D259 /* Bersaudara.mp4 in Resources */,
 				403305F526B5A09E00506E7C /* Ubuntu-Italic.ttf in Resources */,
+				51509FCC26C38DAD0022D259 /* Cita-Cita.AAE in Resources */,
 				403305FC26B5A09E00506E7C /* Ubuntu-MediumItalic.ttf in Resources */,
+				51509FCA26C38DAD0022D259 /* mengenalkan.mp4 in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -405,33 +545,45 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E3D2230D26C032900072BB78 /* TemaCerita+CoreDataClass.swift in Sources */,
 				E3EEF82326B6EF3E002D1F0F /* SubStoryViewController.swift in Sources */,
 				403B940426BA440B0071A376 /* StorytellingViewController.swift in Sources */,
 				403305EB26B59FE500506E7C /* Extension.swift in Sources */,
 				E3F2177526B39618003B4CB5 /* IntroViewController.swift in Sources */,
 				403B93FE26BA43C10071A376 /* AlertExitViewController.swift in Sources */,
 				403B940026BA43DB0071A376 /* HintStoryViewController.swift in Sources */,
-				4033062A26B5A5CE00506E7C /* Stories.swift in Sources */,
+				E335974526BE4B1400F71F0A /* StoryIlustration+CoreDataClass.swift in Sources */,
 				517AFAA726B5C91B00C4DC6C /* UPCarouselFlowLayout.swift in Sources */,
+				E316A02126C0CCB800D5569A /* Cerita+CoreDataProperties.swift in Sources */,
 				403B93F526BA43310071A376 /* CustomStoryProgressBar.swift in Sources */,
 				403B940A26BA6AC80071A376 /* AlertLockItemService.swift in Sources */,
-				517AFA9F26B5C5D300C4DC6C /* Tema.swift in Sources */,
+				E376D45326BCF0ED00A13739 /* Stories.swift in Sources */,
 				40EB3E2026B257A400D9DEC9 /* ViewController.swift in Sources */,
 				515E426C26B9016600DE21E7 /* JudulCollectionViewCell.swift in Sources */,
+				E335974C26BE4B1400F71F0A /* Highlghtword+CoreDataProperties.swift in Sources */,
+				51509FA326C361790022D259 /* Kosakata+CoreDataClass.swift in Sources */,
+				E335974B26BE4B1400F71F0A /* Highlghtword+CoreDataClass.swift in Sources */,
+				E335974626BE4B1400F71F0A /* StoryIlustration+CoreDataProperties.swift in Sources */,
 				E33AE72E26B5AF9000CCEA2E /* StoryEndViewController.swift in Sources */,
+				E335974726BE4B1400F71F0A /* SubStories+CoreDataClass.swift in Sources */,
 				403305FE26B5A0DD00506E7C /* GifImage.swift in Sources */,
+				E376D44F26BCF0C400A13739 /* DataTema.swift in Sources */,
+				51509FA426C361790022D259 /* Kosakata+CoreDataProperties.swift in Sources */,
+				E316A02026C0CCB800D5569A /* Cerita+CoreDataClass.swift in Sources */,
 				403B940826BA69FB0071A376 /* AlertLockItemViewController.swift in Sources */,
 				517AFAA426B5C71900C4DC6C /* homeCollectionViewCell.swift in Sources */,
+				E376D45126BCF0D200A13739 /* Tema.swift in Sources */,
 				40EB3E1C26B257A400D9DEC9 /* AppDelegate.swift in Sources */,
-				517AFAA126B5C62F00C4DC6C /* DataTema.swift in Sources */,
 				403B93FC26BA439D0071A376 /* HintService.swift in Sources */,
 				403B940226BA43F50071A376 /* StoryOverviewViewController.swift in Sources */,
 				40EB3E1E26B257A400D9DEC9 /* SceneDelegate.swift in Sources */,
 				E3A76F8726B7B3E000E1FEF3 /* TesViewController.swift in Sources */,
 				403B93FA26BA437B0071A376 /* AlertExitService.swift in Sources */,
+				E3D2230E26C032900072BB78 /* TemaCerita+CoreDataProperties.swift in Sources */,
 				403B93F726BA434D0071A376 /* LabelTapGesture.swift in Sources */,
+				E3F438B426BCDDB2005A5A21 /* PersistenceManager.swift in Sources */,
 				4033062726B5A57100506E7C /* List2_D_TransferLearning.mlmodel in Sources */,
-				40EB3E2626B257A400D9DEC9 /* KisahKata.xcdatamodeld in Sources */,
+				E335974826BE4B1400F71F0A /* SubStories+CoreDataProperties.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -579,13 +731,13 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = D7589S3EHF;
+				DEVELOPMENT_TEAM = B7LC8VVXHV;
 				INFOPLIST_FILE = KisahKata/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.dimas.KisahKata;
+				PRODUCT_BUNDLE_IDENTIFIER = com.Farendza.KisahKata;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -598,13 +750,13 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = D7589S3EHF;
+				DEVELOPMENT_TEAM = B7LC8VVXHV;
 				INFOPLIST_FILE = KisahKata/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.dimas.KisahKata;
+				PRODUCT_BUNDLE_IDENTIFIER = com.Farendza.KisahKata;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";

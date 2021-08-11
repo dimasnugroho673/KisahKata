@@ -15,7 +15,7 @@ var dataTema: [Tema] = [
 ]
 
 var dataJudul: [Judul] = [
-    Judul(nama: "Salam Kenal"),
-    Judul(nama: "Hobi"),
-    Judul(nama: "Cita-Cita")
+    Judul(nama: "Salam Kenal",preview: UIImage(named: "Preview1")!),
+    Judul(nama: "Hobi",preview: UIImage(named: "Preview5")!),
+    Judul(nama: "Cita-Cita",preview: UIImage(named: "Preview6")!)
 ]

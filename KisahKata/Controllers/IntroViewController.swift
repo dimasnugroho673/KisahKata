@@ -44,8 +44,13 @@ class IntroViewController: UIViewController {
     @IBAction func startLearn(_ sender: UIButton) {
         
         self._animateSpringView(sender)
+        var nama : String = ""
         
+//        let controller = ViewController(persistenceManager: PersistenceManager)
+//        controller.delegate = self
         if userNameTextField.text != "" {
+            
+            
             UserDefaults.standard.set(userNameTextField.text, forKey: "username")
             
             /// trigger function in Home
@@ -53,8 +58,15 @@ class IntroViewController: UIViewController {
             
             dismiss(animated: true, completion: nil)
             UserDefaults.standard.synchronize()
+        } else {
+            var userdefault = UserDefaults.standard.string(forKey: "username") ?? ""
+            nama = userdefault
+//            selectionDelegate.didTapChoice(name: "\(nama)")
+            print(nama)
+            
         }
         
+        dismiss(animated: true, completion: nil)
         
     }
     

@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import CoreData
 
 class ViewController: UIViewController, SaveUserDataDelegate {
 
@@ -21,12 +22,21 @@ class ViewController: UIViewController, SaveUserDataDelegate {
     
     @IBOutlet weak var homeCollectionView: UICollectionView!
     let userDefault = UserDefaults()
-    fileprivate var items = dataTema
+    fileprivate var items = dataJudul
+    fileprivate var tema = dataTema
+    
+//    private var temaCerita : [TemaCerita] = []
+//    private var ceritas: [Cerita] = []
+//    var tema : TemaCerita?
+    
+//    var tema: TemaCerita?
+    
+    var manageObjectContext = NSManagedObjectContext(concurrencyType: .mainQueueConcurrencyType)
     
     fileprivate var currentPage: Int = 0 {
         didSet {
             let preview = self.items[self.currentPage]
-            self.previewImage.image = preview.picture
+            self.previewImage.image = preview.preview
             print("page at centre = \(currentPage)")
         }
     }
@@ -56,10 +66,21 @@ class ViewController: UIViewController, SaveUserDataDelegate {
         return button
     }()
     
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         _checkUserIsLogged()
+//        _checkData()
+//        _loadData()
+//        _addData()
+//        load()
+//
+//
+//        homeCollectionView.reloadData()
         // Do any additional setup after loading the view.
+        
+        let namaTema = self.items[self.currentPage]
+        self.temaLabel.text = namaTema.nama
         let cellNib = UINib(nibName: "homeCollectionViewCell", bundle: nil)
         self.homeCollectionView.register(cellNib, forCellWithReuseIdentifier: "temaCell")
         let cellNibJudul = UINib(nibName: "JudulCollectionViewCell", bundle: nil)
@@ -93,8 +114,11 @@ class ViewController: UIViewController, SaveUserDataDelegate {
             pointSize: 25, weight: .medium, scale: .default)
         let image = UIImage(systemName: "xmark.circle.fill", withConfiguration: config)
         backButton.setImage(image, for: .normal)
+        backButton.tintColor = .white
         
         
+        
+//        didTapChoice(name: "")
         
         
         
@@ -102,6 +126,9 @@ class ViewController: UIViewController, SaveUserDataDelegate {
         homeCollectionView.dataSource = self
         judulCollectionView.delegate = self
         judulCollectionView.dataSource = self
+        
+        
+        
     }
     
     
@@ -136,8 +163,12 @@ extension ViewController: UICollectionViewDelegate, UICollectionViewDataSource{
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         if collectionView == homeCollectionView {
             return dataTema.count
+            print(dataTema)
+            
         }else {
+//            load()
             return dataJudul.count
+            
         }
         
     }
@@ -148,6 +179,7 @@ extension ViewController: UICollectionViewDelegate, UICollectionViewDataSource{
             let tema = dataTema[indexPath.row]
             cell.temaImage.image = tema.picture
             cell.temaLabel.text = tema.nama
+//            cell.setDataIntoCell(tema: tema)
             
             if indexPath.row < 1 {
                 cell.lockImage.image = UIImage(named: "")
@@ -161,6 +193,8 @@ extension ViewController: UICollectionViewDelegate, UICollectionViewDataSource{
             let cellJudul = collectionView.dequeueReusableCell(withReuseIdentifier: "judulCell", for: indexPath)as! JudulCollectionViewCell
             let judul = dataJudul[indexPath.row]
             cellJudul.judulLabel.text = judul.nama
+
+//            cellJudul.setDataIntoCell(ceritas: judul)
             
             if indexPath.row < 1 {
                 cellJudul.scoreImage.image = UIImage(named: "img_star-0")
@@ -171,13 +205,13 @@ extension ViewController: UICollectionViewDelegate, UICollectionViewDataSource{
             
             return cellJudul
         }
+        
+        
     }
     
-    
-    
-    
-    
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+//        let tema = temaCerita[indexPath.row]
+//        temaLabel.text = tema.title
         if collectionView == homeCollectionView && indexPath.row < 1 {
             _animateIn(desiredView: bgBlurJudul)
             
@@ -192,7 +226,6 @@ extension ViewController: UICollectionViewDelegate, UICollectionViewDataSource{
             let alertVC = alert.alert(title: "Cerita terkunci", message: "Cerita masih terkunci, selesaikan cerita sebelumnya untuk membuka cerita baru")
             present(alertVC, animated: true)
         }
-        
         
     }
     
@@ -247,4 +280,101 @@ extension ViewController: UICollectionViewDelegate, UICollectionViewDataSource{
         }
     }
     
+    private func _addData () {
+        
+        _temaData()
+        _storiesData()
+        
+    }
+    
+    private func _temaData() {
+        
+        
+//        let entity = NSEntityDescription.entity(forEntityName: "TemaCerita", in: self.manageObjectContext)
+//        let newKosakata = NSManagedObject(entity: entity!, insertInto: self.manageObjectContext)
+//
+//
+//
+//        newKosakata.setValue("Selamat pagi", forKey: "title")
+//        newKosakata.setValue(true, forKey: "lock")
+//
+//        PersistenceManager.shared.save()
+        
+        let title1 = "Perkenalan"
+        let lock1 = true
+        let temaImage1 = ""
+        
+        let title2 = "Pertemanan"
+        let lock2 = false
+        let temaImage2 = ""
+        
+        let title3 = "Keluarga"
+        let lock3 = false
+        let temaImage3 = ""
+        
+        PersistenceManager.shared.setTemaCerita(lock: lock1, title: title1, temaImage: temaImage1)
+        PersistenceManager.shared.setTemaCerita(lock: lock2, title: title2, temaImage: temaImage2)
+        PersistenceManager.shared.setTemaCerita(lock: lock3, title: title3, temaImage: temaImage3)
+    
+        
+        
+    }
+    
+    private func _storiesData() {
+        
+        let title = "Selamat Pagi"
+        let coverImage = ""
+        let lock = true
+        
+        PersistenceManager.shared.setCerita(coverImage: coverImage, lock: lock, title: title)
+        
+        
+    }
+    
+    
+    private func _checkData() {
+        let dataExist: Int = UserDefaults.standard.integer(forKey: "dataExist")
+
+        if dataExist != 1 {
+            self._addData()
+
+            UserDefaults.standard.setValue(1, forKey: "dataExist")
+            print("data has been dump!")
+        } else {
+//            print("data exist!")
+        }
+    }
+    
+//    private func _loadData() {
+//
+////        guard let tema = tema else {
+////            print("error author")
+////            return
+////        }
+//        temaCerita = PersistenceManager.shared.fetchTemaCerita()
+////        ceritas = PersistenceManager.shared.fetchCerita(tema: tema)
+//        homeCollectionView.reloadData()
+//
+//        print(temaCerita)
+//    }
+//
+//    private func load(){
+//
+//        guard let tema  = tema else {
+//            print("error cerita data")
+//            return
+//        }
+//
+//        ceritas = PersistenceManager.shared.fetchCerita(tema: tema)
+//        judulCollectionView.reloadData()
+////
+//    }
+
+
+//extension ViewController : LoginSelectionDelegate {
+//    func didTapChoice(name: String) {
+//        userLabel.text = name
+//    }
+
+
 }

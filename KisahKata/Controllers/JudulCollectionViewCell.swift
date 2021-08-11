@@ -18,5 +18,10 @@ class JudulCollectionViewCell: UICollectionViewCell {
         // Initialization code
         self.cntnView.layer.cornerRadius = 13
     }
+    
+    func setDataIntoCell(ceritas: Cerita) {
+        self.judulLabel.text = ceritas.title
+        
+    }
 
 }

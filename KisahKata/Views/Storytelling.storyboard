@@ -56,7 +56,6 @@
                                     <constraint firstAttribute="width" constant="32" id="AuG-1f-cHv"/>
                                     <constraint firstAttribute="height" constant="35" id="hpB-IW-dIJ"/>
                                 </constraints>
-                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <state key="normal">
                                     <imageReference key="image" image="xmark.circle.fill" catalog="system" symbolScale="large"/>
                                     <preferredSymbolConfiguration key="preferredSymbolConfiguration" scale="large" weight="heavy"/>
@@ -102,7 +101,6 @@
                                     <constraint firstAttribute="height" constant="30" id="Icz-8b-IM3"/>
                                     <constraint firstAttribute="width" constant="30" id="URN-lP-gMX"/>
                                 </constraints>
-                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <state key="normal" image="questionmark.circle.fill" catalog="system">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>

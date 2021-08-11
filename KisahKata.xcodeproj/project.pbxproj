@@ -73,6 +73,7 @@
 		51509FCA26C38DAD0022D259 /* mengenalkan.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 51509FC626C38DAD0022D259 /* mengenalkan.mp4 */; };
 		51509FCB26C38DAD0022D259 /* Olahraga.AAE in Resources */ = {isa = PBXBuildFile; fileRef = 51509FC726C38DAD0022D259 /* Olahraga.AAE */; };
 		51509FCC26C38DAD0022D259 /* Cita-Cita.AAE in Resources */ = {isa = PBXBuildFile; fileRef = 51509FC826C38DAD0022D259 /* Cita-Cita.AAE */; };
+		51509FCE26C391230022D259 /* DataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51509FCD26C391230022D259 /* DataModel.swift */; };
 		515E426C26B9016600DE21E7 /* JudulCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 515E426A26B9016600DE21E7 /* JudulCollectionViewCell.swift */; };
 		515E426D26B9016600DE21E7 /* JudulCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 515E426B26B9016600DE21E7 /* JudulCollectionViewCell.xib */; };
 		517AFAA426B5C71900C4DC6C /* homeCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 517AFAA226B5C71900C4DC6C /* homeCollectionViewCell.swift */; };
@@ -176,6 +177,7 @@
 		51509FC626C38DAD0022D259 /* mengenalkan.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; name = mengenalkan.mp4; path = ../../../../../../Downloads/VideoSL/Compress/mengenalkan.mp4; sourceTree = "<group>"; };
 		51509FC726C38DAD0022D259 /* Olahraga.AAE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; name = Olahraga.AAE; path = ../../../../../../Downloads/VideoSL/Compress/Olahraga.AAE; sourceTree = "<group>"; };
 		51509FC826C38DAD0022D259 /* Cita-Cita.AAE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; name = "Cita-Cita.AAE"; path = "../../../../../../Downloads/VideoSL/Compress/Cita-Cita.AAE"; sourceTree = "<group>"; };
+		51509FCD26C391230022D259 /* DataModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataModel.swift; sourceTree = "<group>"; };
 		515E426A26B9016600DE21E7 /* JudulCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JudulCollectionViewCell.swift; sourceTree = "<group>"; };
 		515E426B26B9016600DE21E7 /* JudulCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = JudulCollectionViewCell.xib; sourceTree = "<group>"; };
 		517AFAA226B5C71900C4DC6C /* homeCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = homeCollectionViewCell.swift; sourceTree = "<group>"; };
@@ -299,6 +301,7 @@
 				E335974226BE4B1400F71F0A /* Highlghtword+CoreDataProperties.swift */,
 				E376D45226BCF0ED00A13739 /* Stories.swift */,
 				E376D44E26BCF0C400A13739 /* DataTema.swift */,
+				51509FCD26C391230022D259 /* DataModel.swift */,
 				E376D45026BCF0D200A13739 /* Tema.swift */,
 			);
 			path = Models;
@@ -550,6 +553,7 @@
 				403B940426BA440B0071A376 /* StorytellingViewController.swift in Sources */,
 				403305EB26B59FE500506E7C /* Extension.swift in Sources */,
 				E3F2177526B39618003B4CB5 /* IntroViewController.swift in Sources */,
+				51509FCE26C391230022D259 /* DataModel.swift in Sources */,
 				403B93FE26BA43C10071A376 /* AlertExitViewController.swift in Sources */,
 				403B940026BA43DB0071A376 /* HintStoryViewController.swift in Sources */,
 				E335974526BE4B1400F71F0A /* StoryIlustration+CoreDataClass.swift in Sources */,

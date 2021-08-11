@@ -57,6 +57,18 @@
 		51509FAA26C3647B0022D259 /* part2-Story4.gif in Resources */ = {isa = PBXBuildFile; fileRef = 51509FA626C3647A0022D259 /* part2-Story4.gif */; };
 		51509FAB26C3647B0022D259 /* part2-Story1.gif in Resources */ = {isa = PBXBuildFile; fileRef = 51509FA726C3647B0022D259 /* part2-Story1.gif */; };
 		51509FAC26C3647B0022D259 /* part2-Story3.gif in Resources */ = {isa = PBXBuildFile; fileRef = 51509FA826C3647B0022D259 /* part2-Story3.gif */; };
+		51509FB926C367DB0022D259 /* Bersaudara.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 51509FAD26C367DA0022D259 /* Bersaudara.mp4 */; };
+		51509FBA26C367DB0022D259 /* Bersaudara.AAE in Resources */ = {isa = PBXBuildFile; fileRef = 51509FAE26C367DA0022D259 /* Bersaudara.AAE */; };
+		51509FBB26C367DB0022D259 /* bermain.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 51509FAF26C367DA0022D259 /* bermain.mp4 */; };
+		51509FBC26C367DB0022D259 /* panggil.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 51509FB026C367DA0022D259 /* panggil.mp4 */; };
+		51509FBD26C367DB0022D259 /* membanggakan.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 51509FB126C367DA0022D259 /* membanggakan.mp4 */; };
+		51509FBE26C367DB0022D259 /* Selamat Pagi.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 51509FB226C367DA0022D259 /* Selamat Pagi.mp4 */; };
+		51509FBF26C367DB0022D259 /* Olahraga.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 51509FB326C367DB0022D259 /* Olahraga.mp4 */; };
+		51509FC026C367DB0022D259 /* Selamat Pagi.AAE in Resources */ = {isa = PBXBuildFile; fileRef = 51509FB426C367DB0022D259 /* Selamat Pagi.AAE */; };
+		51509FC126C367DB0022D259 /* Cita-Cita.AAE in Resources */ = {isa = PBXBuildFile; fileRef = 51509FB526C367DB0022D259 /* Cita-Cita.AAE */; };
+		51509FC226C367DB0022D259 /* Cita-Cita.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 51509FB626C367DB0022D259 /* Cita-Cita.mp4 */; };
+		51509FC326C367DB0022D259 /* mengenalkan.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 51509FB726C367DB0022D259 /* mengenalkan.mp4 */; };
+		51509FC426C367DB0022D259 /* Olahraga.AAE in Resources */ = {isa = PBXBuildFile; fileRef = 51509FB826C367DB0022D259 /* Olahraga.AAE */; };
 		515E426C26B9016600DE21E7 /* JudulCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 515E426A26B9016600DE21E7 /* JudulCollectionViewCell.swift */; };
 		515E426D26B9016600DE21E7 /* JudulCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 515E426B26B9016600DE21E7 /* JudulCollectionViewCell.xib */; };
 		517AFAA426B5C71900C4DC6C /* homeCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 517AFAA226B5C71900C4DC6C /* homeCollectionViewCell.swift */; };
@@ -144,6 +156,18 @@
 		51509FA626C3647A0022D259 /* part2-Story4.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = "part2-Story4.gif"; sourceTree = "<group>"; };
 		51509FA726C3647B0022D259 /* part2-Story1.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = "part2-Story1.gif"; sourceTree = "<group>"; };
 		51509FA826C3647B0022D259 /* part2-Story3.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = "part2-Story3.gif"; sourceTree = "<group>"; };
+		51509FAD26C367DA0022D259 /* Bersaudara.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = Bersaudara.mp4; sourceTree = "<group>"; };
+		51509FAE26C367DA0022D259 /* Bersaudara.AAE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = Bersaudara.AAE; sourceTree = "<group>"; };
+		51509FAF26C367DA0022D259 /* bermain.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = bermain.mp4; sourceTree = "<group>"; };
+		51509FB026C367DA0022D259 /* panggil.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = panggil.mp4; sourceTree = "<group>"; };
+		51509FB126C367DA0022D259 /* membanggakan.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = membanggakan.mp4; sourceTree = "<group>"; };
+		51509FB226C367DA0022D259 /* Selamat Pagi.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Selamat Pagi.mp4"; sourceTree = "<group>"; };
+		51509FB326C367DB0022D259 /* Olahraga.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = Olahraga.mp4; sourceTree = "<group>"; };
+		51509FB426C367DB0022D259 /* Selamat Pagi.AAE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = "Selamat Pagi.AAE"; sourceTree = "<group>"; };
+		51509FB526C367DB0022D259 /* Cita-Cita.AAE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = "Cita-Cita.AAE"; sourceTree = "<group>"; };
+		51509FB626C367DB0022D259 /* Cita-Cita.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Cita-Cita.mp4"; sourceTree = "<group>"; };
+		51509FB726C367DB0022D259 /* mengenalkan.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = mengenalkan.mp4; sourceTree = "<group>"; };
+		51509FB826C367DB0022D259 /* Olahraga.AAE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = Olahraga.AAE; sourceTree = "<group>"; };
 		515E426A26B9016600DE21E7 /* JudulCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JudulCollectionViewCell.swift; sourceTree = "<group>"; };
 		515E426B26B9016600DE21E7 /* JudulCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = JudulCollectionViewCell.xib; sourceTree = "<group>"; };
 		517AFAA226B5C71900C4DC6C /* homeCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = homeCollectionViewCell.swift; sourceTree = "<group>"; };
@@ -285,6 +309,18 @@
 		4033060326B5A18000506E7C /* Videos */ = {
 			isa = PBXGroup;
 			children = (
+				51509FAF26C367DA0022D259 /* bermain.mp4 */,
+				51509FAE26C367DA0022D259 /* Bersaudara.AAE */,
+				51509FAD26C367DA0022D259 /* Bersaudara.mp4 */,
+				51509FB526C367DB0022D259 /* Cita-Cita.AAE */,
+				51509FB626C367DB0022D259 /* Cita-Cita.mp4 */,
+				51509FB126C367DA0022D259 /* membanggakan.mp4 */,
+				51509FB726C367DB0022D259 /* mengenalkan.mp4 */,
+				51509FB826C367DB0022D259 /* Olahraga.AAE */,
+				51509FB326C367DB0022D259 /* Olahraga.mp4 */,
+				51509FB026C367DA0022D259 /* panggil.mp4 */,
+				51509FB426C367DB0022D259 /* Selamat Pagi.AAE */,
+				51509FB226C367DA0022D259 /* Selamat Pagi.mp4 */,
 				4033061D26B5A55600506E7C /* sibi_bermain.mp4 */,
 				4033061626B5A55500506E7C /* sibi_bersaudara.mp4 */,
 				4033061926B5A55500506E7C /* sibi_cita-cita.mp4 */,
@@ -430,45 +466,57 @@
 			buildActionMask = 2147483647;
 			files = (
 				51509FAC26C3647B0022D259 /* part2-Story3.gif in Resources */,
+				51509FBF26C367DB0022D259 /* Olahraga.mp4 in Resources */,
 				E376D43926BCED8100A13739 /* KisahKata.xcdatamodeld in Resources */,
 				4033061526B5A54600506E7C /* story_1_4.jpeg in Resources */,
 				4033062426B5A55600506E7C /* sibi_panggil.mp4 in Resources */,
 				51B7A6F826C0CE2700068A43 /* Story1.gif in Resources */,
 				4033060926B5A22600506E7C /* Quiz.storyboard in Resources */,
+				51509FBB26C367DB0022D259 /* bermain.mp4 in Resources */,
 				51B7A6F926C0CE2700068A43 /* Story5.gif in Resources */,
 				517AFAA526B5C71900C4DC6C /* homeCollectionViewCell.xib in Resources */,
+				51509FBD26C367DB0022D259 /* membanggakan.mp4 in Resources */,
 				4033061126B5A54600506E7C /* story_1_5.jpeg in Resources */,
+				51509FBA26C367DB0022D259 /* Bersaudara.AAE in Resources */,
 				51B7A6F726C0CE2700068A43 /* Story4.gif in Resources */,
 				403305FB26B5A09E00506E7C /* Ubuntu-Bold.ttf in Resources */,
 				4033061326B5A54600506E7C /* story_1_3.jpeg in Resources */,
 				403305F926B5A09E00506E7C /* Ubuntu-BoldItalic.ttf in Resources */,
 				4033061226B5A54600506E7C /* story_1_2.jpeg in Resources */,
+				51509FC126C367DB0022D259 /* Cita-Cita.AAE in Resources */,
 				403B940626BA45030071A376 /* CustomScreen.storyboard in Resources */,
 				4033061F26B5A55600506E7C /* sibi_memperkenalkan.mp4 in Resources */,
 				4033060726B5A21600506E7C /* Storytelling.storyboard in Resources */,
 				51B7A6FA26C0CE2700068A43 /* Story2.gif in Resources */,
 				40EB3E2B26B257A500D9DEC9 /* LaunchScreen.storyboard in Resources */,
 				40EB3E2826B257A500D9DEC9 /* Assets.xcassets in Resources */,
+				51509FBE26C367DB0022D259 /* Selamat Pagi.mp4 in Resources */,
+				51509FC026C367DB0022D259 /* Selamat Pagi.AAE in Resources */,
 				4033061E26B5A55600506E7C /* sibi_bersaudara.mp4 in Resources */,
 				403305F826B5A09E00506E7C /* Ubuntu-Medium.ttf in Resources */,
 				40EB3E2326B257A400D9DEC9 /* Main.storyboard in Resources */,
 				515E426D26B9016600DE21E7 /* JudulCollectionViewCell.xib in Resources */,
 				51509FAA26C3647B0022D259 /* part2-Story4.gif in Resources */,
+				51509FC426C367DB0022D259 /* Olahraga.AAE in Resources */,
 				4033062326B5A55600506E7C /* sibi_membanggakan.mp4 in Resources */,
 				403305F626B5A09E00506E7C /* Ubuntu-Regular.ttf in Resources */,
 				4033062526B5A55600506E7C /* sibi_bermain.mp4 in Resources */,
+				51509FC226C367DB0022D259 /* Cita-Cita.mp4 in Resources */,
 				51B7A6F626C0CE2700068A43 /* Story3.gif in Resources */,
 				E3EEF81C26B6E5E1002D1F0F /* EndStory.storyboard in Resources */,
+				51509FBC26C367DB0022D259 /* panggil.mp4 in Resources */,
 				E3D9AB1626B9835C00DBCDB5 /* UserIntro.storyboard in Resources */,
 				51509FAB26C3647B0022D259 /* part2-Story1.gif in Resources */,
 				4033062126B5A55600506E7C /* sibi_cita-cita.mp4 in Resources */,
 				4033062026B5A55600506E7C /* sibi_selamatpagi.mp4 in Resources */,
+				51509FC326C367DB0022D259 /* mengenalkan.mp4 in Resources */,
 				4033060B26B5A24300506E7C /* Practice.storyboard in Resources */,
 				403305F726B5A09E00506E7C /* Ubuntu-LightItalic.ttf in Resources */,
 				403305FA26B5A09E00506E7C /* Ubuntu-Light.ttf in Resources */,
 				4033061426B5A54600506E7C /* story_1_1.jpeg in Resources */,
 				4033062226B5A55600506E7C /* sibi_olahraga.mp4 in Resources */,
 				51509FA926C3647B0022D259 /* part2-Story2.gif in Resources */,
+				51509FB926C367DB0022D259 /* Bersaudara.mp4 in Resources */,
 				403305F526B5A09E00506E7C /* Ubuntu-Italic.ttf in Resources */,
 				403305FC26B5A09E00506E7C /* Ubuntu-MediumItalic.ttf in Resources */,
 			);

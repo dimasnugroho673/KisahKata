@@ -54,8 +54,8 @@
 		40ED890F26C46AB50005BC0F /* VideoCapture.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40ED890E26C46AB50005BC0F /* VideoCapture.swift */; };
 		40ED891126C46AE60005BC0F /* Predictor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40ED891026C46AE60005BC0F /* Predictor.swift */; };
 		40ED891326C46B030005BC0F /* Panggil2.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 40ED891226C46B030005BC0F /* Panggil2.mlmodel */; };
-		51509FA326C361790022D259 /* Kosakata+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51509FA126C361790022D259 /* Kosakata+CoreDataClass.swift */; };
-		51509FA426C361790022D259 /* Kosakata+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51509FA226C361790022D259 /* Kosakata+CoreDataProperties.swift */; };
+		40ED891426C477430005BC0F /* StoryIlustration+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3A8C0CF26C3F6EA00390871 /* StoryIlustration+CoreDataClass.swift */; };
+		40ED891526C477430005BC0F /* TemaCerita+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3A8C0D426C3F6EA00390871 /* TemaCerita+CoreDataProperties.swift */; };
 		51509FA926C3647B0022D259 /* part2-Story2.gif in Resources */ = {isa = PBXBuildFile; fileRef = 51509FA526C3647A0022D259 /* part2-Story2.gif */; };
 		51509FAA26C3647B0022D259 /* part2-Story4.gif in Resources */ = {isa = PBXBuildFile; fileRef = 51509FA626C3647A0022D259 /* part2-Story4.gif */; };
 		51509FAB26C3647B0022D259 /* part2-Story1.gif in Resources */ = {isa = PBXBuildFile; fileRef = 51509FA726C3647B0022D259 /* part2-Story1.gif */; };
@@ -91,12 +91,10 @@
 		E3A8C0CA26C3F65700390871 /* KisahKata.xcdatamodeld in Frameworks */ = {isa = PBXBuildFile; fileRef = E3A8C0C826C3F65700390871 /* KisahKata.xcdatamodeld */; };
 		E3A8C0D926C3F6EA00390871 /* Kosakata+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3A8C0CD26C3F6EA00390871 /* Kosakata+CoreDataClass.swift */; };
 		E3A8C0DA26C3F6EA00390871 /* Kosakata+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3A8C0CE26C3F6EA00390871 /* Kosakata+CoreDataProperties.swift */; };
-		E3A8C0DB26C3F6EA00390871 /* StoryIlustration+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3A8C0CF26C3F6EA00390871 /* StoryIlustration+CoreDataClass.swift */; };
 		E3A8C0DC26C3F6EA00390871 /* StoryIlustration+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3A8C0D026C3F6EA00390871 /* StoryIlustration+CoreDataProperties.swift */; };
 		E3A8C0DD26C3F6EA00390871 /* Highlghtword+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3A8C0D126C3F6EA00390871 /* Highlghtword+CoreDataClass.swift */; };
 		E3A8C0DE26C3F6EA00390871 /* Highlghtword+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3A8C0D226C3F6EA00390871 /* Highlghtword+CoreDataProperties.swift */; };
 		E3A8C0DF26C3F6EA00390871 /* TemaCerita+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3A8C0D326C3F6EA00390871 /* TemaCerita+CoreDataClass.swift */; };
-		E3A8C0E026C3F6EA00390871 /* TemaCerita+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3A8C0D426C3F6EA00390871 /* TemaCerita+CoreDataProperties.swift */; };
 		E3A8C0E126C3F6EA00390871 /* Cerita+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3A8C0D526C3F6EA00390871 /* Cerita+CoreDataClass.swift */; };
 		E3A8C0E226C3F6EA00390871 /* Cerita+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3A8C0D626C3F6EA00390871 /* Cerita+CoreDataProperties.swift */; };
 		E3A8C0E326C3F6EA00390871 /* SubStories+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3A8C0D726C3F6EA00390871 /* SubStories+CoreDataClass.swift */; };
@@ -160,8 +158,6 @@
 		40ED890E26C46AB50005BC0F /* VideoCapture.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoCapture.swift; sourceTree = "<group>"; };
 		40ED891026C46AE60005BC0F /* Predictor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Predictor.swift; sourceTree = "<group>"; };
 		40ED891226C46B030005BC0F /* Panggil2.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = Panggil2.mlmodel; sourceTree = "<group>"; };
-		51509FA126C361790022D259 /* Kosakata+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Kosakata+CoreDataClass.swift"; sourceTree = "<group>"; };
-		51509FA226C361790022D259 /* Kosakata+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Kosakata+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		51509FA526C3647A0022D259 /* part2-Story2.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = "part2-Story2.gif"; sourceTree = "<group>"; };
 		51509FA626C3647A0022D259 /* part2-Story4.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = "part2-Story4.gif"; sourceTree = "<group>"; };
 		51509FA726C3647B0022D259 /* part2-Story1.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = "part2-Story1.gif"; sourceTree = "<group>"; };
@@ -560,6 +556,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				40ED891426C477430005BC0F /* StoryIlustration+CoreDataClass.swift in Sources */,
+				40ED891526C477430005BC0F /* TemaCerita+CoreDataProperties.swift in Sources */,
 				E3A8C0DF26C3F6EA00390871 /* TemaCerita+CoreDataClass.swift in Sources */,
 				E3EEF82326B6EF3E002D1F0F /* SubStoryViewController.swift in Sources */,
 				403B940426BA440B0071A376 /* StorytellingViewController.swift in Sources */,
@@ -582,7 +580,6 @@
 				E3A8C0DA26C3F6EA00390871 /* Kosakata+CoreDataProperties.swift in Sources */,
 				E33AE72E26B5AF9000CCEA2E /* StoryEndViewController.swift in Sources */,
 				40ED890F26C46AB50005BC0F /* VideoCapture.swift in Sources */,
-				E335974726BE4B1400F71F0A /* SubStories+CoreDataClass.swift in Sources */,
 				403305FE26B5A0DD00506E7C /* GifImage.swift in Sources */,
 				E3A8C0DE26C3F6EA00390871 /* Highlghtword+CoreDataProperties.swift in Sources */,
 				E376D44F26BCF0C400A13739 /* DataTema.swift in Sources */,
@@ -600,11 +597,9 @@
 				E3A76F8726B7B3E000E1FEF3 /* TesViewController.swift in Sources */,
 				40ED891326C46B030005BC0F /* Panggil2.mlmodel in Sources */,
 				403B93FA26BA437B0071A376 /* AlertExitService.swift in Sources */,
-				E3D2230E26C032900072BB78 /* TemaCerita+CoreDataProperties.swift in Sources */,
 				40ED891126C46AE60005BC0F /* Predictor.swift in Sources */,
 				403B93F726BA434D0071A376 /* LabelTapGesture.swift in Sources */,
 				E3F438B426BCDDB2005A5A21 /* PersistenceManager.swift in Sources */,
-				E335974826BE4B1400F71F0A /* SubStories+CoreDataProperties.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -754,7 +749,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = B7LC8VVXHV;
+				DEVELOPMENT_TEAM = D7589S3EHF;
 				INFOPLIST_FILE = KisahKata/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -776,7 +771,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = B7LC8VVXHV;
+				DEVELOPMENT_TEAM = D7589S3EHF;
 				INFOPLIST_FILE = KisahKata/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",

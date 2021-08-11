@@ -17,7 +17,7 @@ class StorytellingViewController: UIViewController {
     
     let story: [String] = ["*Selamat pagi*, semuanya.", "Saya ingin *memperkenalkan*, nama saya M-Eggy.", "Tapi kalian bisa *panggil* saya Megi.", "Saya anak kedua dari tiga *bersaudara*.", "Umur saya 9 tahun. Saya lahir di Batam, 23 Februari 2012."]
     let highlightedWords = ["Selamat pagi", "memperkenalkan", "panggil", "bersaudara"]
-    let storyIlustrations: [String] = ["img_story_sample", "img_Story-BG-Crop", "img_story_sample", "img_Story-BG-Crop", "img_story_sample"]
+    let storyIlustrations: [String] = ["Story1", "Story2", "Story3", "Story4", "Story5"]
     let storyInArray: [String] = []
     var activePart: Int = 0
     var wordTemp: String = ""
@@ -164,7 +164,7 @@ class StorytellingViewController: UIViewController {
     private func _fetchIlustration() {
         /// change image with transition
         _transitionImage(desiredView: ilustrationStoryImage)
-        
+        ilustrationStoryImage.animationRepeatCount = 1
         ilustrationStoryImage.contentMode = .scaleAspectFill
         
     }
@@ -288,7 +288,7 @@ class StorytellingViewController: UIViewController {
     private func _transitionImage(desiredView: UIView) {
         
         UIView.transition(with: self.ilustrationStoryImage, duration: 0.75, options: .transitionCrossDissolve, animations: {
-            self.ilustrationStoryImage.image = UIImage(named: self.storyIlustrations[self.activePart])
+            self.ilustrationStoryImage.image = UIImage.gifImageWithName(self.storyIlustrations[self.activePart])
         }, completion: nil)
     }
     

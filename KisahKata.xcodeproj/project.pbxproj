@@ -51,6 +51,8 @@
 		40EB3E2326B257A400D9DEC9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 40EB3E2126B257A400D9DEC9 /* Main.storyboard */; };
 		40EB3E2826B257A500D9DEC9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 40EB3E2726B257A500D9DEC9 /* Assets.xcassets */; };
 		40EB3E2B26B257A500D9DEC9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 40EB3E2926B257A500D9DEC9 /* LaunchScreen.storyboard */; };
+		51509FA326C361790022D259 /* Kosakata+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51509FA126C361790022D259 /* Kosakata+CoreDataClass.swift */; };
+		51509FA426C361790022D259 /* Kosakata+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51509FA226C361790022D259 /* Kosakata+CoreDataProperties.swift */; };
 		515E426C26B9016600DE21E7 /* JudulCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 515E426A26B9016600DE21E7 /* JudulCollectionViewCell.swift */; };
 		515E426D26B9016600DE21E7 /* JudulCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 515E426B26B9016600DE21E7 /* JudulCollectionViewCell.xib */; };
 		517AFAA426B5C71900C4DC6C /* homeCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 517AFAA226B5C71900C4DC6C /* homeCollectionViewCell.swift */; };
@@ -132,6 +134,8 @@
 		40EB3E2726B257A500D9DEC9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		40EB3E2A26B257A500D9DEC9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		40EB3E2C26B257A500D9DEC9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		51509FA126C361790022D259 /* Kosakata+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Kosakata+CoreDataClass.swift"; sourceTree = "<group>"; };
+		51509FA226C361790022D259 /* Kosakata+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Kosakata+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		515E426A26B9016600DE21E7 /* JudulCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JudulCollectionViewCell.swift; sourceTree = "<group>"; };
 		515E426B26B9016600DE21E7 /* JudulCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = JudulCollectionViewCell.xib; sourceTree = "<group>"; };
 		517AFAA226B5C71900C4DC6C /* homeCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = homeCollectionViewCell.swift; sourceTree = "<group>"; };
@@ -241,6 +245,8 @@
 		4033060126B5A15400506E7C /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				51509FA126C361790022D259 /* Kosakata+CoreDataClass.swift */,
+				51509FA226C361790022D259 /* Kosakata+CoreDataProperties.swift */,
 				E316A01E26C0CCB800D5569A /* Cerita+CoreDataClass.swift */,
 				E316A01F26C0CCB800D5569A /* Cerita+CoreDataProperties.swift */,
 				E3D2230B26C032900072BB78 /* TemaCerita+CoreDataClass.swift */,
@@ -475,12 +481,14 @@
 				40EB3E2026B257A400D9DEC9 /* ViewController.swift in Sources */,
 				515E426C26B9016600DE21E7 /* JudulCollectionViewCell.swift in Sources */,
 				E335974C26BE4B1400F71F0A /* Highlghtword+CoreDataProperties.swift in Sources */,
+				51509FA326C361790022D259 /* Kosakata+CoreDataClass.swift in Sources */,
 				E335974B26BE4B1400F71F0A /* Highlghtword+CoreDataClass.swift in Sources */,
 				E335974626BE4B1400F71F0A /* StoryIlustration+CoreDataProperties.swift in Sources */,
 				E33AE72E26B5AF9000CCEA2E /* StoryEndViewController.swift in Sources */,
 				E335974726BE4B1400F71F0A /* SubStories+CoreDataClass.swift in Sources */,
 				403305FE26B5A0DD00506E7C /* GifImage.swift in Sources */,
 				E376D44F26BCF0C400A13739 /* DataTema.swift in Sources */,
+				51509FA426C361790022D259 /* Kosakata+CoreDataProperties.swift in Sources */,
 				E316A02026C0CCB800D5569A /* Cerita+CoreDataClass.swift in Sources */,
 				403B940826BA69FB0071A376 /* AlertLockItemViewController.swift in Sources */,
 				517AFAA426B5C71900C4DC6C /* homeCollectionViewCell.swift in Sources */,

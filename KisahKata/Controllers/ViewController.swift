@@ -22,23 +22,24 @@ class ViewController: UIViewController, SaveUserDataDelegate {
     
     @IBOutlet weak var homeCollectionView: UICollectionView!
     let userDefault = UserDefaults()
-//    fileprivate var items : TemaCerita?
+    fileprivate var items = dataJudul
+    fileprivate var tema = dataTema
     
-    private var temaCerita : [TemaCerita] = []
-    private var ceritas: [Cerita] = []
-    var tema : TemaCerita?
+//    private var temaCerita : [TemaCerita] = []
+//    private var ceritas: [Cerita] = []
+//    var tema : TemaCerita?
     
 //    var tema: TemaCerita?
     
     var manageObjectContext = NSManagedObjectContext(concurrencyType: .mainQueueConcurrencyType)
     
-//    fileprivate var currentPage: Int = 0 {
-//        didSet {
-//            let preview = self.items[self.currentPage]
-//            self.previewImage.image = preview.picture
-//            print("page at centre = \(currentPage)")
-//        }
-//    }
+    fileprivate var currentPage: Int = 0 {
+        didSet {
+            let preview = self.items[self.currentPage]
+            self.previewImage.image = preview.preview
+            print("page at centre = \(currentPage)")
+        }
+    }
     
 //    fileprivate var pageSize: CGSize {
 //        let layout = self.homeCollectionView.collectionViewLayout as! UPCarouselFlowLayout
@@ -69,16 +70,17 @@ class ViewController: UIViewController, SaveUserDataDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         _checkUserIsLogged()
-        _checkData()
-        _loadData()
-        _addData()
-        load()
-        
-        
-        homeCollectionView.reloadData()
+//        _checkData()
+//        _loadData()
+//        _addData()
+//        load()
+//
+//
+//        homeCollectionView.reloadData()
         // Do any additional setup after loading the view.
-//        let namaTema = self.items[self.currentPage]
         
+        let namaTema = self.items[self.currentPage]
+        self.temaLabel.text = namaTema.nama
         let cellNib = UINib(nibName: "homeCollectionViewCell", bundle: nil)
         self.homeCollectionView.register(cellNib, forCellWithReuseIdentifier: "temaCell")
         let cellNibJudul = UINib(nibName: "JudulCollectionViewCell", bundle: nil)
@@ -160,11 +162,13 @@ class ViewController: UIViewController, SaveUserDataDelegate {
 extension ViewController: UICollectionViewDelegate, UICollectionViewDataSource{
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         if collectionView == homeCollectionView {
-            return temaCerita.count
+            return dataTema.count
+            print(dataTema)
             
         }else {
-            load()
-            return ceritas.count
+//            load()
+            return dataJudul.count
+            
         }
         
     }
@@ -172,9 +176,10 @@ extension ViewController: UICollectionViewDelegate, UICollectionViewDataSource{
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         if (collectionView == homeCollectionView){
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "temaCell", for: indexPath)as! homeCollectionViewCell
-            let tema = self.temaCerita[indexPath.row]
-//            cell.temaImage.image = tema.picture
-            cell.setDataIntoCell(tema: tema)
+            let tema = dataTema[indexPath.row]
+            cell.temaImage.image = tema.picture
+            cell.temaLabel.text = tema.nama
+//            cell.setDataIntoCell(tema: tema)
             
             if indexPath.row < 1 {
                 cell.lockImage.image = UIImage(named: "")
@@ -186,8 +191,10 @@ extension ViewController: UICollectionViewDelegate, UICollectionViewDataSource{
         }else
         {
             let cellJudul = collectionView.dequeueReusableCell(withReuseIdentifier: "judulCell", for: indexPath)as! JudulCollectionViewCell
-            let judul = self.ceritas[indexPath.row]
-            cellJudul.setDataIntoCell(ceritas: judul)
+            let judul = dataJudul[indexPath.row]
+            cellJudul.judulLabel.text = judul.nama
+
+//            cellJudul.setDataIntoCell(ceritas: judul)
             
             if indexPath.row < 1 {
                 cellJudul.scoreImage.image = UIImage(named: "img_star-0")
@@ -203,8 +210,8 @@ extension ViewController: UICollectionViewDelegate, UICollectionViewDataSource{
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        let tema = temaCerita[indexPath.row]
-        temaLabel.text = tema.title
+//        let tema = temaCerita[indexPath.row]
+//        temaLabel.text = tema.title
         if collectionView == homeCollectionView && indexPath.row < 1 {
             _animateIn(desiredView: bgBlurJudul)
             
@@ -230,7 +237,7 @@ extension ViewController: UICollectionViewDelegate, UICollectionViewDataSource{
 //        let pageSide = (layout.scrollDirection == .vertical) ? self.pageSize.width : self.pageSize.height
 //        let offset = (layout.scrollDirection == .vertical) ? scrollView.contentOffset.x : scrollView.contentOffset.y
 //        currentPage = Int(floor((offset - pageSide / 2) / pageSide) + 1)
-//        currentPage = getCurrentPage()
+        currentPage = getCurrentPage()
     }
     
     
@@ -338,36 +345,31 @@ extension ViewController: UICollectionViewDelegate, UICollectionViewDataSource{
         }
     }
     
-    private func _loadData() {
-        
-//        guard let tema = tema else {
-//            print("error author")
+//    private func _loadData() {
+//
+////        guard let tema = tema else {
+////            print("error author")
+////            return
+////        }
+//        temaCerita = PersistenceManager.shared.fetchTemaCerita()
+////        ceritas = PersistenceManager.shared.fetchCerita(tema: tema)
+//        homeCollectionView.reloadData()
+//
+//        print(temaCerita)
+//    }
+//
+//    private func load(){
+//
+//        guard let tema  = tema else {
+//            print("error cerita data")
 //            return
 //        }
-        
-        temaCerita = PersistenceManager.shared.fetchTemaCerita()
-        
-//        ceritas = PersistenceManager.shared.fetchCerita(tema: tema)
-        homeCollectionView.reloadData()
-            
-        print(temaCerita)
-    }
-    
-    
-    private func load(){
-        
-        guard let tema  = tema else {
-            print("error cerita data")
-            return
-        }
-
-        ceritas = PersistenceManager.shared.fetchCerita(tema: tema)
-        judulCollectionView.reloadData()
 //
-    }
+//        ceritas = PersistenceManager.shared.fetchCerita(tema: tema)
+//        judulCollectionView.reloadData()
+////
+//    }
 
-    
-}
 
 //extension ViewController : LoginSelectionDelegate {
 //    func didTapChoice(name: String) {
@@ -375,3 +377,4 @@ extension ViewController: UICollectionViewDelegate, UICollectionViewDataSource{
 //    }
 
 
+}

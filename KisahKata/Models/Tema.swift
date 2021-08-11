@@ -15,4 +15,5 @@ struct Tema {
 
 struct Judul {
     let nama: String
+    let preview: UIImage
 }

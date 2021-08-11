@@ -102,7 +102,8 @@
                                     <constraint firstAttribute="height" constant="30" id="Icz-8b-IM3"/>
                                     <constraint firstAttribute="width" constant="30" id="URN-lP-gMX"/>
                                 </constraints>
-                                <state key="normal" title="Button" image="ic_questionmark.fill">
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" image="questionmark.circle.fill" catalog="system">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
@@ -217,8 +218,8 @@
     <resources>
         <image name="ic_next" width="50" height="50"/>
         <image name="ic_previous" width="50" height="50"/>
-        <image name="ic_questionmark.fill" width="28" height="28"/>
         <image name="img_story_sample" width="3376" height="1560"/>
+        <image name="questionmark.circle.fill" catalog="system" width="128" height="121"/>
         <image name="xmark.circle.fill" catalog="system" width="128" height="121"/>
         <namedColor name="SecondaryColor">
             <color red="0.0039215686274509803" green="0.5725490196078431" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

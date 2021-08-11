@@ -53,6 +53,10 @@
 		40EB3E2B26B257A500D9DEC9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 40EB3E2926B257A500D9DEC9 /* LaunchScreen.storyboard */; };
 		51509FA326C361790022D259 /* Kosakata+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51509FA126C361790022D259 /* Kosakata+CoreDataClass.swift */; };
 		51509FA426C361790022D259 /* Kosakata+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51509FA226C361790022D259 /* Kosakata+CoreDataProperties.swift */; };
+		51509FA926C3647B0022D259 /* part2-Story2.gif in Resources */ = {isa = PBXBuildFile; fileRef = 51509FA526C3647A0022D259 /* part2-Story2.gif */; };
+		51509FAA26C3647B0022D259 /* part2-Story4.gif in Resources */ = {isa = PBXBuildFile; fileRef = 51509FA626C3647A0022D259 /* part2-Story4.gif */; };
+		51509FAB26C3647B0022D259 /* part2-Story1.gif in Resources */ = {isa = PBXBuildFile; fileRef = 51509FA726C3647B0022D259 /* part2-Story1.gif */; };
+		51509FAC26C3647B0022D259 /* part2-Story3.gif in Resources */ = {isa = PBXBuildFile; fileRef = 51509FA826C3647B0022D259 /* part2-Story3.gif */; };
 		515E426C26B9016600DE21E7 /* JudulCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 515E426A26B9016600DE21E7 /* JudulCollectionViewCell.swift */; };
 		515E426D26B9016600DE21E7 /* JudulCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 515E426B26B9016600DE21E7 /* JudulCollectionViewCell.xib */; };
 		517AFAA426B5C71900C4DC6C /* homeCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 517AFAA226B5C71900C4DC6C /* homeCollectionViewCell.swift */; };
@@ -136,6 +140,10 @@
 		40EB3E2C26B257A500D9DEC9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		51509FA126C361790022D259 /* Kosakata+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Kosakata+CoreDataClass.swift"; sourceTree = "<group>"; };
 		51509FA226C361790022D259 /* Kosakata+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Kosakata+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		51509FA526C3647A0022D259 /* part2-Story2.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = "part2-Story2.gif"; sourceTree = "<group>"; };
+		51509FA626C3647A0022D259 /* part2-Story4.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = "part2-Story4.gif"; sourceTree = "<group>"; };
+		51509FA726C3647B0022D259 /* part2-Story1.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = "part2-Story1.gif"; sourceTree = "<group>"; };
+		51509FA826C3647B0022D259 /* part2-Story3.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = "part2-Story3.gif"; sourceTree = "<group>"; };
 		515E426A26B9016600DE21E7 /* JudulCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JudulCollectionViewCell.swift; sourceTree = "<group>"; };
 		515E426B26B9016600DE21E7 /* JudulCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = JudulCollectionViewCell.xib; sourceTree = "<group>"; };
 		517AFAA226B5C71900C4DC6C /* homeCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = homeCollectionViewCell.swift; sourceTree = "<group>"; };
@@ -294,6 +302,10 @@
 			children = (
 				4033060F26B5A54600506E7C /* story_1_1.jpeg */,
 				51B7A6F326C0CE2700068A43 /* Story1.gif */,
+				51509FA726C3647B0022D259 /* part2-Story1.gif */,
+				51509FA526C3647A0022D259 /* part2-Story2.gif */,
+				51509FA826C3647B0022D259 /* part2-Story3.gif */,
+				51509FA626C3647A0022D259 /* part2-Story4.gif */,
 				51B7A6F526C0CE2700068A43 /* Story2.gif */,
 				51B7A6F126C0CE2600068A43 /* Story3.gif */,
 				51B7A6F226C0CE2700068A43 /* Story4.gif */,
@@ -417,6 +429,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				51509FAC26C3647B0022D259 /* part2-Story3.gif in Resources */,
 				E376D43926BCED8100A13739 /* KisahKata.xcdatamodeld in Resources */,
 				4033061526B5A54600506E7C /* story_1_4.jpeg in Resources */,
 				4033062426B5A55600506E7C /* sibi_panggil.mp4 in Resources */,
@@ -440,12 +453,14 @@
 				403305F826B5A09E00506E7C /* Ubuntu-Medium.ttf in Resources */,
 				40EB3E2326B257A400D9DEC9 /* Main.storyboard in Resources */,
 				515E426D26B9016600DE21E7 /* JudulCollectionViewCell.xib in Resources */,
+				51509FAA26C3647B0022D259 /* part2-Story4.gif in Resources */,
 				4033062326B5A55600506E7C /* sibi_membanggakan.mp4 in Resources */,
 				403305F626B5A09E00506E7C /* Ubuntu-Regular.ttf in Resources */,
 				4033062526B5A55600506E7C /* sibi_bermain.mp4 in Resources */,
 				51B7A6F626C0CE2700068A43 /* Story3.gif in Resources */,
 				E3EEF81C26B6E5E1002D1F0F /* EndStory.storyboard in Resources */,
 				E3D9AB1626B9835C00DBCDB5 /* UserIntro.storyboard in Resources */,
+				51509FAB26C3647B0022D259 /* part2-Story1.gif in Resources */,
 				4033062126B5A55600506E7C /* sibi_cita-cita.mp4 in Resources */,
 				4033062026B5A55600506E7C /* sibi_selamatpagi.mp4 in Resources */,
 				4033060B26B5A24300506E7C /* Practice.storyboard in Resources */,
@@ -453,6 +468,7 @@
 				403305FA26B5A09E00506E7C /* Ubuntu-Light.ttf in Resources */,
 				4033061426B5A54600506E7C /* story_1_1.jpeg in Resources */,
 				4033062226B5A55600506E7C /* sibi_olahraga.mp4 in Resources */,
+				51509FA926C3647B0022D259 /* part2-Story2.gif in Resources */,
 				403305F526B5A09E00506E7C /* Ubuntu-Italic.ttf in Resources */,
 				403305FC26B5A09E00506E7C /* Ubuntu-MediumItalic.ttf in Resources */,
 			);

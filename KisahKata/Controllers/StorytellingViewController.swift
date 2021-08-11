@@ -7,6 +7,7 @@
 
 import UIKit
 import AVFoundation
+import CoreData
 
 class StorytellingViewController: UIViewController {
 
@@ -37,8 +38,14 @@ class StorytellingViewController: UIViewController {
     var playerLayer = AVPlayerLayer()
     let playVideoButton = UIButton(frame: CGRect(x: 100, y: 400, width: 200, height: 60))
     
+    var kosakatas = [Kosakata]()
+    var manageObjectContext = NSManagedObjectContext(concurrencyType: .mainQueueConcurrencyType)
+    let appDelegate = UIApplication.shared.delegate as? AppDelegate
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        manageObjectContext = appDelegate?.persistentContainer.viewContext as! NSManagedObjectContext
 
         // Do any additional setup after loading the view.
         previousButton.layer.shadowColor = UIColor(red: 0, green: 0, blue: 0, alpha: 0.5).cgColor
@@ -217,7 +224,23 @@ class StorytellingViewController: UIViewController {
         
         titleHintLabel.text = wordTap
         _fetchVideo(word: wordTap)
+        _fetchDescription(word: wordTap)
+    }
+    
+    private func _fetchDescription(word: String) {
         
+        let kosakataRequest: NSFetchRequest<Kosakata> = Kosakata.fetchRequest()
+        kosakataRequest.predicate = NSPredicate(format: "kata = %@", word)
+        kosakataRequest.returnsObjectsAsFaults = false
+        
+        do {
+            try kosakatas = manageObjectContext.fetch(kosakataRequest)
+        
+            descriptionTextView.text = kosakatas[0].deskripsi!
+        } catch {
+            print("Gagal load data deskrpsi!")
+        }
+       
     }
     
     
@@ -231,44 +254,57 @@ class StorytellingViewController: UIViewController {
         
         playVideoButton.isHidden = true
         
+        let kosakataRequest: NSFetchRequest<Kosakata> = Kosakata.fetchRequest()
+        kosakataRequest.predicate = NSPredicate(format: "kata = %@", word)
+        kosakataRequest.returnsObjectsAsFaults = false
         
-        /// kalo videonya offline
-//        let file = kosakatas[self.indexStoryReceiver].urlVideo!.components(separatedBy: ".")
-            let file = "sibi_bermain.mp4".components(separatedBy: ".")
+        do {
+            try kosakatas = manageObjectContext.fetch(kosakataRequest)
+            
+            /// video online
+//            let videoURL = URL(string: kosakatas[0].urlVideo!)!
+            
+            /// kalo videonya offline
+            let file = kosakatas[0].urlVideo!.components(separatedBy: ".")
+            
+            guard let filePath = Bundle.main.path(forResource: file[0], ofType:file[1]) else {
+                  debugPrint( "\(file.joined(separator: ".")) not found")
+                  return
+            }
+            
+            /// video offline
+            let videoURL = URL(fileURLWithPath: filePath)
+            
+            let player = AVPlayer(url: videoURL)
+            playerLayer = AVPlayerLayer(player: player)
+            playerLayer.backgroundColor = CGColor(red: 0, green: 0, blue: 0, alpha: 1)
+            playerLayer.frame.size.width = videoContainerView.bounds.width
+            playerLayer.frame.size.height = videoContainerView.bounds.height
+            playerLayer.videoGravity = .resizeAspectFill
+            
+            playVideoButton.setImage(UIImage(named: "ic_play_dark"), for: .normal)
+            playVideoButton.tintColor = UIColor.white
+            playVideoButton.layer.frame = CGRect(x: videoContainerView.frame.width / 2 - 30, y: videoContainerView.frame.height / 2 - 30, width: 60, height: 60)
+            playVideoButton.addTarget(self,
+                                action: #selector(didTapPlayVideoButton),
+                                for: .touchUpInside)
+            playVideoButton.contentHorizontalAlignment = .fill
+            playVideoButton.contentVerticalAlignment = .fill
+            
+            videoContainerView.roundedBorder(cornerRadius: 12)
+            videoContainerView.layer.addSublayer(playerLayer)
+            videoContainerView.addSubview(playVideoButton)
 
-        guard let filePath = Bundle.main.path(forResource: file[0], ofType:file[1]) else {
-              debugPrint( "\(file.joined(separator: ".")) not found")
-              return
+            NotificationCenter.default.addObserver(self, selector: #selector(videoDidEnd), name:
+            NSNotification.Name.AVPlayerItemDidPlayToEndTime, object: nil)
+            
+            player.isMuted = true
+            player.play()
+        } catch {
+            print("Gagal load data video!")
         }
-        
-        /// video offline
-        let videoURL = URL(fileURLWithPath: filePath)
-        
-        let player = AVPlayer(url: videoURL)
-        playerLayer = AVPlayerLayer(player: player)
-        playerLayer.backgroundColor = CGColor(red: 0, green: 0, blue: 0, alpha: 1)
-        playerLayer.frame.size.width = videoContainerView.bounds.width
-        playerLayer.frame.size.height = videoContainerView.bounds.height
-        playerLayer.videoGravity = .resizeAspectFill
-        
-        playVideoButton.setImage(UIImage(named: "ic_play_dark"), for: .normal)
-        playVideoButton.tintColor = UIColor.white
-        playVideoButton.layer.frame = CGRect(x: videoContainerView.frame.width / 2 - 30, y: videoContainerView.frame.height / 2 - 30, width: 60, height: 60)
-        playVideoButton.addTarget(self,
-                            action: #selector(didTapPlayVideoButton),
-                            for: .touchUpInside)
-        playVideoButton.contentHorizontalAlignment = .fill
-        playVideoButton.contentVerticalAlignment = .fill
-        
-        videoContainerView.roundedBorder(cornerRadius: 12)
-        videoContainerView.layer.addSublayer(playerLayer)
-        videoContainerView.addSubview(playVideoButton)
 
-        NotificationCenter.default.addObserver(self, selector: #selector(videoDidEnd), name:
-        NSNotification.Name.AVPlayerItemDidPlayToEndTime, object: nil)
         
-        player.isMuted = true
-        player.play()
     }
     
     

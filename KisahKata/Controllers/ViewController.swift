@@ -43,17 +43,6 @@ class ViewController: UIViewController, SaveUserDataDelegate {
         }
     }
     
-//    fileprivate var pageSize: CGSize {
-//        let layout = self.homeCollectionView.collectionViewLayout as! UPCarouselFlowLayout
-//        var pageSize = layout.itemSize
-//        if layout.scrollDirection == .horizontal {
-//            pageSize.width += layout.minimumLineSpacing
-//        } else {
-//            pageSize.height += layout.minimumLineSpacing
-//        }
-//        return pageSize
-//    }
-    
     private let nextFloatingButton: UIButton = {
         let button = UIButton()
         button.layer.masksToBounds = true
@@ -71,15 +60,12 @@ class ViewController: UIViewController, SaveUserDataDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        // CoreData config
+        manageObjectContext = appDelegate?.persistentContainer.viewContext as! NSManagedObjectContext
+        
+        _checkData()
         _checkUserIsLogged()
-//        _checkData()
-//        _loadData()
-//        _addData()
-//        load()
-//
-//
-//        homeCollectionView.reloadData()
-        // Do any additional setup after loading the view.
         
         let namaTema = self.items[self.currentPage]
         self.temaLabel.text = namaTema.nama
@@ -118,20 +104,15 @@ class ViewController: UIViewController, SaveUserDataDelegate {
         backButton.setImage(image, for: .normal)
         backButton.tintColor = .white
         
-        
-        
-//        didTapChoice(name: "")
-        
-        
-        
         homeCollectionView.delegate = self
         homeCollectionView.dataSource = self
         judulCollectionView.delegate = self
         judulCollectionView.dataSource = self
         
     }
+    
     // CoreData Config
-    private func _addData(){
+    private func _addData() {
         let entity = NSEntityDescription.entity(forEntityName: "Kosakata", in: self.manageObjectContext)
         let newKosakata = NSManagedObject(entity: entity!, insertInto: self.manageObjectContext)
         let newKosakata2 = NSManagedObject(entity: entity!, insertInto: self.manageObjectContext)
@@ -146,49 +127,41 @@ class ViewController: UIViewController, SaveUserDataDelegate {
         newKosakata.setValue("sibi_selamatpagi.mp4", forKey: "urlVideo")
         newKosakata.setValue("Mudah-mudahan selamat pada pagi hari (ini)", forKey: "deskripsi")
         newKosakata.setValue(0, forKey: "sudahDipelajari")
-        newKosakata.setValue("", forKey: "deskripsiVideo")
         
         newKosakata2.setValue("memperkenalkan", forKey: "kata")
         newKosakata2.setValue("sibi_memperkenalkan.mp4", forKey: "urlVideo")
         newKosakata2.setValue("Memberitahukan (nama dan sebagainya) supaya saling ", forKey: "deskripsi")
         newKosakata2.setValue(0, forKey: "sudahDipelajari")
-        newKosakata2.setValue("", forKey: "deskripsiVideo")
         
         newKosakata3.setValue("panggil", forKey: "kata")
         newKosakata3.setValue("sibi_panggil.mp4", forKey: "urlVideo")
         newKosakata3.setValue("Mengajak (meminta) datang (kembali, mendekat, dan sebagainya)", forKey: "deskripsi")
         newKosakata3.setValue(0, forKey: "sudahDipelajari")
-        newKosakata3.setValue("", forKey: "deskripsiVideo")
         
         newKosakata4.setValue("bersaudara", forKey: "kata")
         newKosakata4.setValue("sibi_bersaudara.mp4", forKey: "urlVideo")
         newKosakata4.setValue("Mempunyai saudara", forKey: "deskripsi")
         newKosakata4.setValue(0, forKey: "sudahDipelajari")
-        newKosakata4.setValue("", forKey: "deskripsiVideo")
         
         newKosakata5.setValue("olahraga", forKey: "kata")
         newKosakata5.setValue("sibi_olahraga.mp4", forKey: "urlVideo")
         newKosakata5.setValue("Gerak badan untuk menguatkan dan menyehatkan tubuh (seperti sepak bola, berenang, lempar lembing)", forKey: "deskripsi")
         newKosakata5.setValue(0, forKey: "sudahDipelajari")
-        newKosakata5.setValue("", forKey: "deskripsiVideo")
         
         newKosakata6.setValue("bermain", forKey: "kata")
         newKosakata6.setValue("sibi_bermain.mp4", forKey: "urlVideo")
         newKosakata6.setValue("Melakukan sesuatu untuk bersenang-senang", forKey: "deskripsi")
         newKosakata6.setValue(0, forKey: "sudahDipelajari")
-        newKosakata6.setValue("", forKey: "deskripsiVideo")
         
         newKosakata7.setValue("cita-cita", forKey: "kata")
         newKosakata7.setValue("sibi_cita-cita.mp4", forKey: "urlVideo")
         newKosakata7.setValue("Keinginan (kehendak) yang selalu ada di dalam pikiran | tujuan yang sempurna (yang akan dicapai atau dilaksanakan)", forKey: "deskripsi")
         newKosakata7.setValue(0, forKey: "sudahDipelajari")
-        newKosakata7.setValue("", forKey: "deskripsiVideo")
         
         newKosakata8.setValue("membanggakan", forKey: "kata")
         newKosakata8.setValue("sibi_membanggakan.mp4", forKey: "urlVideo")
         newKosakata8.setValue("Menimbulkan perasaan bangga", forKey: "deskripsi")
         newKosakata8.setValue(0, forKey: "sudahDipelajari")
-        newKosakata8.setValue("", forKey: "deskripsiVideo")
         
         do {
             try manageObjectContext.save()
@@ -399,15 +372,15 @@ extension ViewController: UICollectionViewDelegate, UICollectionViewDataSource{
     
     
     private func _checkData() {
-        let dataExist: Int = UserDefaults.standard.integer(forKey: "dataExist")
+        let dataExist: Bool = UserDefaults.standard.bool(forKey: "dataExist")
 
-        if dataExist != 1 {
+        if dataExist != true {
             self._addData()
 
-            UserDefaults.standard.setValue(1, forKey: "dataExist")
+            UserDefaults.standard.setValue(true, forKey: "dataExist")
             print("data has been dump!")
         } else {
-//            print("data exist!")
+            print("data exist!")
         }
     }
     

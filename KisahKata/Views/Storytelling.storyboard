@@ -51,7 +51,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ud5-A0-m5p">
-                                <rect key="frame" x="60" y="33" width="32" height="35"/>
+                                <rect key="frame" x="60" y="30" width="32" height="35"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="32" id="AuG-1f-cHv"/>
                                     <constraint firstAttribute="height" constant="35" id="hpB-IW-dIJ"/>
@@ -115,10 +115,10 @@
                             <constraint firstAttribute="trailing" secondItem="WVn-f9-azE" secondAttribute="trailing" id="7sP-vl-3Ov"/>
                             <constraint firstAttribute="bottomMargin" secondItem="Zp0-lM-4D8" secondAttribute="bottom" constant="12" id="A20-co-aNE"/>
                             <constraint firstItem="ud5-A0-m5p" firstAttribute="leading" secondItem="Zp0-lM-4D8" secondAttribute="leading" id="Hxy-KK-NFs"/>
-                            <constraint firstItem="lzy-5N-WgW" firstAttribute="top" secondItem="EGi-XM-h4s" secondAttribute="top" constant="44" id="JaN-bX-HGF"/>
+                            <constraint firstItem="lzy-5N-WgW" firstAttribute="top" secondItem="EGi-XM-h4s" secondAttribute="top" constant="40" id="JaN-bX-HGF"/>
                             <constraint firstItem="EGi-XM-h4s" firstAttribute="bottom" secondItem="Tib-Bc-4BJ" secondAttribute="bottom" constant="8" id="Lot-FE-th8"/>
                             <constraint firstAttribute="bottom" secondItem="WVn-f9-azE" secondAttribute="bottom" id="Quq-7e-kS7"/>
-                            <constraint firstItem="ud5-A0-m5p" firstAttribute="top" secondItem="EGi-XM-h4s" secondAttribute="top" constant="33" id="S56-83-nOM"/>
+                            <constraint firstItem="ud5-A0-m5p" firstAttribute="top" secondItem="EGi-XM-h4s" secondAttribute="top" constant="30" id="S56-83-nOM"/>
                             <constraint firstItem="Zp0-lM-4D8" firstAttribute="leading" secondItem="o6H-rD-EAn" secondAttribute="leadingMargin" id="T2z-n9-ojg"/>
                             <constraint firstItem="WVn-f9-azE" firstAttribute="top" secondItem="EGi-XM-h4s" secondAttribute="top" id="TvG-Hv-ihX"/>
                             <constraint firstItem="EGi-XM-h4s" firstAttribute="bottom" secondItem="NdB-TS-Squ" secondAttribute="bottom" constant="12" id="Vuq-pw-5Hq"/>

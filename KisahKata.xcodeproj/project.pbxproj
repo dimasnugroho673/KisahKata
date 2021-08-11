@@ -33,7 +33,6 @@
 		4033062326B5A55600506E7C /* sibi_membanggakan.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 4033061B26B5A55500506E7C /* sibi_membanggakan.mp4 */; };
 		4033062426B5A55600506E7C /* sibi_panggil.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 4033061C26B5A55600506E7C /* sibi_panggil.mp4 */; };
 		4033062526B5A55600506E7C /* sibi_bermain.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 4033061D26B5A55600506E7C /* sibi_bermain.mp4 */; };
-		4033062726B5A57100506E7C /* List2_D_TransferLearning.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 4033062626B5A57100506E7C /* List2_D_TransferLearning.mlmodel */; };
 		403B93F526BA43310071A376 /* CustomStoryProgressBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 403B93F426BA43310071A376 /* CustomStoryProgressBar.swift */; };
 		403B93F726BA434D0071A376 /* LabelTapGesture.swift in Sources */ = {isa = PBXBuildFile; fileRef = 403B93F626BA434D0071A376 /* LabelTapGesture.swift */; };
 		403B93FA26BA437B0071A376 /* AlertExitService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 403B93F926BA437B0071A376 /* AlertExitService.swift */; };
@@ -51,6 +50,10 @@
 		40EB3E2326B257A400D9DEC9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 40EB3E2126B257A400D9DEC9 /* Main.storyboard */; };
 		40EB3E2826B257A500D9DEC9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 40EB3E2726B257A500D9DEC9 /* Assets.xcassets */; };
 		40EB3E2B26B257A500D9DEC9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 40EB3E2926B257A500D9DEC9 /* LaunchScreen.storyboard */; };
+		40ED890D26C462020005BC0F /* PracticeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40ED890C26C462020005BC0F /* PracticeViewController.swift */; };
+		40ED890F26C46AB50005BC0F /* VideoCapture.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40ED890E26C46AB50005BC0F /* VideoCapture.swift */; };
+		40ED891126C46AE60005BC0F /* Predictor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40ED891026C46AE60005BC0F /* Predictor.swift */; };
+		40ED891326C46B030005BC0F /* Panggil2.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 40ED891226C46B030005BC0F /* Panggil2.mlmodel */; };
 		51509FA326C361790022D259 /* Kosakata+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51509FA126C361790022D259 /* Kosakata+CoreDataClass.swift */; };
 		51509FA426C361790022D259 /* Kosakata+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51509FA226C361790022D259 /* Kosakata+CoreDataProperties.swift */; };
 		51509FA926C3647B0022D259 /* part2-Story2.gif in Resources */ = {isa = PBXBuildFile; fileRef = 51509FA526C3647A0022D259 /* part2-Story2.gif */; };
@@ -130,7 +133,6 @@
 		4033061B26B5A55500506E7C /* sibi_membanggakan.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = sibi_membanggakan.mp4; sourceTree = "<group>"; };
 		4033061C26B5A55600506E7C /* sibi_panggil.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = sibi_panggil.mp4; sourceTree = "<group>"; };
 		4033061D26B5A55600506E7C /* sibi_bermain.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = sibi_bermain.mp4; sourceTree = "<group>"; };
-		4033062626B5A57100506E7C /* List2_D_TransferLearning.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = List2_D_TransferLearning.mlmodel; sourceTree = "<group>"; };
 		403B93F426BA43310071A376 /* CustomStoryProgressBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomStoryProgressBar.swift; sourceTree = "<group>"; };
 		403B93F626BA434D0071A376 /* LabelTapGesture.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LabelTapGesture.swift; sourceTree = "<group>"; };
 		403B93F926BA437B0071A376 /* AlertExitService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertExitService.swift; sourceTree = "<group>"; };
@@ -151,6 +153,10 @@
 		40EB3E2726B257A500D9DEC9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		40EB3E2A26B257A500D9DEC9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		40EB3E2C26B257A500D9DEC9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		40ED890C26C462020005BC0F /* PracticeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PracticeViewController.swift; sourceTree = "<group>"; };
+		40ED890E26C46AB50005BC0F /* VideoCapture.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoCapture.swift; sourceTree = "<group>"; };
+		40ED891026C46AE60005BC0F /* Predictor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Predictor.swift; sourceTree = "<group>"; };
+		40ED891226C46B030005BC0F /* Panggil2.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = Panggil2.mlmodel; sourceTree = "<group>"; };
 		51509FA126C361790022D259 /* Kosakata+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Kosakata+CoreDataClass.swift"; sourceTree = "<group>"; };
 		51509FA226C361790022D259 /* Kosakata+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Kosakata+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		51509FA526C3647A0022D259 /* part2-Story2.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = "part2-Story2.gif"; sourceTree = "<group>"; };
@@ -220,6 +226,8 @@
 				403305FD26B5A0DD00506E7C /* GifImage.swift */,
 				517AFAA626B5C91B00C4DC6C /* UPCarouselFlowLayout.swift */,
 				403B93F626BA434D0071A376 /* LabelTapGesture.swift */,
+				40ED890E26C46AB50005BC0F /* VideoCapture.swift */,
+				40ED891026C46AE60005BC0F /* Predictor.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -260,6 +268,7 @@
 			isa = PBXGroup;
 			children = (
 				40EB3E1F26B257A400D9DEC9 /* ViewController.swift */,
+				40ED890C26C462020005BC0F /* PracticeViewController.swift */,
 				E3EEF82126B6EF3E002D1F0F /* SubStoryViewController.swift */,
 				517AFAA226B5C71900C4DC6C /* homeCollectionViewCell.swift */,
 				515E426A26B9016600DE21E7 /* JudulCollectionViewCell.swift */,
@@ -360,7 +369,7 @@
 		4033060526B5A19800506E7C /* MLModels */ = {
 			isa = PBXGroup;
 			children = (
-				4033062626B5A57100506E7C /* List2_D_TransferLearning.mlmodel */,
+				40ED891226C46B030005BC0F /* Panggil2.mlmodel */,
 			);
 			path = MLModels;
 			sourceTree = "<group>";
@@ -535,6 +544,7 @@
 				E3D2230D26C032900072BB78 /* TemaCerita+CoreDataClass.swift in Sources */,
 				E3EEF82326B6EF3E002D1F0F /* SubStoryViewController.swift in Sources */,
 				403B940426BA440B0071A376 /* StorytellingViewController.swift in Sources */,
+				40ED890D26C462020005BC0F /* PracticeViewController.swift in Sources */,
 				403305EB26B59FE500506E7C /* Extension.swift in Sources */,
 				E3F2177526B39618003B4CB5 /* IntroViewController.swift in Sources */,
 				51509FCE26C391230022D259 /* DataModel.swift in Sources */,
@@ -553,6 +563,7 @@
 				E335974B26BE4B1400F71F0A /* Highlghtword+CoreDataClass.swift in Sources */,
 				E335974626BE4B1400F71F0A /* StoryIlustration+CoreDataProperties.swift in Sources */,
 				E33AE72E26B5AF9000CCEA2E /* StoryEndViewController.swift in Sources */,
+				40ED890F26C46AB50005BC0F /* VideoCapture.swift in Sources */,
 				E335974726BE4B1400F71F0A /* SubStories+CoreDataClass.swift in Sources */,
 				403305FE26B5A0DD00506E7C /* GifImage.swift in Sources */,
 				E376D44F26BCF0C400A13739 /* DataTema.swift in Sources */,
@@ -566,11 +577,12 @@
 				403B940226BA43F50071A376 /* StoryOverviewViewController.swift in Sources */,
 				40EB3E1E26B257A400D9DEC9 /* SceneDelegate.swift in Sources */,
 				E3A76F8726B7B3E000E1FEF3 /* TesViewController.swift in Sources */,
+				40ED891326C46B030005BC0F /* Panggil2.mlmodel in Sources */,
 				403B93FA26BA437B0071A376 /* AlertExitService.swift in Sources */,
 				E3D2230E26C032900072BB78 /* TemaCerita+CoreDataProperties.swift in Sources */,
+				40ED891126C46AE60005BC0F /* Predictor.swift in Sources */,
 				403B93F726BA434D0071A376 /* LabelTapGesture.swift in Sources */,
 				E3F438B426BCDDB2005A5A21 /* PersistenceManager.swift in Sources */,
-				4033062726B5A57100506E7C /* List2_D_TransferLearning.mlmodel in Sources */,
 				E335974826BE4B1400F71F0A /* SubStories+CoreDataProperties.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -719,7 +731,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = B7LC8VVXHV;
+				DEVELOPMENT_TEAM = D7589S3EHF;
 				INFOPLIST_FILE = KisahKata/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -738,7 +750,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = B7LC8VVXHV;
+				DEVELOPMENT_TEAM = D7589S3EHF;
 				INFOPLIST_FILE = KisahKata/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",

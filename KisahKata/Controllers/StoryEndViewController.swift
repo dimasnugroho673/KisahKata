@@ -17,8 +17,8 @@ class StoryEndViewController: UIViewController {
         endStoryAcceptButton.layer.cornerRadius = 12
     }
     
-    @IBAction func didTapGoToHomeButton(_ sender: Any) {
-        dismiss(animated: true, completion: nil)
+    @IBAction func didTapPractice(_ sender: Any) {
+        performSegue(withIdentifier: "goToPractice", sender: nil)
     }
     
     /*

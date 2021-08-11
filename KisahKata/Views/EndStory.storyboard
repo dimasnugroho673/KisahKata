@@ -46,11 +46,11 @@
                                     <constraint firstAttribute="height" constant="50" id="rjJ-j8-0xD"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="Ubuntu-Bold" family="Ubuntu" pointSize="18"/>
-                                <state key="normal" title="Kembali ke menu awal">
+                                <state key="normal" title="Selanjutnya">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
-                                    <action selector="didTapGoToHomeButton:" destination="bHY-Ka-K0X" eventType="touchUpInside" id="qJE-EQ-vZC"/>
+                                    <action selector="didTapPractice:" destination="bHY-Ka-K0X" eventType="touchUpInside" id="Uqu-ZA-ISQ"/>
                                 </connections>
                             </button>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="img_star-3" translatesAutoresizingMaskIntoConstraints="NO" id="oGq-1d-uzt">
@@ -80,11 +80,20 @@
                     </view>
                     <connections>
                         <outlet property="endStoryAcceptButton" destination="7uI-I7-tmX" id="9j1-OZ-mK5"/>
+                        <segue destination="ApX-DK-usD" kind="presentation" identifier="goToPractice" modalPresentationStyle="fullScreen" id="7iu-Bc-7Me"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="DPf-bs-An3" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="34.834123222748815" y="-767.69230769230762"/>
+        </scene>
+        <!--Practice-->
+        <scene sceneID="yxd-OO-m3l">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Practice" id="ApX-DK-usD" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="0Sp-JR-wmF" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="597" y="-768"/>
         </scene>
     </scenes>
     <resources>

@@ -2,7 +2,7 @@
 //  Cerita+CoreDataClass.swift
 //  KisahKata
 //
-//  Created by Mulazi Azi on 09/08/21.
+//  Created by Mulazi Azi on 11/08/21.
 //
 //
 

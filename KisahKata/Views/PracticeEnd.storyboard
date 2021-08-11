@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="QX3-FY-9HJ">
+    <device id="retina6_0" orientation="landscape" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Ubuntu-Bold.ttf">
+            <string>Ubuntu-Bold</string>
+        </array>
+        <array key="Ubuntu-Regular.ttf">
+            <string>Ubuntu-Regular</string>
+        </array>
+    </customFonts>
+    <scenes>
+        <!--Practice End View Controller-->
+        <scene sceneID="60b-1o-G5U">
+            <objects>
+                <viewController id="QX3-FY-9HJ" customClass="PracticeEndViewController" customModule="KisahKata" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8MH-h5-l1I">
+                        <rect key="frame" x="0.0" y="0.0" width="844" height="390"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="EndBackground" translatesAutoresizingMaskIntoConstraints="NO" id="pa1-hM-Vwj">
+                                <rect key="frame" x="0.0" y="0.0" width="844" height="390"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Berhasil!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="htw-xv-5Qy">
+                                <rect key="frame" x="60" y="60" width="724" height="42"/>
+                                <fontDescription key="fontDescription" name="Ubuntu-Bold" family="Ubuntu" pointSize="36"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Kamu telah menyelesaikan kisah dengan baik" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pc8-yd-xUs">
+                                <rect key="frame" x="270" y="193" width="304" height="42"/>
+                                <fontDescription key="fontDescription" name="Ubuntu-Regular" family="Ubuntu" pointSize="18"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="w3m-qG-liC">
+                                <rect key="frame" x="284" y="272" width="276" height="50"/>
+                                <color key="backgroundColor" red="0.25101926920000001" green="0.56500226259999997" blue="0.96867746109999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="REO-gN-bQd"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Ubuntu-Bold" family="Ubuntu" pointSize="18"/>
+                                <state key="normal" title="Kembali ke menu awal">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="didTapGoToHomeButton:" destination="QX3-FY-9HJ" eventType="touchUpInside" id="xjO-Iq-JAU"/>
+                                    <action selector="endPracticeButtonTapped:" destination="QX3-FY-9HJ" eventType="touchUpInside" id="WVF-g8-hvX"/>
+                                </connections>
+                            </button>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="img_star-3" translatesAutoresizingMaskIntoConstraints="NO" id="xwT-jv-Asz">
+                                <rect key="frame" x="347" y="127" width="150" height="41"/>
+                            </imageView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="XaQ-cj-INt"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="pc8-yd-xUs" firstAttribute="leading" secondItem="XaQ-cj-INt" secondAttribute="leading" constant="226" id="4nT-mE-5wT"/>
+                            <constraint firstItem="XaQ-cj-INt" firstAttribute="trailing" secondItem="htw-xv-5Qy" secondAttribute="trailing" constant="16" id="AyI-iw-gSc"/>
+                            <constraint firstItem="w3m-qG-liC" firstAttribute="leading" secondItem="XaQ-cj-INt" secondAttribute="leading" constant="240" id="D4A-db-HAn"/>
+                            <constraint firstAttribute="trailing" secondItem="pa1-hM-Vwj" secondAttribute="trailing" id="Dt9-dV-MEX"/>
+                            <constraint firstItem="XaQ-cj-INt" firstAttribute="trailing" secondItem="xwT-jv-Asz" secondAttribute="trailing" constant="303" id="JYo-1D-08I"/>
+                            <constraint firstItem="XaQ-cj-INt" firstAttribute="trailing" secondItem="pc8-yd-xUs" secondAttribute="trailing" constant="226" id="NNP-j8-BRk"/>
+                            <constraint firstItem="pa1-hM-Vwj" firstAttribute="top" secondItem="XaQ-cj-INt" secondAttribute="top" id="OPY-62-Re9"/>
+                            <constraint firstItem="htw-xv-5Qy" firstAttribute="top" secondItem="XaQ-cj-INt" secondAttribute="top" constant="60" id="V3t-5F-8H8"/>
+                            <constraint firstItem="XaQ-cj-INt" firstAttribute="trailing" secondItem="w3m-qG-liC" secondAttribute="trailing" constant="240" id="YdG-uC-V8y"/>
+                            <constraint firstItem="htw-xv-5Qy" firstAttribute="leading" secondItem="XaQ-cj-INt" secondAttribute="leading" constant="16" id="aFv-aQ-mGp"/>
+                            <constraint firstAttribute="bottomMargin" secondItem="w3m-qG-liC" secondAttribute="bottom" constant="47" id="gNc-XP-rx6"/>
+                            <constraint firstAttribute="bottom" secondItem="pa1-hM-Vwj" secondAttribute="bottom" id="iB7-4e-fSs"/>
+                            <constraint firstItem="xwT-jv-Asz" firstAttribute="leading" secondItem="XaQ-cj-INt" secondAttribute="leading" constant="303" id="khz-He-KHs"/>
+                            <constraint firstItem="pc8-yd-xUs" firstAttribute="top" secondItem="xwT-jv-Asz" secondAttribute="bottom" constant="25" id="mGU-eG-7ig"/>
+                            <constraint firstItem="xwT-jv-Asz" firstAttribute="top" secondItem="htw-xv-5Qy" secondAttribute="bottom" constant="25" id="qPd-6b-Y8B"/>
+                            <constraint firstItem="pa1-hM-Vwj" firstAttribute="leading" secondItem="8MH-h5-l1I" secondAttribute="leading" id="usC-Qy-rvy"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="endPracticeButton" destination="w3m-qG-liC" id="h9F-Ra-Y80"/>
+                        <outlet property="endStoryAcceptButton" destination="w3m-qG-liC" id="hHb-Ny-3QG"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="gzr-cj-t9e" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="34.834123222748815" y="-767.69230769230762"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="EndBackground" width="844" height="390"/>
+        <image name="img_star-3" width="123" height="41"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

@@ -2,7 +2,7 @@
 //  TemaCerita+CoreDataProperties.swift
 //  KisahKata
 //
-//  Created by Mulazi Azi on 08/08/21.
+//  Created by Mulazi Azi on 11/08/21.
 //
 //
 

@@ -2,7 +2,7 @@
 //  Kosakata+CoreDataClass.swift
 //  KisahKata
 //
-//  Created by Farendza Muda on 11/08/21.
+//  Created by Mulazi Azi on 11/08/21.
 //
 //
 

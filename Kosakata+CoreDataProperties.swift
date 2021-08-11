@@ -2,7 +2,7 @@
 //  Kosakata+CoreDataProperties.swift
 //  KisahKata
 //
-//  Created by Farendza Muda on 11/08/21.
+//  Created by Mulazi Azi on 11/08/21.
 //
 //
 
@@ -16,10 +16,10 @@ extension Kosakata {
         return NSFetchRequest<Kosakata>(entityName: "Kosakata")
     }
 
-    @NSManaged public var urlVideo: String?
-    @NSManaged public var sudahDipelajari: Int16
-    @NSManaged public var kata: String?
     @NSManaged public var deskripsi: String?
+    @NSManaged public var kata: String?
+    @NSManaged public var sudahDipelajari: Int16
+    @NSManaged public var urlVideo: String?
 
 }
 

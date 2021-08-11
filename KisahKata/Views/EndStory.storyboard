@@ -28,13 +28,13 @@
                                 <rect key="frame" x="0.0" y="0.0" width="844" height="390"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Berhasil!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hY4-pJ-Nl3">
-                                <rect key="frame" x="60" y="60" width="724" height="40.666666666666657"/>
+                                <rect key="frame" x="60" y="60" width="724" height="42"/>
                                 <fontDescription key="fontDescription" name="Ubuntu-Bold" family="Ubuntu" pointSize="36"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Kamu telah menyelesaikan kisah dengan baik" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0cA-cD-gYL">
-                                <rect key="frame" x="270" y="191.66666666666666" width="304" height="40.666666666666657"/>
+                                <rect key="frame" x="270" y="193" width="304" height="42"/>
                                 <fontDescription key="fontDescription" name="Ubuntu-Regular" family="Ubuntu" pointSize="18"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
@@ -54,7 +54,7 @@
                                 </connections>
                             </button>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="img_star-3" translatesAutoresizingMaskIntoConstraints="NO" id="oGq-1d-uzt">
-                                <rect key="frame" x="347" y="125.66666666666669" width="150" height="41"/>
+                                <rect key="frame" x="347" y="127" width="150" height="41"/>
                             </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="Xhi-I6-1eg"/>

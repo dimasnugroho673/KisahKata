@@ -83,6 +83,50 @@
 		51B7A6F826C0CE2700068A43 /* Story1.gif in Resources */ = {isa = PBXBuildFile; fileRef = 51B7A6F326C0CE2700068A43 /* Story1.gif */; };
 		51B7A6F926C0CE2700068A43 /* Story5.gif in Resources */ = {isa = PBXBuildFile; fileRef = 51B7A6F426C0CE2700068A43 /* Story5.gif */; };
 		51B7A6FA26C0CE2700068A43 /* Story2.gif in Resources */ = {isa = PBXBuildFile; fileRef = 51B7A6F526C0CE2700068A43 /* Story2.gif */; };
+		C54C093A26CF4F34006ED698 /* VideoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C54C093926CF4F34006ED698 /* VideoView.swift */; };
+		C54C093C26CF5053006ED698 /* PlayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C54C093B26CF5053006ED698 /* PlayView.swift */; };
+		C54C093E26CF50C4006ED698 /* quiz.swift in Sources */ = {isa = PBXBuildFile; fileRef = C54C093D26CF50C4006ED698 /* quiz.swift */; };
+		C54C094026CF58BD006ED698 /* QuizView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C54C093F26CF58BD006ED698 /* QuizView.swift */; };
+		C54C094126CF625F006ED698 /* Olahraga.AAE in Resources */ = {isa = PBXBuildFile; fileRef = 51509FB826C367DB0022D259 /* Olahraga.AAE */; };
+		C54C094226CF625F006ED698 /* Cita-Cita.AAE in Resources */ = {isa = PBXBuildFile; fileRef = 51509FB526C367DB0022D259 /* Cita-Cita.AAE */; };
+		C54C094326CF625F006ED698 /* panggil.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 51509FB026C367DA0022D259 /* panggil.mp4 */; };
+		C54C094426CF625F006ED698 /* bermain.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 51509FAF26C367DA0022D259 /* bermain.mp4 */; };
+		C54C094526CF625F006ED698 /* sibi_bersaudara.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 4033061626B5A55500506E7C /* sibi_bersaudara.mp4 */; };
+		C54C094626CF625F006ED698 /* sibi_panggil.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 4033061C26B5A55600506E7C /* sibi_panggil.mp4 */; };
+		C54C094726CF625F006ED698 /* sibi_cita-cita.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 4033061926B5A55500506E7C /* sibi_cita-cita.mp4 */; };
+		C54C094826CF625F006ED698 /* mengenalkan.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 51509FB726C367DB0022D259 /* mengenalkan.mp4 */; };
+		C54C094926CF625F006ED698 /* Olahraga.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 51509FB326C367DB0022D259 /* Olahraga.mp4 */; };
+		C54C094A26CF625F006ED698 /* Cita-Cita.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 51509FB626C367DB0022D259 /* Cita-Cita.mp4 */; };
+		C54C094B26CF625F006ED698 /* sibi_memperkenalkan.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 4033061726B5A55500506E7C /* sibi_memperkenalkan.mp4 */; };
+		C54C094C26CF625F006ED698 /* sibi_olahraga.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 4033061A26B5A55500506E7C /* sibi_olahraga.mp4 */; };
+		C54C094D26CF625F006ED698 /* sibi_selamatpagi.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 4033061826B5A55500506E7C /* sibi_selamatpagi.mp4 */; };
+		C54C094E26CF625F006ED698 /* Bersaudara.AAE in Resources */ = {isa = PBXBuildFile; fileRef = 51509FAE26C367DA0022D259 /* Bersaudara.AAE */; };
+		C54C094F26CF625F006ED698 /* Selamat Pagi.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 51509FB226C367DA0022D259 /* Selamat Pagi.mp4 */; };
+		C54C095026CF625F006ED698 /* sibi_bermain.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 4033061D26B5A55600506E7C /* sibi_bermain.mp4 */; };
+		C54C095126CF625F006ED698 /* Selamat Pagi.AAE in Resources */ = {isa = PBXBuildFile; fileRef = 51509FB426C367DB0022D259 /* Selamat Pagi.AAE */; };
+		C54C095226CF625F006ED698 /* sibi_membanggakan.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 4033061B26B5A55500506E7C /* sibi_membanggakan.mp4 */; };
+		C54C095326CF625F006ED698 /* membanggakan.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 51509FB126C367DA0022D259 /* membanggakan.mp4 */; };
+		C54C095426CF625F006ED698 /* Bersaudara.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 51509FAD26C367DA0022D259 /* Bersaudara.mp4 */; };
+		C54C095526CF62D1006ED698 /* bermain.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 51509FAF26C367DA0022D259 /* bermain.mp4 */; };
+		C54C095626CF62D1006ED698 /* Cita-Cita.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 51509FB626C367DB0022D259 /* Cita-Cita.mp4 */; };
+		C54C095726CF62D1006ED698 /* sibi_olahraga.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 4033061A26B5A55500506E7C /* sibi_olahraga.mp4 */; };
+		C54C095826CF62D1006ED698 /* Bersaudara.AAE in Resources */ = {isa = PBXBuildFile; fileRef = 51509FAE26C367DA0022D259 /* Bersaudara.AAE */; };
+		C54C095926CF62D1006ED698 /* panggil.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 51509FB026C367DA0022D259 /* panggil.mp4 */; };
+		C54C095A26CF62D1006ED698 /* sibi_cita-cita.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 4033061926B5A55500506E7C /* sibi_cita-cita.mp4 */; };
+		C54C095B26CF62D1006ED698 /* sibi_memperkenalkan.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 4033061726B5A55500506E7C /* sibi_memperkenalkan.mp4 */; };
+		C54C095C26CF62D1006ED698 /* Bersaudara.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 51509FAD26C367DA0022D259 /* Bersaudara.mp4 */; };
+		C54C095D26CF62D1006ED698 /* Selamat Pagi.AAE in Resources */ = {isa = PBXBuildFile; fileRef = 51509FB426C367DB0022D259 /* Selamat Pagi.AAE */; };
+		C54C095E26CF62D1006ED698 /* Cita-Cita.AAE in Resources */ = {isa = PBXBuildFile; fileRef = 51509FB526C367DB0022D259 /* Cita-Cita.AAE */; };
+		C54C095F26CF62D1006ED698 /* Olahraga.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 51509FB326C367DB0022D259 /* Olahraga.mp4 */; };
+		C54C096026CF62D1006ED698 /* membanggakan.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 51509FB126C367DA0022D259 /* membanggakan.mp4 */; };
+		C54C096126CF62D1006ED698 /* mengenalkan.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 51509FB726C367DB0022D259 /* mengenalkan.mp4 */; };
+		C54C096226CF62D1006ED698 /* sibi_selamatpagi.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 4033061826B5A55500506E7C /* sibi_selamatpagi.mp4 */; };
+		C54C096326CF62D1006ED698 /* Olahraga.AAE in Resources */ = {isa = PBXBuildFile; fileRef = 51509FB826C367DB0022D259 /* Olahraga.AAE */; };
+		C54C096426CF62D1006ED698 /* Selamat Pagi.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 51509FB226C367DA0022D259 /* Selamat Pagi.mp4 */; };
+		C54C096526CF62D1006ED698 /* sibi_bermain.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 4033061D26B5A55600506E7C /* sibi_bermain.mp4 */; };
+		C54C096626CF62D1006ED698 /* sibi_bersaudara.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 4033061626B5A55500506E7C /* sibi_bersaudara.mp4 */; };
+		C54C096726CF62D1006ED698 /* sibi_membanggakan.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 4033061B26B5A55500506E7C /* sibi_membanggakan.mp4 */; };
+		C54C096826CF62D1006ED698 /* sibi_panggil.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 4033061C26B5A55600506E7C /* sibi_panggil.mp4 */; };
 		C5C350C426CE174F002CB2A2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C5C350C326CE174F002CB2A2 /* Assets.xcassets */; };
 		C5C350CB26CE174F002CB2A2 /* KisahKataWatchApp Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = C5C350CA26CE174F002CB2A2 /* KisahKataWatchApp Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		C5C350D026CE174F002CB2A2 /* KisahKataApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5C350CF26CE174F002CB2A2 /* KisahKataApp.swift */; };
@@ -237,6 +281,10 @@
 		51B7A6F326C0CE2700068A43 /* Story1.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = Story1.gif; sourceTree = "<group>"; };
 		51B7A6F426C0CE2700068A43 /* Story5.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = Story5.gif; sourceTree = "<group>"; };
 		51B7A6F526C0CE2700068A43 /* Story2.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = Story2.gif; sourceTree = "<group>"; };
+		C54C093926CF4F34006ED698 /* VideoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoView.swift; sourceTree = "<group>"; };
+		C54C093B26CF5053006ED698 /* PlayView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayView.swift; sourceTree = "<group>"; };
+		C54C093D26CF50C4006ED698 /* quiz.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = quiz.swift; sourceTree = "<group>"; };
+		C54C093F26CF58BD006ED698 /* QuizView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizView.swift; sourceTree = "<group>"; };
 		C5C350C126CE174E002CB2A2 /* KisahKataWatchApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KisahKataWatchApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C5C350C326CE174F002CB2A2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C5C350C526CE174F002CB2A2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -503,6 +551,31 @@
 			path = KisahKata;
 			sourceTree = "<group>";
 		};
+		C54C093626CF4F15006ED698 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				C54C093926CF4F34006ED698 /* VideoView.swift */,
+				C54C093B26CF5053006ED698 /* PlayView.swift */,
+				C54C093F26CF58BD006ED698 /* QuizView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		C54C093726CF4F1E006ED698 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		C54C093826CF4F23006ED698 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				C54C093D26CF50C4006ED698 /* quiz.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		C5C350C226CE174E002CB2A2 /* KisahKataWatchApp */ = {
 			isa = PBXGroup;
 			children = (
@@ -515,6 +588,9 @@
 		C5C350CE26CE174F002CB2A2 /* KisahKataWatchApp Extension */ = {
 			isa = PBXGroup;
 			children = (
+				C54C093826CF4F23006ED698 /* Model */,
+				C54C093726CF4F1E006ED698 /* ViewModel */,
+				C54C093626CF4F15006ED698 /* View */,
 				C5C350CF26CE174F002CB2A2 /* KisahKataApp.swift */,
 				C5C350D126CE174F002CB2A2 /* ContentView.swift */,
 				C5C350D326CE174F002CB2A2 /* NotificationController.swift */,
@@ -707,7 +783,27 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C54C095326CF625F006ED698 /* membanggakan.mp4 in Resources */,
+				C54C094C26CF625F006ED698 /* sibi_olahraga.mp4 in Resources */,
+				C54C094626CF625F006ED698 /* sibi_panggil.mp4 in Resources */,
+				C54C094326CF625F006ED698 /* panggil.mp4 in Resources */,
+				C54C095126CF625F006ED698 /* Selamat Pagi.AAE in Resources */,
+				C54C094826CF625F006ED698 /* mengenalkan.mp4 in Resources */,
+				C54C094426CF625F006ED698 /* bermain.mp4 in Resources */,
+				C54C094A26CF625F006ED698 /* Cita-Cita.mp4 in Resources */,
+				C54C094E26CF625F006ED698 /* Bersaudara.AAE in Resources */,
+				C54C095226CF625F006ED698 /* sibi_membanggakan.mp4 in Resources */,
+				C54C094F26CF625F006ED698 /* Selamat Pagi.mp4 in Resources */,
+				C54C095426CF625F006ED698 /* Bersaudara.mp4 in Resources */,
+				C54C095026CF625F006ED698 /* sibi_bermain.mp4 in Resources */,
+				C54C094926CF625F006ED698 /* Olahraga.mp4 in Resources */,
+				C54C094226CF625F006ED698 /* Cita-Cita.AAE in Resources */,
+				C54C094B26CF625F006ED698 /* sibi_memperkenalkan.mp4 in Resources */,
+				C54C094126CF625F006ED698 /* Olahraga.AAE in Resources */,
+				C54C094526CF625F006ED698 /* sibi_bersaudara.mp4 in Resources */,
+				C54C094726CF625F006ED698 /* sibi_cita-cita.mp4 in Resources */,
 				C5C350C426CE174F002CB2A2 /* Assets.xcassets in Resources */,
+				C54C094D26CF625F006ED698 /* sibi_selamatpagi.mp4 in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -715,8 +811,28 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C54C096326CF62D1006ED698 /* Olahraga.AAE in Resources */,
+				C54C095F26CF62D1006ED698 /* Olahraga.mp4 in Resources */,
+				C54C096726CF62D1006ED698 /* sibi_membanggakan.mp4 in Resources */,
+				C54C096226CF62D1006ED698 /* sibi_selamatpagi.mp4 in Resources */,
+				C54C095526CF62D1006ED698 /* bermain.mp4 in Resources */,
+				C54C095C26CF62D1006ED698 /* Bersaudara.mp4 in Resources */,
 				C5C350DD26CE1750002CB2A2 /* Preview Assets.xcassets in Resources */,
 				C5C350DA26CE1750002CB2A2 /* Assets.xcassets in Resources */,
+				C54C096126CF62D1006ED698 /* mengenalkan.mp4 in Resources */,
+				C54C095826CF62D1006ED698 /* Bersaudara.AAE in Resources */,
+				C54C095726CF62D1006ED698 /* sibi_olahraga.mp4 in Resources */,
+				C54C096626CF62D1006ED698 /* sibi_bersaudara.mp4 in Resources */,
+				C54C095626CF62D1006ED698 /* Cita-Cita.mp4 in Resources */,
+				C54C096026CF62D1006ED698 /* membanggakan.mp4 in Resources */,
+				C54C095A26CF62D1006ED698 /* sibi_cita-cita.mp4 in Resources */,
+				C54C095B26CF62D1006ED698 /* sibi_memperkenalkan.mp4 in Resources */,
+				C54C095E26CF62D1006ED698 /* Cita-Cita.AAE in Resources */,
+				C54C095926CF62D1006ED698 /* panggil.mp4 in Resources */,
+				C54C095D26CF62D1006ED698 /* Selamat Pagi.AAE in Resources */,
+				C54C096426CF62D1006ED698 /* Selamat Pagi.mp4 in Resources */,
+				C54C096526CF62D1006ED698 /* sibi_bermain.mp4 in Resources */,
+				C54C096826CF62D1006ED698 /* sibi_panggil.mp4 in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -778,10 +894,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C54C093A26CF4F34006ED698 /* VideoView.swift in Sources */,
 				C5C350D426CE174F002CB2A2 /* NotificationController.swift in Sources */,
+				C54C094026CF58BD006ED698 /* QuizView.swift in Sources */,
 				C5C350D226CE174F002CB2A2 /* ContentView.swift in Sources */,
+				C54C093C26CF5053006ED698 /* PlayView.swift in Sources */,
 				C5C350D826CE174F002CB2A2 /* ComplicationController.swift in Sources */,
 				C5C350D026CE174F002CB2A2 /* KisahKataApp.swift in Sources */,
+				C54C093E26CF50C4006ED698 /* quiz.swift in Sources */,
 				C5C350D626CE174F002CB2A2 /* NotificationView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
